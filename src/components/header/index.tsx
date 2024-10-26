@@ -1,27 +1,28 @@
-import styles from './header.module.css';
-import projectLogo from '/logo.png'
-import TranslateRoundedIcon from '@mui/icons-material/Translate';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
-import './header.css';
+import TranslateRoundedIcon from '@mui/icons-material/Translate';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
+import styles from './header.module.css';
+import { StyledLink } from './Header.styles';
+import projectLogo from '/logo.png';
 
 const Header = () => {
     return (
         <div className={styles.headerContainer}>
-            
-            <div className={styles.logoWrapper}>
+            <Link to="/" className={styles.logoWrapper}>
                 <img src={projectLogo} alt="My personnal brand logo showing up my values" className={styles.logo} />
                 <span className={styles.nameInteraction}>Gilles.</span>
-            </div>
+            </Link>
             <div className={styles.navLinksContainer}>
-                <a href="/" className={styles.navLink}>Accueil</a>
-                <a href="/" className={styles.navLink}>Projets</a>
-                <a href="/" className={styles.navLink}>Parcours</a>
-                <a href="/" className={styles.navLink}>A propos</a>
+                <StyledLink to="/">Accueil</StyledLink>
+                <StyledLink to="/projects">Projets</StyledLink>
+                <StyledLink to="/roadmap">Parcours</StyledLink>
+                <StyledLink to="/about">A propos</StyledLink>
             </div>
             <div className={styles.actionsWidgetContainer}>
                 <TranslateRoundedIcon htmlColor='black' fontSize='large' className={styles.icon} />
                 <PersonRoundedIcon htmlColor='black' fontSize='large' className={styles.icon} />
-                <div className={styles.getInTouch}>Contactez-moi</div>
+                <Button variant='contained' sx={{textTransform: 'capitalize'}} className={styles.getInTouch}>Contactez-moi</Button>
             </div>
         </div>
     );

@@ -23,4 +23,6 @@ export const availableLanguages: Language[] = [
         code: AvailableLanguageCodes.ENGLISH,
         flagSrc: gbFlagSvg
     }
-]
+];
+
+export const CURRENT_APP_LANG_LOCALSTORAGE_KEY = 'CURRENT_APP_LANG';

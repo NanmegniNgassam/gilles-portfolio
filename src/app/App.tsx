@@ -1,7 +1,27 @@
 import { createTheme, ThemeProvider } from '@mui/material';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Header from '../components/header';
+import i18next from 'i18next';
+import global_en from '../assets/loc/en/global.json';
+import global_fr from '../assets/loc/fr/global.json';
+import { I18nextProvider } from 'react-i18next';
+import { CURRENT_APP_LANG_LOCALSTORAGE_KEY } from '../utils/languages';
 
+
+// loc files initialization
+i18next.init({
+  interpolation: {escapeValue: false},
+  lng: localStorage.getItem(CURRENT_APP_LANG_LOCALSTORAGE_KEY) ?? 'fr',
+  fallbackLng: 'fr',
+  resources: {
+    en: {
+      global:global_en
+    },
+    fr: {
+      global:global_fr
+    }
+  }
+})
 
 const theme = createTheme({
   palette: {
@@ -64,9 +84,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-   </ThemeProvider>
+    <I18nextProvider i18n={i18next}>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+   </I18nextProvider>
   )
 }
 

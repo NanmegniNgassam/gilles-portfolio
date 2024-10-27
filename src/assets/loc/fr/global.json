@@ -1,0 +1,16 @@
+{
+    "Header": {
+        "NavLinks": {
+            "landing": "Accueil",
+            "projects": "Projets",
+            "roadMap": "Parcours",
+            "about": "A propos"
+        },
+        "Actions": {
+            "getInTouch": "Contactez-moi"
+        },
+        "AltMessages": {
+            "logo": "Mon logo personnel indiquant les valeurs de progrès aux quelles je m'accroche."
+        }
+    }
+}

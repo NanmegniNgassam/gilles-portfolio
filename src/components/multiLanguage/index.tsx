@@ -2,7 +2,8 @@ import TranslateRoundedIcon from '@mui/icons-material/Translate';
 import { IconButton, Menu, Tooltip } from "@mui/material";
 import { useState } from "react";
 import { StyledMenuItem } from "./MultiLanguage.styles";
-import { AvailableLanguageCodes, availableLanguages } from '../../utils/languages';
+import { AvailableLanguageCodes, availableLanguages, CURRENT_APP_LANG_LOCALSTORAGE_KEY } from '../../utils/languages';
+import i18next from 'i18next';
 
 
 const MultiLanguage = () => {
@@ -16,12 +17,18 @@ const MultiLanguage = () => {
         setAnchorEl(null);
     }
 
+    /**
+     * Set the global app language
+     * 
+     * @param lang the language selected by the user
+     */
     const onLanguageSelected = (lang : AvailableLanguageCodes) => {
-        // Set the lang as the app language and save this config in cookies for 30 days.
-        // Dispatch a specific action
-        console.log("You've selected : ", lang);
-
+        // Apply selected language on the app & dismiss the menu
+        i18next.changeLanguage(lang);
         handleClose();
+
+        // Save the selected language in the local storage
+        localStorage.setItem(CURRENT_APP_LANG_LOCALSTORAGE_KEY, lang);
     }
 
     return (

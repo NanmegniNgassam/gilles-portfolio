@@ -1,7 +1,7 @@
-import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
-import TranslateRoundedIcon from '@mui/icons-material/Translate';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+
+import MultiLanguage from '../multiLanguage';
 import styles from './header.module.css';
 import { StyledLink } from './Header.styles';
 import projectLogo from '/logo.png';
@@ -20,9 +20,8 @@ const Header = () => {
                 <StyledLink to="/about">A propos</StyledLink>
             </div>
             <div className={styles.actionsWidgetContainer}>
-                <TranslateRoundedIcon htmlColor='black' fontSize='large' className={styles.icon} />
-                <PersonRoundedIcon htmlColor='black' fontSize='large' className={styles.icon} />
-                <Button variant='contained' sx={{textTransform: 'capitalize'}} className={styles.getInTouch}>Contactez-moi</Button>
+                <MultiLanguage />
+                <Button variant='contained' className="removeButtonOutline">Contactez-moi</Button>
             </div>
         </div>
     );

@@ -6,12 +6,22 @@ import Header from '../components/header';
 const theme = createTheme({
   palette: {
     mode: 'light',
+    common: {
+      black: '#232326',
+      white: '#ffffff',
+    },
     primary: {
       main: '#F2B90F',
-      dark: '#BF9411',
+      dark: '#dead18',
       light: '#edc344',
       contrastText: '#f2f2f2'
-    }
+    },
+    secondary: {
+      main: '#1088E5',
+      light: '#2893e6',
+      dark: '#266fd5',
+      contrastText: '#f2f2f2'
+    },
   }
 });
 

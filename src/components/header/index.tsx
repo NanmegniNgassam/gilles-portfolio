@@ -23,10 +23,21 @@ const Header = () => {
             </div>
             <div className={styles.actionsWidgetContainer}>
                 <MultiLanguage />
-                <Button variant='contained' className="removeButtonOutline">{t("Header.Actions.getInTouch")}</Button>
+                <Button 
+                    variant='contained' 
+                    className="removeButtonOutline" 
+                    sx={{
+                        px: {mobile: 1, laptop: 2},
+                        py: {mobile: 0.5, tablet: 0.75, laptop: 1},
+                        fontSize: {mobile: 13, tablet: 14, laptop: 15}
+                    }}
+                >
+                    {t("Header.Actions.getInTouch")}
+                </Button>
             </div>
         </div>
     );
 }
- 
+
+//sx={{ paddingX: 1, paddingY: 0.5 }}
 export default Header;

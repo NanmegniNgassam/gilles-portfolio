@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Dosis";
+    src: url('../../assets/fonts/Dosis-VariableFont_wght.ttf');
+}
+
+.footerContainer {
+    background-color: #f2f2f2;
+    padding: 40px 0;
+}
+
+.credentials {
+    font-family: Dosis;
+}

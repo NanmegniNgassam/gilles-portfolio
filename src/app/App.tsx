@@ -6,6 +6,7 @@ import global_en from '../assets/loc/en/global.json';
 import global_fr from '../assets/loc/fr/global.json';
 import { I18nextProvider } from 'react-i18next';
 import { CURRENT_APP_LANG_LOCALSTORAGE_KEY } from '../utils/languages';
+import Footer from '../components/footer';
 
 
 // loc files initialization
@@ -23,7 +24,34 @@ i18next.init({
   }
 })
 
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    // Remove classic breakpoints labels
+    xs: false;
+    sm: false;
+    md: false;
+    lg: false;
+    xl: false;
+    // Add new breakpoints labels
+    mobile: true;
+    tablet: true;
+    laptop: true;
+    desktop: true;
+    projector: true;
+  }
+}
+
 const theme = createTheme({
+  breakpoints: {
+    // Redefines new breakpoints values
+    values: {
+      mobile: 0,
+      tablet: 700,
+      laptop: 900,
+      desktop: 1200,
+      projector: 1536
+    }
+  },
   palette: {
     mode: 'light',
     common: {
@@ -46,10 +74,11 @@ const theme = createTheme({
 });
 
 const AppLayout = () => (
-  <>
+  <div>
     <Header />
     <Outlet />
-  </>
+    <Footer />
+  </div>
 )
 
 const router = createBrowserRouter([

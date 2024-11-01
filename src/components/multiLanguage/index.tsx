@@ -10,9 +10,6 @@ import { StyledMenuItem } from "./MultiLanguage.styles";
 const MultiLanguage = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const isLanguageMenuOpen = Boolean(anchorEl);
-    const spinObjectAnimation = {
-        rotate: [20, -20, 15, -15, 10, -10, 5, -5, 0]
-    }
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -43,7 +40,7 @@ const MultiLanguage = () => {
                     style={{color: '#4b4b4b'}} 
                     className="removeButtonOutline"
                     component={motion.div}
-                    animate={spinObjectAnimation}
+                    animate={{ rotate: [20, -20, 15, -15, 10, -10, 5, -5, 0] }}
                     aria-controls={isLanguageMenuOpen ? 'language-menu' : undefined}
                     aria-haspopup="true"
                     aria-expanded={isLanguageMenuOpen ? 'true' : undefined}

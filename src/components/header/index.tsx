@@ -6,6 +6,7 @@ import styles from './header.module.css';
 import { StyledLink } from './Header.styles';
 import projectLogo from '/logo.png';
 import { motion } from "framer-motion"
+import MobileNavWidget from '../mobileNavWidget';
  
 const Header = () => {
     const { t } = useTranslation("global");
@@ -76,6 +77,7 @@ const Header = () => {
                     {t("Header.Actions.getInTouch")}
                 </Button>
             </div>
+            <MobileNavWidget />
         </div>
     );
 }

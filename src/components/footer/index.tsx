@@ -28,7 +28,7 @@ const Footer = () => {
                             </motion.div>
                         </a>
                     ) : (
-                        <Tooltip key={id} title={socialMedia.link} placement="top">
+                        <Tooltip  key={id} title={socialMedia.link} placement="top">
                             <div className={styles.linkContainer} >
                                 <img src={socialMedia.image} alt={socialMedia.altDescription} />
                             </div>

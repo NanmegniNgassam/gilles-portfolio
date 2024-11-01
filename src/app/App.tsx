@@ -87,19 +87,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <div>Home</div>,
+        element: <div className='full-page'>Home</div>,
       },
       {
         path: 'projects',
-        element: <div>Projects</div>
+        element: <div className='full-page'>Projects</div>
       },
       {
         path: 'roadmap',
-        element: <div>Parcours</div>
+        element: <div className='full-page'>Parcours</div>
       },
       {
         path: 'about',
-        element: <div>About me</div>
+        element: <div className='full-page'>About me</div>
       }, 
     ],
     errorElement: (

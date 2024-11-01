@@ -6,6 +6,8 @@
 }
 
 :root {
+  --primary-color: #f2b90f;
+
   line-height: 1.5;
   font-weight: 400;
 

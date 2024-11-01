@@ -39,5 +39,4 @@ const Header = () => {
     );
 }
 
-//sx={{ paddingX: 1, paddingY: 0.5 }}
 export default Header;

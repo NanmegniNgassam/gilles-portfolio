@@ -5,15 +5,59 @@ import MultiLanguage from '../multiLanguage';
 import styles from './header.module.css';
 import { StyledLink } from './Header.styles';
 import projectLogo from '/logo.png';
-
+import { motion } from "framer-motion"
+ 
 const Header = () => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [t, _] = useTranslation("global");
+    const { t } = useTranslation("global");
+    const logoImageVariants = {
+        hidden: {
+            opacity: 0,
+            x: -100,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.5
+            }
+        }
+    }
+    const logoLabelVariants = {
+        hidden: {
+            opacity: 0,
+            x: 100,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.5
+            }
+        }
+    }
+    const spinObjectAnimation = {
+        rotate: [20, -20, 15, -15, 10, -10, 5, -5, 0]
+    }
+
     return (
         <div className={styles.headerContainer}>
             <Link to="/" className={styles.logoWrapper}>
-                <img src={projectLogo} alt={t("Header.AltMessages.logo")} className={styles.logo} />
-                <span className={styles.nameInteraction}>Gilles.</span>
+                <motion.img 
+                    src={projectLogo} 
+                    alt={t("Header.AltMessages.logo")} 
+                    className={styles.logo} 
+                    variants={logoImageVariants} 
+                    initial="hidden"
+                    animate="visible"
+                />
+                <motion.span 
+                    className={styles.nameInteraction} 
+                    variants={logoLabelVariants} 
+                    initial="hidden" 
+                    animate="visible"
+                >
+                    Gilles.
+                </motion.span>
             </Link>
             <div className={styles.navLinksContainer}>
                 <StyledLink to="/">{t("Header.NavLinks.landing")}</StyledLink>
@@ -26,6 +70,8 @@ const Header = () => {
                 <Button 
                     variant='contained' 
                     className="removeButtonOutline" 
+                    component={motion.div}
+                    animate={spinObjectAnimation}
                     sx={{
                         px: {mobile: 1, laptop: 2},
                         py: {mobile: 0.5, tablet: 0.75, laptop: 1},

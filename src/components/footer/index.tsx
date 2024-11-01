@@ -1,17 +1,17 @@
+import { Tooltip } from "@mui/material";
+import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import behance from '../../assets/images/behance.png';
 import cardDiamond from '../../assets/images/card_diamond_icon.png';
-import discord from '../../assets/images/discord.png';
-import github from '../../assets/images/github.png';
-import gmail from '../../assets/images/gmail.png';
-import linkedIn from '../../assets/images/linkedin.png';
+import { socialsMedia } from '../../utils/socials';
 import styles from './footer.module.css';
 import { TitleHook } from './Footer.styles';
 
 const Footer = () => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [t, _] = useTranslation("global");
+    const { t } = useTranslation("global");
+    const linkHoverAnimation = {
+        y: -10
+    }
 
     return (
         <div className={styles.footerContainer}>
@@ -20,21 +20,22 @@ const Footer = () => {
             </TitleHook>
 
             <div className={styles.linksContainer}>
-                <div className={styles.linkContainer}>
-                    <img src={linkedIn} alt="A link to my LinkedIn's account" />
-                </div>
-                <div className={styles.linkContainer}>
-                    <img src={gmail} alt="A link to my Gmail's account" />
-                </div>
-                <div className={styles.linkContainer}>
-                    <img src={github} alt="A link to my GitHub's account" />
-                </div>
-                <div className={styles.linkContainer}>
-                    <img src={behance} alt="A link to my Behance's account" />
-                </div>
-                <div className={styles.linkContainer}>
-                    <img src={discord} alt="A link to my Discord's account" />
-                </div>
+                {socialsMedia.map((socialMedia) => (
+                    socialMedia.clickable ? (
+                        <a href={socialMedia.link} target='_blank'>
+                            <motion.div className={styles.linkContainer} whileHover={linkHoverAnimation}>
+                                <img src={socialMedia.image} alt={socialMedia.altDescription} />
+                            </motion.div>
+                        </a>
+                    ) : (
+                        <Tooltip title={socialMedia.link} placement="top">
+                            <div className={styles.linkContainer} >
+                                <img src={socialMedia.image} alt={socialMedia.altDescription} />
+                            </div>
+                        </Tooltip>
+                    )
+                    
+                ))}
             </div>
 
             <div className={styles.navLinks}>

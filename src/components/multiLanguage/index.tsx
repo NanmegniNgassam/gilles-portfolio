@@ -1,14 +1,18 @@
 import TranslateRoundedIcon from '@mui/icons-material/Translate';
 import { IconButton, Menu, Tooltip } from "@mui/material";
-import { useState } from "react";
-import { StyledMenuItem } from "./MultiLanguage.styles";
-import { AvailableLanguageCodes, availableLanguages, CURRENT_APP_LANG_LOCALSTORAGE_KEY } from '../../utils/languages';
+import { motion } from 'framer-motion';
 import i18next from 'i18next';
+import { useState } from "react";
+import { AvailableLanguageCodes, availableLanguages, CURRENT_APP_LANG_LOCALSTORAGE_KEY } from '../../utils/languages';
+import { StyledMenuItem } from "./MultiLanguage.styles";
 
 
 const MultiLanguage = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const isLanguageMenuOpen = Boolean(anchorEl);
+    const spinObjectAnimation = {
+        rotate: [20, -20, 15, -15, 10, -10, 5, -5, 0]
+    }
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -38,6 +42,8 @@ const MultiLanguage = () => {
                     onClick={handleClick} 
                     style={{color: '#4b4b4b'}} 
                     className="removeButtonOutline"
+                    component={motion.div}
+                    animate={spinObjectAnimation}
                     aria-controls={isLanguageMenuOpen ? 'language-menu' : undefined}
                     aria-haspopup="true"
                     aria-expanded={isLanguageMenuOpen ? 'true' : undefined}

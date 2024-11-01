@@ -35,9 +35,6 @@ const Header = () => {
             }
         }
     }
-    const spinObjectAnimation = {
-        rotate: [20, -20, 15, -15, 10, -10, 5, -5, 0]
-    }
 
     return (
         <div className={styles.headerContainer}>
@@ -70,8 +67,6 @@ const Header = () => {
                 <Button 
                     variant='contained' 
                     className="removeButtonOutline" 
-                    component={motion.div}
-                    animate={spinObjectAnimation}
                     sx={{
                         px: {mobile: 1, laptop: 2},
                         py: {mobile: 0.5, tablet: 0.75, laptop: 1},

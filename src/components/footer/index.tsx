@@ -20,15 +20,15 @@ const Footer = () => {
             </TitleHook>
 
             <div className={styles.linksContainer}>
-                {socialsMedia.map((socialMedia) => (
+                {socialsMedia.map((socialMedia, id) => (
                     socialMedia.clickable ? (
-                        <a href={socialMedia.link} target='_blank'>
+                        <a key={id} href={socialMedia.link} target='_blank'>
                             <motion.div className={styles.linkContainer} whileHover={linkHoverAnimation}>
                                 <img src={socialMedia.image} alt={socialMedia.altDescription} />
                             </motion.div>
                         </a>
                     ) : (
-                        <Tooltip title={socialMedia.link} placement="top">
+                        <Tooltip key={id} title={socialMedia.link} placement="top">
                             <div className={styles.linkContainer} >
                                 <img src={socialMedia.image} alt={socialMedia.altDescription} />
                             </div>

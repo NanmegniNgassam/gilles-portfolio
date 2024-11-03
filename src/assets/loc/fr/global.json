@@ -30,6 +30,15 @@
                     "resume": "Télécharger mon CV",
                     "bitOfCode": "Voir un aperçu de mon code"
                 }
+            },
+            "container": {
+                "titles": {
+                    "domains": {
+                        "hook": "Intérêts",
+                        "main": "Domaines de compétences",
+                        "description": "Ces domaines, loin d'être exhaustifs, représentent les secteurs principaux dans lesquels j'ai eu une expérience préalable. Cependant, je reste très ouvert à la nouveauté et aux challenges."
+                    }
+                }
             }
         }
     },

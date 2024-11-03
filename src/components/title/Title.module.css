@@ -1,0 +1,51 @@
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    color: var(--dark-contrast-color);
+    text-align: center;
+    
+}
+
+.titleHook {
+    font-family: Dosis;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.actualTitle {
+    font-size: 3.6rem;
+    color: var(--black-color);
+    text-transform: uppercase;
+}
+.titleDescription {
+    font-family: DosisMedium;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .actualTitle {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .titleHook, .titleDescription {
+        font-size: 1rem;
+    }
+    .actualTitle {
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .titleHook, .titleDescription {
+        font-size: 0.9rem;
+    }
+    .actualTitle {
+        font-size: 1.8rem;
+    }
+}

@@ -30,6 +30,15 @@
                     "resume": "Download my resume",
                     "bitOfCode": "See a preview of my code"
                 }
+            },
+            "container": {
+                "titles": {
+                    "domains": {
+                        "hook": "interest",
+                        "main": "Areas of expertise",
+                        "description": "These areas, far from being exhaustive, represent the main sectors in which I have had prior experience. However, I remain very open to novelty and challenges."
+                    }
+                }
             }
         }
     },

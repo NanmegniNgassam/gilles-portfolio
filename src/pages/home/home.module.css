@@ -2,11 +2,11 @@
   font-family: "Dosis";
   src: url("../../assets/fonts/Dosis-VariableFont_wght.ttf");
 }
-
+/* Hero section styles */
 .heroSection {
   padding: 120px 80px 60px 80px;
   background: var(--contrast-color);
-  margin-bottom: 200px;
+  margin-bottom: 80px;
 }
 .heroSection * {
     color: var(--dark-contrast-color);
@@ -127,5 +127,23 @@ h2 span {
     }
     .linkContainer img {
         width: 25px;
+    }
+}
+
+/* Main Content styles */
+.mainContainer {
+    padding: 0px 80px;
+}
+
+@media screen and (max-width: 900px) {
+    .mainContainer {
+        padding: 0 40px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .mainContainer {
+        padding: 0 20px;
     }
 }

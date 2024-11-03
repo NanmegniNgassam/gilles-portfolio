@@ -9,6 +9,7 @@ import gilles from "../../assets/images/Gilles.png";
 import github from '../../assets/images/github.png';
 import gmail from "../../assets/images/gmail.png";
 import linkedIn from '../../assets/images/linkedin.png';
+import Title from "../../components/title";
 import styles from "./home.module.css";
 import { TitleHook } from "./Home.styles";
 
@@ -87,6 +88,13 @@ const Home = () => {
                         </a>
                     </Tooltip>
                 </div>
+            </div>
+            <div className={styles.mainContainer}>
+                <Title 
+                    actualTitle={t("pages.home.container.titles.domains.main")}
+                    titleHook={t("pages.home.container.titles.domains.hook")}
+                    titleDescription={t("pages.home.container.titles.domains.description")}
+                />
             </div>
         </div>
     );

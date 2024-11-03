@@ -12,5 +12,35 @@
         "AltMessages": {
             "logo": "My personnal brand logo showing up the growth values I hold on to."
         }
+    },
+    "Footer": {
+        "copyrightsLabel": "Copyrights",
+        "authorLabel": "Designed and coded by"
+    },
+    "pages": {
+        "home": {
+            "heroSection": {
+                "morningGreeting": "Morning",
+                "eveningGreeting": "Evening",
+                "introductionFormula": "I'm",
+                "letMotiv": "Above all, technology must bring added value to the human experience and the planet and bring social interactions from sufficiency to excellence.",
+                "tooltipLabels": {
+                    "sendMail": "Send me an email",
+                    "linkedInProfil": "Take a look at my profil",
+                    "resume": "Download my resume",
+                    "bitOfCode": "See a preview of my code"
+                }
+            }
+        }
+    },
+    "general": {
+        "hireMeLabel": "Hire me",
+        "seeMyProjects": "See my projects",
+        "skills": {
+            "uxDesigner": "UX designer",
+            "frontendDeveloper": "Frontend developer",
+            "backendDeveloper": "Backend developer",
+            "fullStackDeveloper": "Fullstack developer"
+        }
     }
 }

@@ -4,7 +4,7 @@
 }
 
 .heroSection {
-  padding: 180px 80px 90px 80px;
+  padding: 120px 80px 60px 80px;
   background: #f2f2f2;
   margin-bottom: 200px;
 }
@@ -42,12 +42,13 @@ h2 span {
 }
 .letmotiv {
     font-family: DosisMedium;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     min-width: 50%;
     max-width: 600px;
     text-indent: 3rem;
     text-align: justify;
 }
+
 .actions {
     display: flex;
     gap: 50px;

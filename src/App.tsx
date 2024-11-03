@@ -12,7 +12,7 @@ import Home from './pages/home';
 
 // loc files initialization
 i18next.init({
-  interpolation: {escapeValue: false},
+  interpolation: {escapeValue: true},
   lng: localStorage.getItem(CURRENT_APP_LANG_LOCALSTORAGE_KEY) ?? 'fr',
   fallbackLng: 'fr',
   resources: {

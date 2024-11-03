@@ -12,5 +12,35 @@
         "AltMessages": {
             "logo": "Mon logo personnel indiquant les valeurs de progrès aux quelles je m'accroche."
         }
+    },
+    "Footer": {
+        "copyrightsLabel": "Tous droits réservés",
+        "authorLabel": "Designé et développé par"
+    },
+    "pages": {
+        "home": {
+            "heroSection": {
+                "morningGreeting": "Bonjour",
+                "eveningGreeting": "Bonsoir",
+                "introductionFormula": "je suis",
+                "letMotiv": "La technologie doit avant tout apporter une plus-value à l'expérience humaine, à la planète et porter les interactions sociales de la suffisance à l'excellence.",
+                "tooltipLabels": {
+                    "sendMail": "Envoyer moi un mail",
+                    "linkedInProfil": "Consulter mon profil",
+                    "resume": "Télécharger mon CV",
+                    "bitOfCode": "Voir un aperçu de mon code"
+                }
+            }
+        }
+    },
+    "general": {
+        "hireMeLabel": "Me recruter",
+        "seeMyProjects": "Voir mes projets",
+        "skills": {
+            "uxDesigner": "Designeur UX",
+            "frontendDeveloper": "Developpeur frontend",
+            "backendDeveloper": "Developpeur backend",
+            "fullStackDeveloper": "Developpeur fullstack"
+        }
     }
 }

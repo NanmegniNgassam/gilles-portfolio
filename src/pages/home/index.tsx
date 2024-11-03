@@ -1,17 +1,19 @@
 import { Button, Tooltip } from "@mui/material";
-import gilles from "../../assets/images/Gilles.png";
-import gmail from "../../assets/images/gmail.png";
-import github from '../../assets/images/github.png';
-import linkedIn from '../../assets/images/linkedin.png';
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import Typewriter from "typewriter-effect";
+import cv from "../../assets/data/NANMEGNI_NGASSAM_Gilles_Pavel_CV.pdf";
 import download from '../../assets/images/download.png';
-import cv from "../../assets/data/NANMEGNI_NGASSAM_Gilles_Pavel_CV.pdf"
+import gilles from "../../assets/images/Gilles.png";
+import github from '../../assets/images/github.png';
+import gmail from "../../assets/images/gmail.png";
+import linkedIn from '../../assets/images/linkedin.png';
 import styles from "./home.module.css";
 import { TitleHook } from "./Home.styles";
-import Typewriter  from "typewriter-effect"
-import { motion } from "framer-motion"
-import { useEffect } from "react";
 
 const Home = () => {
+    const {t} = useTranslation("global");
     const isEvening = new Date().getHours() >= 17;
     const heroImageVariants = {
         hidden: {
@@ -34,48 +36,52 @@ const Home = () => {
                 <div className={styles.content}>
                     <div className={styles.description}>
                         <TitleHook className={styles.title}>
-                            { isEvening ? "Bonsoir" : "Bonjour" }, 
-                            je suis <TitleHook as="div" className={styles.colorHook}>Gilles NGASSAM</TitleHook>
+                            { isEvening ? t("pages.home.heroSection.eveningGreeting") : t("pages.home.heroSection.morningGreeting") }, {" "}
+                            { t("pages.home.heroSection.introductionFormula")} <TitleHook as="div" className={styles.colorHook}>Gilles NGASSAM</TitleHook>.
                         </TitleHook>                            
                         <Typewriter
                             component="h2"
                             options={{
                                 cursor: "_",
-                                strings: ['Développeur Frontend', 'Développeur Backend', "Développeur FullStack", "Designeur UX"],
+                                strings: [
+                                    t("general.skills.uxDesigner"), 
+                                    t("general.skills.frontendDeveloper"), 
+                                    t("general.skills.backendDeveloper"), 
+                                    t("general.skills.fullStackDeveloper")
+                                ],
                                 autoStart: true,
                                 loop: true,
                             }}
                         />
                         <span className={styles.letmotiv}>
-                            La <strong>technologie</strong> doit avant tout apporter une plus value à l'<strong>expérience humaine</strong>, à la <strong>planète </strong> 
-                            et porter les <strong>interactions sociales</strong> de la suffisance à l'<strong>excellence</strong>. 
+                            {t("pages.home.heroSection.letMotiv")}
                         </span>
                         <div className={styles.actions}>
-                            <Button variant="contained" className="removeButtonOutline">Me recruter</Button>
-                            <Button variant="outlined" className="removeButtonOutline" style={{ borderWidth: 2, }}>Voir mes projets</Button>
+                            <Button variant="contained" className="removeButtonOutline">{ t("general.hireMeLabel") }</Button>
+                            <Button variant="outlined" className="removeButtonOutline" style={{ borderWidth: 2, }}>{ t("general.seeMyProjects") }</Button>
                         </div>
                     </div>
-                    <div className={styles.imageContainer}>
-                        <motion.img variants={heroImageVariants} initial="hidden" animate="visible" src={gilles} className={styles.heroImage} alt="Humbly image of myself" />
-                    </div>
+                    <motion.div variants={heroImageVariants} initial="hidden" animate="visible" className={styles.imageContainer}>
+                        <img src={gilles} className={styles.heroImage} alt="Humbly image of myself" />
+                    </motion.div>
                 </div>
                 <div className={styles.linksContainer}>
-                    <Tooltip title="Envoyer moi un mail" placement="top">
+                    <Tooltip title={ t("pages.home.heroSection.tooltipLabels.sendMail") } placement="top">
                         <a className={styles.linkContainer} href="mailto:nanmegningassam@gmail.com" target='_blank'>
                             <img src={gmail} alt="Default description" />
                         </a>
                     </Tooltip>
-                    <Tooltip title="Consulter mon profil" placement="top">
+                    <Tooltip title={ t("pages.home.heroSection.tooltipLabels.linkedInProfil") } placement="top">
                         <a className={styles.linkContainer} href="https://www.linkedin.com/in/nanmegni-ngassam-gilles-pavel-825997206" target='_blank'>
                             <img src={linkedIn} alt="Default description" />
                         </a>
                     </Tooltip>
-                    <Tooltip title="Télécharger mon CV" placement="top">
+                    <Tooltip title={ t("pages.home.heroSection.tooltipLabels.resume") } placement="top">
                         <a className={styles.linkContainer} href={cv} target='_blank'>
                             <img src={download} alt="Default description" />
                         </a>
                     </Tooltip>
-                    <Tooltip title="Voir un aperçu de mon code" placement="top">
+                    <Tooltip title={ t("pages.home.heroSection.tooltipLabels.bitOfCode") } placement="top">
                         <a className={styles.linkContainer} href="https://github.com/NanmegniNgassam" target='_blank'>
                             <img src={github} alt="Default description" />
                         </a>

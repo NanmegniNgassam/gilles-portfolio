@@ -61,10 +61,10 @@ const Footer = () => {
             </div>
 
             <div className={styles.credentials}>
-                @Copyrights
+                @{t("Footer.copyrightsLabel")}
                 <span className={styles.actualHook}> 2024</span>. 
-                Designed and coded by 
-                <span className={styles.actualHook}> Gilles NGASSAM</span> 
+                {t("Footer.authorLabel")}
+                <span className={styles.actualHook}> Gilles NGASSAM</span>.
             </div>
         </div>
     );

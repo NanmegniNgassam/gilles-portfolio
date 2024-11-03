@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Dosis";
+  src: url("../../assets/fonts/Dosis-VariableFont_wght.ttf");
+}
+
+.heroSection {
+  padding: 180px 80px 90px 80px;
+  background: #f2f2f2;
+  margin-bottom: 200px;
+}
+.heroSection * {
+    color: #707070;
+    line-height: 150%;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.title {
+    font-family: Dosis;
+    font-weight: 500;
+}
+.colorHook {
+    color: var(--primary-color);
+}
+/* Style the typewriter */
+h2 span {
+    font-family: Dosis;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--secondary-color) !important;
+}
+.letmotiv {
+    font-family: DosisMedium;
+    font-size: 1.1rem;
+    min-width: 50%;
+    max-width: 600px;
+    text-indent: 3rem;
+    text-align: justify;
+}
+.actions {
+    display: flex;
+    gap: 50px;
+}
+
+.imageContainer {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.heroImage {
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 420px
+}
+
+.linksContainer {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+.linkContainer {
+    background-color: #707070;
+    width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    will-change: backgroundColor;
+    transition: all 0.42s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.linkContainer:hover {
+    background-color: var(--primary-color);
+}
+.linkContainer img {
+    width: 35px;
+}
+
+@media screen and (max-width: 1200px) {
+    .heroImage {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .heroSection {
+        padding: 120px 40px 60px 40px;
+    }
+    .actions {
+        gap: 25px;
+    }
+    .heroImage {
+        width: 250px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .heroSection {
+        padding: 60px 20px 30px 20px;
+    }
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .linkContainer {
+        width: 50px;
+    }
+    .linkContainer img {
+        width: 25px;
+    }
+}

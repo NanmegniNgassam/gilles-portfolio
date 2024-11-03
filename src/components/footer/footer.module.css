@@ -45,7 +45,6 @@
 }
 .linkContainer:hover {
   background-color: var(--primary-color);
-  top: 20px;
 }
 .linkContainer img {
   width: 35px;
@@ -58,9 +57,9 @@
   align-items: center;
 }
 .navLinks a {
-  font-family: PoppingRegular;
+  font-family: PoppinsRegular;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 .navLinks img {
   display: inline-block;
@@ -73,12 +72,6 @@
   text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-  .navLinks a {
-    font-size: 1.2rem;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .linksContainer {
     display: flex;
@@ -86,10 +79,6 @@
   }
   .linkContainer {
     width: 50px;
-  }
-  .linkContainer:hover {
-    background-color: var(--primary-color);
-    top: 20px;
   }
   .linkContainer img {
     width: 25px;

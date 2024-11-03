@@ -31,22 +31,19 @@ const MobileNavWidget = () => {
                         animate="visible"
                         exit={{ x: "100vw" }}
                     >
-                        <StyledLink 
-                            to="/about" 
-                            className={styles.navLinkContainer} 
-                        >
+                        <StyledLink onClick={() => setMenuOpen(false)} to="/about" className={styles.navLinkContainer}>
                             <ion-icon name="information-outline"></ion-icon>
                             {t("Header.NavLinks.about")}
                         </StyledLink>
-                        <StyledLink to="/roadmap" className={styles.navLinkContainer}>
+                        <StyledLink onClick={() => setMenuOpen(false)} to="/roadmap" className={styles.navLinkContainer}>
                             <ion-icon name="school-outline"></ion-icon>
                             {t("Header.NavLinks.roadMap")}
                         </StyledLink>
-                        <StyledLink to="/projects" className={styles.navLinkContainer}>
+                        <StyledLink onClick={() => setMenuOpen(false)} to="/projects" className={styles.navLinkContainer}>
                             <ion-icon name="folder-open-outline"></ion-icon>
                             {t("Header.NavLinks.projects")}
                         </StyledLink>
-                        <StyledLink to="/" className={styles.navLinkContainer}>
+                        <StyledLink onClick={() => setMenuOpen(false)} to="/" className={styles.navLinkContainer}>
                             <ion-icon name="home-outline"></ion-icon>
                             {t("Header.NavLinks.landing")}
                         </StyledLink>

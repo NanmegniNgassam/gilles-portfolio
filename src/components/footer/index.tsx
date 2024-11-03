@@ -18,7 +18,7 @@ const Footer = () => {
             <TitleHook>
                 Portfolio <TitleHook className={styles.actualHook}>Gilles</TitleHook>.
             </TitleHook>
-
+            {/* TODO: Refacto the linksContainer and linksButton */}
             <div className={styles.linksContainer}>
                 {socialsMedia.map((socialMedia, id) => (
                     socialMedia.clickable ? (

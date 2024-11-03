@@ -7,6 +7,8 @@
 
 :root {
   --primary-color: #f2b90f;
+  --secondary-color: #1088e5;
+  --dark-secondary-color: #275a9f;
 
   line-height: 1.5;
   font-weight: 400;
@@ -52,6 +54,9 @@ button:focus-visible {
 }
 .removeButtonOutline {
   outline: none !important;
+}
+.removeButtonOutline:hover {
+  border-color: inherit;
 }
 
 @media (prefers-color-scheme: light) {

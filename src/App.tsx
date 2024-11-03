@@ -1,12 +1,13 @@
 import { createTheme, ThemeProvider } from '@mui/material';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import Header from '../components/header';
+import Header from './components/header';
 import i18next from 'i18next';
-import global_en from '../assets/loc/en/global.json';
-import global_fr from '../assets/loc/fr/global.json';
+import global_en from './assets/loc/en/global.json';
+import global_fr from './assets/loc/fr/global.json';
 import { I18nextProvider } from 'react-i18next';
-import { CURRENT_APP_LANG_LOCALSTORAGE_KEY } from '../utils/languages';
-import Footer from '../components/footer';
+import { CURRENT_APP_LANG_LOCALSTORAGE_KEY } from './utils/languages';
+import Footer from './components/footer';
+import Home from './pages/home';
 
 
 // loc files initialization
@@ -67,7 +68,7 @@ const theme = createTheme({
     secondary: {
       main: '#1088E5',
       light: '#2893e6',
-      dark: '#266fd5',
+      dark: '#275A9F',
       contrastText: '#f2f2f2'
     },
   }
@@ -87,7 +88,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <div className='full-page'>Home</div>,
+        element: <Home />,
       },
       {
         path: 'projects',

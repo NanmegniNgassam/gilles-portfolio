@@ -1,88 +1,87 @@
 .headerContainer {
-    padding: 20px 80px;
-    border: 1px solid #f2f2f2;
-    background-color: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  padding: 20px 80px;
+  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logoWrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    width: fit-content;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  width: fit-content;
+  cursor: pointer;
 }
 .logo {
-    width: 75px;
-    aspect-ratio: 1/1;
-    will-change: filter;
-    transition: filter 300ms;
+  width: 75px;
+  aspect-ratio: 1/1;
+  will-change: filter;
+  transition: filter 300ms;
 }
 .logo:hover {
-    filter: drop-shadow(0 0 0.5rem gray);
+  filter: drop-shadow(0 0 0.5rem gray);
 }
 .nameInteraction {
-    font-size: 2.5rem;
-    color: #707070;
+  font-size: 2.5rem;
+  color: #707070;
 }
 .nameInteraction::first-letter {
-    color: #F2B90F;
-    text-transform: uppercase;
+  color: #f2b90f;
+  text-transform: uppercase;
 }
 
 .navLinksContainer {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
 }
 
 .actionsWidgetContainer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 @media screen and (max-width: 900px) {
-    .headerContainer {
-        padding: 20px 40px;
-    }
+  .headerContainer {
+    padding: 20px 40px;
+  }
 
-    .logoWrapper {
-        gap: 5px;
-    }
-    .logo {
-        width: 60px;
-    }
-    .nameInteraction {
-        font-size: 2rem;
-    }
+  .logoWrapper {
+    gap: 5px;
+  }
+  .logo {
+    width: 60px;
+  }
+  .nameInteraction {
+    font-size: 2rem;
+  }
 
-    .navLinksContainer {
-        gap: 10px;
-    }
+  .navLinksContainer {
+    gap: 10px;
+  }
+  .actionsWidgetContainer {
+    gap: 0px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    .headerContainer {
-        padding: 15px 20px;
-    }
+  .headerContainer {
+    padding: 15px 20px;
+  }
 
-    .logo {
-        width: 50px;
-    }
-    .nameInteraction {
-        font-size: 1.5rem;
-    }
+  .logo {
+    width: 50px;
+  }
+  .nameInteraction {
+    font-size: 1.5rem;
+  }
 
-    .navLinksContainer {
-        display: none;
-    }
-
-    .actionsWidgetContainer {
-        gap: 5px;
-    }
+  .navLinksContainer {
+    display: none;
+  }
 }

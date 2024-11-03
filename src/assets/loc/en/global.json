@@ -34,6 +34,7 @@
         }
     },
     "general": {
+        "selectLanguageTool": "Change the language",
         "hireMeLabel": "Hire me",
         "seeMyProjects": "See my projects",
         "skills": {

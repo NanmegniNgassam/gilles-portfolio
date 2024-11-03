@@ -2,6 +2,10 @@
   display: none;
 }
 
+.image {
+  width: 25px;
+}
+
 .navLinksContainer {
   display: flex;
   flex-direction: column;

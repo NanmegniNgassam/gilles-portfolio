@@ -5,9 +5,11 @@ import i18next from 'i18next';
 import { useState } from "react";
 import { AvailableLanguageCodes, availableLanguages, CURRENT_APP_LANG_LOCALSTORAGE_KEY } from '../../utils/languages';
 import { StyledMenuItem } from "./MultiLanguage.styles";
+import { useTranslation } from 'react-i18next';
 
 
 const MultiLanguage = () => {
+    const { t } = useTranslation("global");
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const isLanguageMenuOpen = Boolean(anchorEl);
 
@@ -34,7 +36,7 @@ const MultiLanguage = () => {
 
     return (
         <>
-            <Tooltip title="change the language" arrow placement='top'>
+            <Tooltip title={ t("general.selectLanguageTool") } arrow placement='top'>
                 <IconButton 
                     onClick={handleClick} 
                     style={{color: '#4b4b4b'}} 
@@ -86,7 +88,7 @@ const MultiLanguage = () => {
             >
                 {availableLanguages.map((language) => (
                     <StyledMenuItem key={language.code} onClick={() => onLanguageSelected(language.code)}>
-                        <img alt='English flag' src={language.flagSrc}/>
+                        <img alt={ language.name + "'s flag"} src={language.flagSrc}/>
                         <span>{language.name}</span>
                     </StyledMenuItem>
                 ))}

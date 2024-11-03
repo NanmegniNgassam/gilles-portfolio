@@ -1,10 +1,13 @@
 import Add from "@mui/icons-material/Add";
-import { ClickAwayListener, IconButton } from "@mui/material";
+import { ClickAwayListener, IconButton, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { StyledLink } from "./MobileNavWidget";
 import styles from "./mobileNavWidget.module.css";
+import { changeLanguage } from "i18next";
+import { availableLanguages } from '../../utils/languages';
+
 
 const MobileNavWidget = () => {
     const {t} = useTranslation("global");
@@ -31,6 +34,17 @@ const MobileNavWidget = () => {
                         animate="visible"
                         exit={{ x: "100vw" }}
                     >
+                        <ToggleButtonGroup
+                            color="primary"
+                            onChange={(_,lng) => changeLanguage(lng) }
+                            exclusive
+                        >
+                            {availableLanguages.map((language) => (
+                                <ToggleButton key={language.name} className="removeButtonOutline" value={language.code}>
+                                    <img className={styles.image} alt={ language.name + "'s flag"} src={language.flagSrc}/>
+                                </ToggleButton>
+                            ))}
+                        </ToggleButtonGroup>
                         <StyledLink onClick={() => setMenuOpen(false)} to="/about" className={styles.navLinkContainer}>
                             <ion-icon name="information-outline"></ion-icon>
                             {t("Header.NavLinks.about")}

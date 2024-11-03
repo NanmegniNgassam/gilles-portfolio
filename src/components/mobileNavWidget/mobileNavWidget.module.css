@@ -1,46 +1,46 @@
 .widgetContainer {
-    display: none;
+  display: none;
 }
 
 .navLinksContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
-    backdrop-filter: blur(25px);
-    border-radius: 10px;
-    padding: 20px 40px;
-    padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  padding: 20px 40px;
+  padding-right: 10px;
 }
 .navLinkContainer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .navLinkContainer ion-icon {
-    font-size: 30px;
-    color: #707070;
+  font-size: 30px;
+  color: var(--dark-contrast-color);
 }
 
 .menuIcon {
-    color: white;
-    will-change: transform, color;
-    transition: all .42s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: white;
+  will-change: transform, color;
+  transition: all 0.42s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .menuOpenedIcon {
-    color: #707070;
-    transform: rotate(45deg);
+  color: var(--dark-contrast-color);
+  transform: rotate(45deg);
 }
 
 @media screen and (max-width: 700px) {
-    .widgetContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        position: fixed;
-        bottom: 5vh;
-        right: 20px;
-        align-items: flex-end;
-        z-index: 3;
-    }
+  .widgetContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    bottom: 5vh;
+    right: 20px;
+    align-items: flex-end;
+    z-index: 3;
+  }
 }

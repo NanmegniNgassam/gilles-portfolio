@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { Colors } from "../../utils/colors";
 
 export const StyledLink = styled(NavLink)`
-    color: #4b4b4b;
+    color: ${Colors.lightBlack};
     will-change: color, opacity;
     transition: color, opacity 300ms;
     &.active, &:hover {

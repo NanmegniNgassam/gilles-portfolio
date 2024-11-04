@@ -8,6 +8,7 @@ import { I18nextProvider } from 'react-i18next';
 import { CURRENT_APP_LANG_LOCALSTORAGE_KEY } from './utils/languages';
 import Footer from './components/footer';
 import Home from './pages/home';
+import Hire from './pages/hire';
 
 
 // loc files initialization
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
         path: 'about',
         element: <div className='full-page'>About me</div>
       }, 
+      {
+        path: 'hire',
+        element: <Hire />,
+      },
     ],
     errorElement: (
       <div>

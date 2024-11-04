@@ -36,6 +36,24 @@ const Header = () => {
             }
         }
     }
+    const navLinksData = [
+        {
+            link: "/",
+            label: t("Header.NavLinks.landing")
+        },
+        {
+            link: "/projects",
+            label: t("Header.NavLinks.projects")
+        },
+        {
+            link: "/roadmap",
+            label: t("Header.NavLinks.roadMap")
+        },
+        {
+            link: "/about",
+            label: t("Header.NavLinks.about")
+        },
+    ];
 
     return (
         <div className={styles.headerContainer}>
@@ -58,24 +76,28 @@ const Header = () => {
                 </motion.span>
             </Link>
             <div className={styles.navLinksContainer}>
-                <StyledLink to="/">{t("Header.NavLinks.landing")}</StyledLink>
-                <StyledLink to="/projects">{t("Header.NavLinks.projects")}</StyledLink>
-                <StyledLink to="/roadmap">{t("Header.NavLinks.roadMap")}</StyledLink>
-                <StyledLink to="/about">{t("Header.NavLinks.about")}</StyledLink>
+                {navLinksData.map((navLink, index) => (
+                    <StyledLink key={index} to={navLink.link}>
+                        {navLink.label}
+                    </StyledLink>
+                ))}
             </div>
             <div className={styles.actionsWidgetContainer}>
                 <MultiLanguage />
-                <Button 
-                    variant='contained' 
-                    className="removeButtonOutline" 
-                    sx={{
-                        px: {mobile: 1, laptop: 2},
-                        py: {mobile: 0.5, tablet: 0.75, laptop: 1},
-                        fontSize: {mobile: 13, tablet: 14, laptop: 15}
-                    }}
-                >
-                    {t("Header.Actions.getInTouch")}
-                </Button>
+                <Link to="/hire">
+                    <Button 
+                        variant='contained' 
+                        className="removeButtonOutline" 
+                        sx={{
+                            px: {mobile: 1, laptop: 2},
+                            py: {mobile: 0.5, tablet: 0.75, laptop: 1},
+                            fontSize: {mobile: 13, tablet: 14, laptop: 15}
+                        }}
+                    >
+                        {t("Header.Actions.getInTouch")}
+                    </Button>
+                </Link>
+
             </div>
             <MobileNavWidget />
         </div>

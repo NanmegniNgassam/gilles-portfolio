@@ -13,12 +13,30 @@ const Footer = () => {
         y: -10
     }
 
+    const navLinksData = [
+        {
+            link: "/",
+            label: t("Header.NavLinks.landing")
+        },
+        {
+            link: "/projects",
+            label: t("Header.NavLinks.projects")
+        },
+        {
+            link: "/roadmap",
+            label: t("Header.NavLinks.roadMap")
+        },
+        {
+            link: "/about",
+            label: t("Header.NavLinks.about")
+        },
+    ];
+
     return (
         <div className={styles.footerContainer}>
             <TitleHook>
                 Portfolio <TitleHook className={styles.actualHook}>Gilles</TitleHook>.
             </TitleHook>
-            {/* TODO: Refacto the linksContainer and linksButton */}
             <div className={styles.linksContainer}>
                 {socialsMedia.map((socialMedia, id) => (
                     socialMedia.clickable ? (
@@ -39,23 +57,15 @@ const Footer = () => {
             </div>
 
             <div className={styles.navLinks}>
-                <Link to="/">
-                    {t("Header.NavLinks.landing")}
-                </Link>
-                <img src={cardDiamond} alt='Separate navigation links' />
-                <Link to="/projects">
-                    {t("Header.NavLinks.projects")}
-                </Link>
-                <img src={cardDiamond} alt='Separate navigation links' />
-                <Link to="/roadmap">
-                    {t("Header.NavLinks.roadMap")}
-                </Link>
-                <img src={cardDiamond} alt='Separate navigation links' />
-                <Link to="/about">
-                    {t("Header.NavLinks.about")}
-                </Link>
-                <img src={cardDiamond} alt='Separate navigation links' />
-                <Link to="/">
+                {navLinksData.map((navLink, index) => (
+                    <span key={index}>
+                        <Link to={navLink.link}>
+                            {navLink.label}
+                        </Link>
+                        <img src={cardDiamond} alt='Separate navigation links' />
+                    </span>
+                ))}
+                <Link to="/hire">
                     {t("Header.Actions.getInTouch")}
                 </Link>
             </div>

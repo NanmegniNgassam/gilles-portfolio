@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
 
             <div className={styles.credentials}>
-                @{t("Footer.copyrightsLabel")}
+                © {t("Footer.copyrightsLabel")}
                 <span className={styles.actualHook}> 2024</span>. 
                 {t("Footer.authorLabel")}
                 <span className={styles.actualHook}> Gilles NGASSAM</span>.

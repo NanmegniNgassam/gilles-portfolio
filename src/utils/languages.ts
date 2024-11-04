@@ -1,5 +1,5 @@
 import frFlagSvg from '../assets/images/fr.svg';
-import gbFlagSvg from '../assets/images/gb-eng.svg';
+import gbFlagSvg from '../assets/images/gb.svg';
 
 export enum AvailableLanguageCodes {
     FRENCH = "fr",

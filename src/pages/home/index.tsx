@@ -8,7 +8,7 @@ import fullstack from "../../assets/images/fullstack.jpg";
 import uxDesign from "../../assets/images/ux.jpg";
 import Title from "../../components/title";
 import styles from "./home.module.css";
-import HeroSection from "../components/heroSection";
+import HeroSection from "./heroSection";
 
 const Home = () => {
     const {t} = useTranslation("global");

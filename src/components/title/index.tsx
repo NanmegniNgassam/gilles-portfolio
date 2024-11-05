@@ -11,6 +11,14 @@ const Title = (props: TitleWidgetProps) => {
             <p className={styles.titleDescription}>
                 { props.titleDescription }
             </p>
+            {props.furtherDescription && (
+                (
+                    <p className={styles.titleDescription}>
+                        { props.furtherDescription }
+                    </p>
+                )
+            )}
+            
         </div>
         
     );

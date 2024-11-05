@@ -1,0 +1,11 @@
+.hireContainer {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm {
+    border: 1px dashed red;
+}

@@ -4,7 +4,7 @@ export const Colors = {
     darkPrimary: "#dead18",
     secondary: "#1088E5",
     lightSecondary: "#2893e6",
-    darkSecondary: "#275A9F",
+    darkSecondary: "#0e62d6",
 
     contrast: "#f2f2f2",
     darkContrast: "#707070",

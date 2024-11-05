@@ -40,6 +40,14 @@
                     }
                 }
             }
+        },
+        "hire": {
+            "title": {
+                "hook": "Prenons contact !",
+                "main": "FORMULAIRE DE CONTACT",
+                "description": "J'espère vivement avoir su susciter de par mon profil votre intérêt.",
+                "furtherDescription": "N'hésitez surtout pas à m'envoyer un message privé sur l'un de mes réseaux ou bien directement sur ce site afin que nous puissions en discuter davantage."
+            }
         }
     },
     "general": {
@@ -51,6 +59,12 @@
             "frontendDeveloper": "Developpeur frontend",
             "backendDeveloper": "Developpeur backend",
             "fullStackDeveloper": "Developpeur fullstack"
+        },
+        "domains": {
+            "mobileDev": "Développement Mobile",
+            "webDev": "Développement Web",
+            "concepUX": "Conception UX & UI",
+            "aiTools": "Outils d'IA"
         }
     }
 }

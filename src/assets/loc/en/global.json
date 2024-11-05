@@ -40,6 +40,14 @@
                     }
                 }
             }
+        },
+        "hire": {
+            "title": {
+                "hook": "Get in touch !",
+                "main": "CONTACT FORM",
+                "description": "I very much hope that my profile has aroused your interest.",
+                "furtherDescription": "Please don't hesitate to send me a private message on one of my networks or directly on this website so that we can discuss things further."
+            }
         }
     },
     "general": {
@@ -51,6 +59,12 @@
             "frontendDeveloper": "Frontend developer",
             "backendDeveloper": "Backend developer",
             "fullStackDeveloper": "Fullstack developer"
+        },
+        "domains": {
+            "mobileDev": "Mobile Development",
+            "webDev": "Web Development",
+            "concepUX": "UX & UI Conception",
+            "aiTools": "AI Tools"
         }
     }
 }

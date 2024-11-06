@@ -31,4 +31,18 @@ export const availableSkills: Skill[] = [
         code: SKILLS.AI_TOOLS,
         label: "aiTools"
     }
-]
+];
+
+export const getListingFromList = (list: string[]): string => {
+    return list.map((item, index, list) => {
+        if(index === 0) {
+            // First skill formatting
+            return (` ${item}`)
+        } else if(index === (list.length - 1)) {
+            // Last skill formatting
+            return (` et ${item}`)
+        } else {
+            return (`, ${item}`)
+        }
+    }).join("");
+}

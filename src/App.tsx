@@ -112,6 +112,7 @@ const router = createBrowserRouter([
       <div>
         <Header />
         <p>404 page</p>
+        <Footer />
       </div>
     )
   }

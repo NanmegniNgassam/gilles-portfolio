@@ -33,7 +33,25 @@ const ContactForm = ({ skills }: ContactFormType) => {
             title: projectTitle,
             description: projectMessage,
         }
-    })
+    });
+
+    const submitProposition = () => {
+        // Update the current proposition
+        setProposition({
+            recruiter: {
+                firstName, familyName, 
+                company: companyName, 
+                email: recruiterEmail, 
+                phone: recruiterPhone
+            },
+            mission: {
+                title: projectTitle,
+                description: projectMessage,
+            }
+        })
+
+        setDialogOpen(true);
+    }
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -125,7 +143,7 @@ const ContactForm = ({ skills }: ContactFormType) => {
                         setProjectMessage={setProjectMessage}
                         skills={skills}
                         handleBack={handleBack}
-                        submitProposition={() => setDialogOpen(true)}
+                        submitProposition={submitProposition}
                     />
                 )
             }

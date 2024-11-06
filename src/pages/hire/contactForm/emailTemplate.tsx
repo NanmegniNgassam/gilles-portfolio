@@ -3,9 +3,9 @@ import { MissionProposition } from "../../../utils/mission";
 import { availableSkills, getListingFromList, SKILLS } from "../../../utils/skills";
 import { useTranslation } from "react-i18next";
 
-const EmailFormat = (props: MissionProposition & { skills: SKILLS[] }  ) => {
+const EmailTemplate = (props: {proposition : MissionProposition & { skills: SKILLS[] }}  ) => {
     const EMAIL_FONT_SIZE = { laptop: 18, tablet: 16, mobile: 14 };
-    const {mission, recruiter, skills} = props;
+    const {mission, recruiter, skills} = props.proposition;
     const {t} = useTranslation("global");
 
     const skillList = skills.map((skill) => {
@@ -18,16 +18,14 @@ const EmailFormat = (props: MissionProposition & { skills: SKILLS[] }  ) => {
     return (
         <>
             <DialogContent>
-                <DialogContentText id="alert-dialog-slide-description">
+                <DialogContentText component="div" id="alert-dialog-slide-description">
                     <Typography fontSize={EMAIL_FONT_SIZE} >Bonjour Gilles NGASSAM,</Typography>
                     <br />
                     <Typography fontSize={EMAIL_FONT_SIZE} sx={{ textIndent: 40, textAlign: "justify" }}>
-                        Je me permets de vous contacter 
-                        <strong> { recruiter.company && ( "de la part de " + recruiter.company ) } </strong>  
-                        pour vous proposer une mission correspondant à votre profil. 
+                        Je me permets de vous contacter afin de vous proposer une mission correspondant à votre profil. 
                         Nous recherchons actuellement un intervenant pour un projet intitulé <strong>{ mission.title }</strong>.
                         { mission.description && ( 
-                            <>Le projet consiste principalement en { mission.description.toLowerCase() }</>
+                            <>Le projet consiste principalement en { mission.description.toLowerCase() }.</>
                         )}
                     </Typography>
                     <Typography fontSize={EMAIL_FONT_SIZE} sx={{ textIndent: 40, textAlign: "justify" }}>
@@ -49,5 +47,5 @@ const EmailFormat = (props: MissionProposition & { skills: SKILLS[] }  ) => {
         </>
     );
 }
- 
-export default EmailFormat;
+
+export default EmailTemplate;

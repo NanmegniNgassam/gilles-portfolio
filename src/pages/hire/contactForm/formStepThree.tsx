@@ -9,7 +9,7 @@ interface ContactStepThreeType {
     setProjectMessage: (value: string) => void
     handleBack: () => void;
     submitProposition: () => void;
-    skills: Set<SKILLS>
+    skills: Set<SKILLS>;
 }
 
 const ContactStepThree = (props: ContactStepThreeType) => {
@@ -38,7 +38,7 @@ const ContactStepThree = (props: ContactStepThreeType) => {
                     size="small"
                     fullWidth
                     multiline
-                    maxRows={4}
+                    maxRows={1}
                 />
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>

@@ -5,30 +5,31 @@ import { allSkills, SKILLS } from "../../utils/skills";
 import TrustCompanies from "../components/trustCompanies";
 import styles from "./hire.module.css";
 import ProfilSection from "./profilSection";
+import ContactForm from "./contactForm";
 
 
 const Hire = () => {
     const { t } = useTranslation("global");
-    const [skills, setSkills] = useState<SKILLS[]> ([SKILLS.MOBILE_DEVELOPMENT, SKILLS.WEB_DEVELOPMENT])
+    const [skills, setSkills] = useState<Set<SKILLS>>(new Set<SKILLS>([SKILLS.MOBILE_DEVELOPMENT, SKILLS.WEB_DEVELOPMENT]));
 
     const addSkill = (skill: SKILLS) => {
         if(!allSkills.includes(skill)) 
             return;
-        if(skills.includes(skill)) 
+        if(skills.has(skill)) 
             return;
 
-        setSkills((prevSkills) => [
+        setSkills((prevSkills) => new Set<SKILLS>([
             ...prevSkills,
             skill
-        ])
+        ]))
     }
 
     const removeSkill = (newSkill: SKILLS) => {
         if(!allSkills.includes(newSkill)) 
             return;
 
-        if(skills.includes(newSkill)) {
-            setSkills((prevSkills) => prevSkills.filter((skill) => skill !== newSkill));
+        if(skills.has(newSkill)) {
+            setSkills((prevSkills) => new Set<SKILLS>([...prevSkills].filter((skill) => skill !== newSkill)));
         }
     }
 
@@ -46,9 +47,7 @@ const Hire = () => {
                     addSkill={addSkill}
                     removeSkill={removeSkill}
                 />
-                <div className={styles.stepperForm}>
-                    
-                </div>
+                <ContactForm skills={skills} />
             </div>
             
             <TrustCompanies />

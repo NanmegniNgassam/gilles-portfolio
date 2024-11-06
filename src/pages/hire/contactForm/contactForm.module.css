@@ -1,0 +1,23 @@
+.contactContainer {
+    flex: 3.5;
+    color: var(--dark-contrast-color);
+}
+.title {
+    font-family: Roboto;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 8px;
+}
+.tips {
+    font-size: 14px;
+    font-family: DosisMedium;
+}
+input {
+    color: var(--black-color)!important;
+}
+
+@media screen and (max-width: 900px) {
+    .contactContainer {
+        flex: 6;
+    }
+}

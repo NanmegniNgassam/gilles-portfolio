@@ -1,6 +1,14 @@
 .profilZone {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    flex: 6;
+}
+.profilZoneContainer {
+    display: flex;
     gap: 30px;
+    align-items: center;
 }
 .skillsZone {
     display: flex;
@@ -27,4 +35,33 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .profilZone {
+        gap: 30px;
+    }
+    .profilZoneContainer {
+        gap: 15px;
+        align-items: center;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .profilZone {
+        gap: 15px;
+    }
+    .profilZoneContainer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .skillsZone .title {
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
 }

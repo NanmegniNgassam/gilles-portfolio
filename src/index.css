@@ -65,6 +65,9 @@ button:focus-visible {
 .removeButtonOutline:hover {
   border-color: inherit;
 }
+.MuiButtonBase-root {
+  outline: none !important;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

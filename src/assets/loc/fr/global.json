@@ -114,7 +114,13 @@
             "mobileDev": "Développement Mobile",
             "webDev": "Développement Web",
             "concepUX": "Conception UX & UI",
-            "aiTools": "Outils d'IA"
+            "aiTools": "Intelligence Artificielle"
+        },
+        "description": {
+            "mobileDev": "Le développement mobile consiste à créer des applications élégantes et performantes qui s'intègrent parfaitement à notre quotidien, offrant des expériences optimisées et intuitives qui transforment les smartphones en outils essentiels.",
+            "webDev": "Le développement Web transforme des concepts abstraits en expériences numériques engageantes, alliant créativité et rigueur technique pour concevoir des plateformes dynamiques qui connectent et inspirent des millions de personnes.",
+            "concepUX": "Le design UI/UX façonne des expériences utilisateur intuitives et captivantes, en équilibrant parfaitement l'esthétique et l'utilisabilité pour rendre chaque interaction avec la technologie agréable, simple et mémorable.",
+            "aiTools": "L’intelligence artificielle exploite la puissance des données pour créer des solutions intelligentes et révolutionnaires, redéfinissant la façon dont nous interagissons avec la technologie et améliorant chaque aspect de notre quotidien."
         }
     }
 }

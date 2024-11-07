@@ -90,6 +90,13 @@
                     "skillsAnnouncer": "For this mission, the essential skills are:",
                     "goodByeFormulation": "King regards"
                 }
+            },
+            "companies": {
+                "title": {
+                    "hook": "Companies",
+                    "main": "Companies I've worked with",
+                    "description": "Some companies with which I collaborate or have had to collaborate on non-confidential projects"
+                }
             }
         }
     },

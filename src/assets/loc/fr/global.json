@@ -90,6 +90,13 @@
                     "skillsAnnouncer": "Pour cette mission, les compétences essentielles sont : ",
                     "goodByeFormulation": "Cordialement"
                 }
+            },
+            "companies": {
+                "title": {
+                    "hook": "Entreprises",
+                    "main": "Collaborations entreprises",
+                    "description": "Quelques entreprises avec lesquelles je collabore ou j'ai eu à collaborer sur des projets non-confidentiels"
+                }
             }
         }
     },

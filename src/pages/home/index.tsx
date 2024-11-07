@@ -4,11 +4,12 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import aitools from "../../assets/images/ai-tools.png";
 import frontend from "../../assets/images/frontend.png";
-import fullstack from "../../assets/images/fullstack.jpg";
+import fullstack from "../../assets/images/backend.png";
 import uxDesign from "../../assets/images/ux.jpg";
 import Title from "../../components/title";
 import styles from "./home.module.css";
 import HeroSection from "./heroSection";
+import TrustCompanies from "../components/trustCompanies";
 
 const Home = () => {
     const {t} = useTranslation("global");
@@ -118,7 +119,7 @@ const Home = () => {
                         titleDescription={t("pages.home.container.titles.domains.description")}
                     />
                 </div>
-                
+                <TrustCompanies />
             </div>
         </div>
     );

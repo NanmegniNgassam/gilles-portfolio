@@ -10,6 +10,7 @@ import Title from "../../components/title";
 import styles from "./home.module.css";
 import HeroSection from "./heroSection";
 import TrustCompanies from "../components/trustCompanies";
+import FieldsSection from "./fieldsSection";
 
 const Home = () => {
     const {t} = useTranslation("global");
@@ -21,6 +22,7 @@ const Home = () => {
         <div>
             <HeroSection />
             <div className={styles.mainContainer}>
+                <FieldsSection />
                 <div className="expertiseSection">
                     <Title 
                         actualTitle={t("pages.home.container.titles.domains.main")}

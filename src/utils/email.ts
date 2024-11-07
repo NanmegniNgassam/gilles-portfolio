@@ -19,10 +19,12 @@ export const emailFormat = (proposition: MissionProposition, skills: SKILLS[]):s
     ` : '';
 
     const skillsSection = `
+        <br/><br/>
         Pour cette mission, les compétences essentielles sont : 
         <strong>
             ${ getListingFromList(skillList) }.
         </strong>
+        <br/><br/><br/>
     `;
 
     const footerSection = `
@@ -34,5 +36,5 @@ export const emailFormat = (proposition: MissionProposition, skills: SKILLS[]):s
     `;
 
 
-    return headerSection + '<br/><br/>' +  descriptionSection + '<br/><br/>' +  skillsSection + '<br/><br/>' +  footerSection ;
+    return headerSection + descriptionSection +  skillsSection +  footerSection;
 }

@@ -17,7 +17,7 @@ interface ConfirmDialogProps {
     skills: SKILLS[];
 }
 
-const mailslurp = new MailSlurp({ apiKey: "c560fbc51bc041f913acbc01d1ff37165f9afe99ec2078b01ff0cb06b2733f35" });
+const mailslurp = new MailSlurp({ apiKey: import.meta.env.VITE_REACT_MAIL_SLURP_API_KEY });
 
 const ConfirmDialog = (props: ConfirmDialogProps) => {
     const {isDialogOpen, setDialogOpen, proposition, handleNext, skills} = props;
@@ -42,7 +42,7 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
     }
 
     const sendProposition = async(proposition: MissionProposition, skills: SKILLS[]): Promise<void> => {
-        const inboxID = "eb2951b6-6832-4bd8-a82b-2bc781eedfe6";
+        const inboxID = import.meta.env.VITE_REACT_MAIL_SLURP_INBOX_ID;
         setSendingError(false);
         setSending(true)
 

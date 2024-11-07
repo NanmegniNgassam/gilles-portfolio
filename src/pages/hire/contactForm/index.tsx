@@ -1,4 +1,4 @@
-import { Box, Button, Container, Step, StepLabel, Stepper } from "@mui/material";
+import { Box, Button, Container, Stack, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import { useState } from "react";
 import styles from "./contactForm.module.css";
 import { ContactFormType } from "./ContactForm.types";
@@ -7,10 +7,11 @@ import ContactStepThree from "./formStepThree";
 import ContactStepTwo from "./formStepTwo";
 import ConfirmDialog from "./confirmDialog";
 import { MissionProposition } from "../../../utils/mission";
+import DoneAllIcon from '@mui/icons-material/DoneAll';
 
-const steps = ['Introducing', 'Contacts', 'Message'];
+const steps = ['Introducing', 'Contacts', 'Mission'];
 
-const ContactForm = ({ skills }: ContactFormType) => {
+const ContactForm = ({ skills, setDefaultSkills }: ContactFormType) => {
     const [activeStep, setActiveStep] = useState<number>(0);
     const [isDialogOpen, setDialogOpen] = useState<boolean>(false);
     
@@ -21,7 +22,6 @@ const ContactForm = ({ skills }: ContactFormType) => {
     const [recruiterPhone, setRecruiterPhone] = useState<string>("");
     const [projectTitle, setProjectTitle] = useState<string>("");
     const [projectMessage, setProjectMessage] = useState<string>("");
-
     const [proposition, setProposition] = useState<MissionProposition>({
         recruiter: {
             firstName, familyName, 
@@ -35,6 +35,9 @@ const ContactForm = ({ skills }: ContactFormType) => {
         }
     });
 
+    /**
+     * Summarize in order to send the proposition
+     */
     const submitProposition = () => {
         // Update the current proposition
         setProposition({
@@ -53,6 +56,9 @@ const ContactForm = ({ skills }: ContactFormType) => {
         setDialogOpen(true);
     }
 
+    /**
+     * Go to the process next step
+     */
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
 
@@ -71,9 +77,22 @@ const ContactForm = ({ skills }: ContactFormType) => {
         })
     };
 
+    /**
+     * Go to the process previous step
+     */
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
+
+    /**
+     * 
+     */
+    const resetProposition = () => {
+        setProjectTitle("");
+        setProjectMessage("");
+        setDefaultSkills();
+        setActiveStep(0);
+    }
     
     return (
         <Box sx={{ width: '100%', mt: 2 }} className={styles.contactContainer}>
@@ -90,23 +109,22 @@ const ContactForm = ({ skills }: ContactFormType) => {
                 })}
             </Stepper>
             {activeStep === steps.length && (
-                <Container>
-                    <div>Message de réussite</div>
+                <Container sx={{ mt: 3 }}>
+                    <Stack sx={{ alignItems: "center" }}>
+                        <DoneAllIcon color="success" fontSize="large" />
+                        <Typography textAlign="center">
+                            Votre proposition a été envoyé avec succès. J'y répondrai sous 24 heures.
+                        </Typography>
+                    </Stack>
                     <Button 
                         variant="outlined" 
                         className="removeButtonOutline"
-                        onClick={() => {
-                            setProjectTitle("");
-                            setProjectMessage("");
-                            // TODO: Remettre les compétences par défaut.
-                            setActiveStep(0);
-                        }}
-                        
+                        onClick={resetProposition}
+                        sx={{  display: "block", margin: "20px auto" }}
                     >
                         Soumettre un autre projet
                     </Button>
                 </Container>
-                
             )}
             {
                 activeStep === 0 && (

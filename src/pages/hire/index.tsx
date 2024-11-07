@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Title from "../../components/title";
-import { allSkills, SKILLS } from "../../utils/skills";
+import { allSkills, defaultSkills, SKILLS } from "../../utils/skills";
 import TrustCompanies from "../components/trustCompanies";
 import styles from "./hire.module.css";
 import ProfilSection from "./profilSection";
@@ -10,7 +10,7 @@ import ContactForm from "./contactForm";
 
 const Hire = () => {
     const { t } = useTranslation("global");
-    const [skills, setSkills] = useState<Set<SKILLS>>(new Set<SKILLS>([SKILLS.MOBILE_DEVELOPMENT, SKILLS.WEB_DEVELOPMENT]));
+    const [skills, setSkills] = useState<Set<SKILLS>>(new Set<SKILLS>(defaultSkills));
 
     const addSkill = (skill: SKILLS) => {
         if(!allSkills.includes(skill)) 
@@ -33,6 +33,10 @@ const Hire = () => {
         }
     }
 
+    const setDefaultSkills = () => {
+        setSkills(new Set(defaultSkills));
+    }
+
     return (
         <div className={styles.hireContainer}>
             <Title 
@@ -47,7 +51,7 @@ const Hire = () => {
                     addSkill={addSkill}
                     removeSkill={removeSkill}
                 />
-                <ContactForm skills={skills} />
+                <ContactForm skills={skills} setDefaultSkills={setDefaultSkills} />
             </div>
             
             <TrustCompanies />

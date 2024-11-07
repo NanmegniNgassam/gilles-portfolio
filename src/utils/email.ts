@@ -10,7 +10,7 @@ export const emailFormat = (proposition: MissionProposition, skills: SKILLS[]):s
     const {mission, recruiter} = proposition;
     const headerSection = `
         Bonjour Gilles NGASSAM,
-        <br/>
+        <br/><br/><br/>
         Je me permets de vous contacter afin de vous proposer une mission correspondant à votre profil. Nous recherchons actuellement un intervenant pour un projet intitulé ${ mission.title }.
     `;
 
@@ -28,11 +28,11 @@ export const emailFormat = (proposition: MissionProposition, skills: SKILLS[]):s
     const footerSection = `
         Cordialement,<br />
         ${recruiter.firstName} ${recruiter.familyName} <br />
-        <span>${recruiter.company} ${recruiter.company ? '<br/>': ''} </span>
-        <span>${recruiter.email} ${recruiter.email ? '<br/>': ''} </span>
-        <span>${recruiter.phone} ${recruiter.phone ? '<br/>': ''}</span>
+        ${recruiter.company} ${recruiter.company ? '<br/>': ''}
+        ${recruiter.email} ${recruiter.email ? '<br/>': ''}
+        ${recruiter.phone} ${recruiter.phone ? '<br/>': ''}
     `;
 
 
-    return headerSection + '<br/>' +  descriptionSection + '<br/>' +  skillsSection + '<br/>' +  footerSection ;
+    return headerSection + '<br/><br/>' +  descriptionSection + '<br/><br/>' +  skillsSection + '<br/><br/>' +  footerSection ;
 }

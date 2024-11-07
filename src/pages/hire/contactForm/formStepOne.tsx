@@ -1,5 +1,6 @@
 import { Box, Button, Stack, TextField } from "@mui/material"
 import styles from "./contactForm.module.css"
+import { useTranslation } from "react-i18next"
 
 interface ContactStepOneType {
     firstName: string,
@@ -13,15 +14,21 @@ interface ContactStepOneType {
 }
 
 const ContactStepOne = (props : ContactStepOneType) => {
+    const {t} = useTranslation("global");
     const {firstName, setFirstName, familyName, setFamilyName, companyName, setCompanyName, handleBack, handleNext} = props;
+    
     return (  
         <>
-            <h3 className={styles.title}>Présentations</h3>
-            <span className={styles.tips}>Veuillez vous présenter.</span>
+            <h3 className={styles.title}>
+                {t("pages.hire.contactForm.steps.first")}
+            </h3>
+            <span className={styles.tips}>
+                {t("pages.hire.contactForm.stepDescriptions.first")}
+            </span>
             <Box sx={{ mt:2 }}>
                 <Stack direction="row" gap={2} sx={{ mt:1, mb: 2 }}>
                     <TextField
-                        label="Prénom"
+                        label={t("pages.hire.contactForm.labels.firstName")}
                         id="recruiter-first-name"
                         value={firstName}
                         onChange={(event) => setFirstName(event.currentTarget.value)}
@@ -29,7 +36,7 @@ const ContactStepOne = (props : ContactStepOneType) => {
                         required
                     />
                     <TextField
-                        label="Nom"
+                        label={t("pages.hire.contactForm.labels.familyName")}
                         id="recruiter-family-name"
                         value={familyName}
                         onChange={(event) => setFamilyName(event.currentTarget.value)}
@@ -37,7 +44,7 @@ const ContactStepOne = (props : ContactStepOneType) => {
                     />
                 </Stack>
                 <TextField 
-                    label="Nom de l'entreprise"
+                    label={t("pages.hire.contactForm.labels.company")}
                     id="recruiter-company"
                     value={companyName}
                     onChange={(event) => setCompanyName(event.currentTarget.value)}
@@ -53,7 +60,7 @@ const ContactStepOne = (props : ContactStepOneType) => {
                     sx={{ mr: 1 }}
                     className="removeButtonOutline"
                 >
-                    Back
+                    {t("pages.hire.contactForm.previousStep")}
                 </Button>
                 <Box sx={{ flex: '1 1 auto' }} />
                 <Button 
@@ -61,7 +68,7 @@ const ContactStepOne = (props : ContactStepOneType) => {
                     className="removeButtonOutline" 
                     disabled={(!firstName || firstName?.length < 3)}
                 >
-                    Next
+                    {t("pages.hire.contactForm.nextStep")}
                 </Button>
             </Box>
         </>

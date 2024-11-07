@@ -1,6 +1,7 @@
 import { Box, Button, TextField } from "@mui/material";
 import styles from "./contactForm.module.css"
 import { SKILLS } from "../../../utils/skills";
+import { useTranslation } from "react-i18next";
 
 interface ContactStepThreeType {
     projectTitle: string,
@@ -13,15 +14,16 @@ interface ContactStepThreeType {
 }
 
 const ContactStepThree = (props: ContactStepThreeType) => {
+    const {t} = useTranslation("global");
     const {projectTitle, setProjectTitle, projectMessage, setProjectMessage, handleBack, submitProposition, skills} = props;
 
     return (
         <>
-            <h3 className={styles.title}>Message</h3>
-            <span className={styles.tips}>Brève description du projet.</span>
+            <h3 className={styles.title}> { t("pages.hire.contactForm.steps.third") } </h3>
+            <span className={styles.tips}> { t("pages.hire.contactForm.stepDescriptions.third") } </span>
             <Box sx={{ mt:2,}}>
                 <TextField 
-                    label="Intitulé du projet"
+                    label={t("pages.hire.contactForm.labels.projectTitle")}
                     id="mission-title"
                     value={projectTitle}
                     onChange={(event) => setProjectTitle(event.currentTarget.value)}
@@ -31,7 +33,7 @@ const ContactStepThree = (props: ContactStepThreeType) => {
                     required
                 />
                 <TextField 
-                    label="Description du projet"
+                    label={t("pages.hire.contactForm.labels.projectDescription")}
                     id="mission-description"
                     value={projectMessage}
                     onChange={(event) => setProjectMessage(event.currentTarget.value)}
@@ -48,7 +50,7 @@ const ContactStepThree = (props: ContactStepThreeType) => {
                     sx={{ mr: 1 }}
                     className="removeButtonOutline"
                 >
-                    Back
+                    {t("pages.hire.contactForm.previousStep")}
                 </Button>
                 <Box sx={{ flex: '1 1 auto' }} />
                 <Button 
@@ -57,7 +59,7 @@ const ContactStepThree = (props: ContactStepThreeType) => {
                     disabled={projectTitle.length < 10 || ([...skills].length === 0)}
                     variant="contained"
                 >
-                    Soumettre
+                    {t("pages.hire.contactForm.submitProject")}
                 </Button>
             </Box>
         </>

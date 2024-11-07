@@ -8,10 +8,17 @@ import ContactStepTwo from "./formStepTwo";
 import ConfirmDialog from "./confirmDialog";
 import { MissionProposition } from "../../../utils/mission";
 import DoneAllIcon from '@mui/icons-material/DoneAll';
+import { useTranslation } from "react-i18next";
 
-const steps = ['Introducing', 'Contacts', 'Mission'];
 
 const ContactForm = ({ skills, setDefaultSkills }: ContactFormType) => {
+    const {t} = useTranslation("global");
+    const steps = [
+        t("pages.hire.contactForm.steps.first"), 
+        t("pages.hire.contactForm.steps.second"),
+        t("pages.hire.contactForm.steps.third"),
+    ];
+
     const [activeStep, setActiveStep] = useState<number>(0);
     const [isDialogOpen, setDialogOpen] = useState<boolean>(false);
     
@@ -113,7 +120,7 @@ const ContactForm = ({ skills, setDefaultSkills }: ContactFormType) => {
                     <Stack sx={{ alignItems: "center" }}>
                         <DoneAllIcon color="success" fontSize="large" />
                         <Typography textAlign="center">
-                            Votre proposition a été envoyé avec succès. J'y répondrai sous 24 heures.
+                            { t("pages.hire.contactForm.successMessage") }
                         </Typography>
                     </Stack>
                     <Button 
@@ -122,7 +129,7 @@ const ContactForm = ({ skills, setDefaultSkills }: ContactFormType) => {
                         onClick={resetProposition}
                         sx={{  display: "block", margin: "20px auto" }}
                     >
-                        Soumettre un autre projet
+                        { t("pages.hire.contactForm.submitAnotherProject") }
                     </Button>
                 </Container>
             )}

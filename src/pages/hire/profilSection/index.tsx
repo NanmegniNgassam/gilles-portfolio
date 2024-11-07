@@ -28,9 +28,13 @@ const ProfilSection = (props: ProfilSectionType) => {
                 <div className={styles.skillsZone}>
                     <Typography variant="h5" className={styles.title}>Gilles NGASSAM</Typography>
                     {[...props.skills].length ? (
-                        <span className={styles.tips}>Compétences requises</span>
+                        <span className={styles.tips}>
+                            { t("pages.hire.profilSection.requiredSkills") }
+                        </span>
                     ) : (
-                        <span className={styles.tipsError}>Veuillez selectionner au moins une compétence</span>
+                        <span className={styles.tipsError}>
+                            { t("pages.hire.profilSection.skillErrorLabel") }
+                        </span>
                     )}
                     
                     <div className={styles.skills}>
@@ -39,7 +43,7 @@ const ProfilSection = (props: ProfilSectionType) => {
                             (
                                 <Chip 
                                     label={t("general.domains." + skill.label)} 
-                                    color="secondary" 
+                                    color={"secondary"} 
                                     onDelete={() => props.removeSkill(skill.code)}
                                     onClick={() => props.removeSkill(skill.code)}
                                     deleteIcon={<CloseOutlined />}
@@ -68,7 +72,7 @@ const ProfilSection = (props: ProfilSectionType) => {
                 fontSize={{ laptop: 20, tablet: 16, mobile: 14 }} 
                 sx={{ textAlign: "center", fontFamily: "DosisMedium", color: Colors.darkContrast }} 
             >
-                Ça serait un réel plaisir pour moi de collaborer avec vous !
+                { t("pages.hire.profilSection.incentiveMessage") }
             </Typography>
         </div>
     );

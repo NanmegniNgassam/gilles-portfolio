@@ -47,6 +47,49 @@
                 "main": "FORMULAIRE DE CONTACT",
                 "description": "J'espère vivement avoir su susciter de par mon profil votre intérêt.",
                 "furtherDescription": "N'hésitez surtout pas à m'envoyer un message privé sur l'un de mes réseaux ou bien directement sur ce site afin que nous puissions en discuter davantage."
+            },
+            "profilSection": {
+                "requiredSkills": "Compétences requises",
+                "skillErrorLabel": "Veuillez sélectionner au moins une compétence.",
+                "incentiveMessage": "Ça serait un réel plaisir pour moi de collaborer avec vous !"
+            },
+            "contactForm": {
+                "steps": {
+                    "first": "Présentations",
+                    "second": "Contacts",
+                    "third": "Mission"
+                },
+                "stepDescriptions": {
+                    "first": "Veuillez vous présenter.",
+                    "second": "Ajoutez au moins un de vos contacts.",
+                    "third": "Brève description du projet."
+                },
+                "labels": {
+                    "firstName": "Prénom",
+                    "familyName": "Nom",
+                    "company": "Nom de l'entreprise",
+                    "email": "Adresse e-mail",
+                    "phone": "Numéro de téléphone",
+                    "projectTitle": "Intitulé du projet",
+                    "projectDescription": "Description du projet"
+                },
+                "submitAnotherProject": "Soumettre un autre projet",
+                "successMessage": "Votre proposition a été envoyée avec succès. J'y répondrai sous 24 heures.",
+                "nextStep": "Suivant",
+                "previousStep": "Précédent",
+                "submitProject": "Soumettre",
+                "summary": {
+                    "title": "Récapitulatif de la proposition de mission",
+                    "send": "Envoyer",
+                    "cancel": "Annuler"
+                },
+                "mailError": "Votre proposition n'a pas pu être envoyée !",
+                "email": {
+                    "emailHeader": "Je me permets de vous contacter afin de vous proposer une mission correspondant à votre profil. Nous recherchons actuellement un intervenant pour un projet intitulé",
+                    "projectDescriptionAnnouncer": "Le projet consiste principalement en ",
+                    "skillsAnnouncer": "Pour cette mission, les compétences essentielles sont : ",
+                    "goodByeFormulation": "Cordialement"
+                }
             }
         }
     },

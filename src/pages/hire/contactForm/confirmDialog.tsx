@@ -8,6 +8,7 @@ import EmailTemplate from "./emailTemplate";
 import { MailSlurp } from 'mailslurp-client';
 import { emailFormat } from "../../../utils/email";
 import CustomSnackBar from "./snackBar";
+import { useTranslation } from "react-i18next";
 
 interface ConfirmDialogProps {
     isDialogOpen: boolean;
@@ -20,6 +21,7 @@ interface ConfirmDialogProps {
 const mailslurp = new MailSlurp({ apiKey: import.meta.env.VITE_REACT_MAIL_SLURP_API_KEY });
 
 const ConfirmDialog = (props: ConfirmDialogProps) => {
+    const {t} = useTranslation("global");
     const {isDialogOpen, setDialogOpen, proposition, handleNext, skills} = props;
     const [isSending, setSending] = useState<boolean>(false);
     const [isSendingError, setSendingError] = useState<boolean>(false);
@@ -76,7 +78,7 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
                 maxWidth="laptop"
             >
                 <DialogTitle variant="h5" color="secondary" sx={{ textAlign: "center", fontWeight: 500, textTransform: "uppercase", mb: 2, mt: 2 }}>
-                    Récapitulatif de la proposition de mission
+                    { t("pages.hire.contactForm.summary.title") }
                 </DialogTitle>
                 <IconButton
                     aria-label="close"
@@ -102,7 +104,7 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
                         color="secondary"
                         sx={{ minWidth: 100 }}
                     >
-                        Annuler
+                        { t("pages.hire.contactForm.summary.cancel") }
                     </Button>
                     <Button 
                         className="removeButtonOutline" 
@@ -114,7 +116,9 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
                         {isSending ? (
                             <CircularProgress color="inherit" size={22} />
                         ): (
-                            <span>Envoyer</span>
+                            <span>
+                                { t("pages.hire.contactForm.summary.send") }
+                            </span>
                         )}
                         
                     </Button>

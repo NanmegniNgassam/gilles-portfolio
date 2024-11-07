@@ -19,23 +19,24 @@ const EmailTemplate = (props: {proposition : MissionProposition & { skills: SKIL
         <>
             <DialogContent>
                 <DialogContentText component="div" id="alert-dialog-slide-description">
-                    <Typography fontSize={EMAIL_FONT_SIZE} >Bonjour Gilles NGASSAM,</Typography>
+                    <Typography fontSize={EMAIL_FONT_SIZE} >
+                        { t("pages.home.heroSection.morningGreeting") } Gilles NGASSAM,
+                    </Typography>
                     <br />
                     <Typography fontSize={EMAIL_FONT_SIZE} sx={{ textIndent: 40, textAlign: "justify" }}>
-                        Je me permets de vous contacter afin de vous proposer une mission correspondant à votre profil. 
-                        Nous recherchons actuellement un intervenant pour un projet intitulé <strong>{ mission.title }</strong>.
+                        {t("pages.hire.contactForm.email.emailHeader")} <strong>{ mission.title.toLowerCase() }</strong>.
                         { mission.description && ( 
-                            <>Le projet consiste principalement en { mission.description.toLowerCase() }.</>
+                            <>{t("pages.hire.contactForm.email.projectDescriptionAnnouncer")} { mission.description.toLowerCase() }.</>
                         )}
                     </Typography>
                     <Typography fontSize={EMAIL_FONT_SIZE} sx={{ textIndent: 40, textAlign: "justify" }}>
-                        Pour cette mission, les compétences essentielles sont : 
+                        {t("pages.hire.contactForm.email.skillsAnnouncer")} 
                         <strong>
                             { getListingFromList(skillList) }.
                         </strong>
                     </Typography>
                     <br />
-                    <Typography fontSize={EMAIL_FONT_SIZE}>Cordialement,</Typography>
+                    <Typography fontSize={EMAIL_FONT_SIZE}> {t("pages.hire.contactForm.email.goodByeFormulation")}, </Typography>
                     <Typography fontSize={EMAIL_FONT_SIZE}>
                         {recruiter.firstName} {recruiter.familyName}
                     </Typography>

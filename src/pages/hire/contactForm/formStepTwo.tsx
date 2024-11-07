@@ -1,6 +1,7 @@
 import { Box, Button, TextField } from "@mui/material";
 import styles from "./contactForm.module.css"
 import { MuiTelInput } from "mui-tel-input";
+import { useTranslation } from "react-i18next";
 
 const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
@@ -14,15 +15,16 @@ interface ContactStepTwoType {
 }
 
 const ContactStepTwo = (props: ContactStepTwoType) => {
+    const {t} = useTranslation("global");
     const {recruiterEmail, setRecruiterEmail, recruiterPhone, setRecruiterPhone, handleBack, handleNext} = props;
 
     return (  
         <>
-            <h3 className={styles.title}>Contacts</h3>
-            <span className={styles.tips}>Ajoutez au moins un de vos contacts.</span>
+            <h3 className={styles.title}> {t("pages.hire.contactForm.steps.second")} </h3>
+            <span className={styles.tips}> {t("pages.hire.contactForm.stepDescriptions.second")} </span>
             <Box sx={{ mt:2 }}>
                 <TextField 
-                    label="Adresse e-mail"
+                    label={t("pages.hire.contactForm.labels.email")}
                     id="recruiter-email"
                     value={recruiterEmail}
                     onChange={(event) => setRecruiterEmail(event.currentTarget.value)}
@@ -33,7 +35,7 @@ const ContactStepTwo = (props: ContactStepTwoType) => {
                     required
                 />
                 <MuiTelInput 
-                    label="Numéro de téléphone"
+                    label={t("pages.hire.contactForm.labels.phone")}
                     id="recruiter-email" 
                     defaultCountry="FR"
                     value={recruiterPhone} 
@@ -50,7 +52,7 @@ const ContactStepTwo = (props: ContactStepTwoType) => {
                     sx={{ mr: 1 }}
                     className="removeButtonOutline"
                 >
-                    Back
+                    {t("pages.hire.contactForm.previousStep")}
                 </Button>
                 <Box sx={{ flex: '1 1 auto' }} />
                 <Button 
@@ -58,7 +60,7 @@ const ContactStepTwo = (props: ContactStepTwoType) => {
                     className="removeButtonOutline"
                     disabled={!recruiterEmail.match(EMAIL_REGEX) && recruiterPhone.length < 7}
                 >
-                    Next
+                    {t("pages.hire.contactForm.nextStep")}
                 </Button>
             </Box>
         </>

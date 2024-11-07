@@ -11,7 +11,8 @@ export const emailFormat = (proposition: MissionProposition, skills: SKILLS[]):s
     const headerSection = `
         Bonjour Gilles NGASSAM,
         <br/><br/><br/>
-        Je me permets de vous contacter afin de vous proposer une mission correspondant à votre profil. Nous recherchons actuellement un intervenant pour un projet intitulé ${ mission.title }.
+        Je me permets de vous contacter afin de vous proposer une mission correspondant à votre profil. 
+        Nous recherchons actuellement un intervenant pour un projet intitulé ${ mission.title }.
     `;
 
     const descriptionSection = mission.description ? `
@@ -34,6 +35,8 @@ export const emailFormat = (proposition: MissionProposition, skills: SKILLS[]):s
         ${recruiter.email} ${recruiter.email ? '<br/>': ''}
         ${recruiter.phone} ${recruiter.phone ? '<br/>': ''}
     `;
+
+    // TODO: Generate english version
 
 
     return headerSection + descriptionSection +  skillsSection +  footerSection;

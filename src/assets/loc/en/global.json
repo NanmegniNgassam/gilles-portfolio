@@ -47,6 +47,49 @@
                 "main": "CONTACT FORM",
                 "description": "I very much hope that my profile has aroused your interest.",
                 "furtherDescription": "Please don't hesitate to send me a private message on one of my networks or directly on this website so that we can discuss things further."
+            },
+            "profilSection": {
+                "requiredSkills": "Required skills",
+                "skillErrorLabel": "Please select at least one skill.",
+                "incentiveMessage": "It would be a real pleasure for me to work with you!"
+            },
+            "contactForm": {
+                "steps": {
+                    "first": "Introducing",
+                    "second": "Contacts",
+                    "third": "Mission"
+                },
+                "stepDescriptions": {
+                    "first": "Please introduce yourself.",
+                    "second": "Add at least one of your contacts.",
+                    "third": "Brief description of the project."
+                },
+                "labels": {
+                    "firstName": "First name",
+                    "familyName": "Family name",
+                    "company": "Company name",
+                    "email": "e-mail address",
+                    "phone": "Phone number",
+                    "projectTitle": "Project title",
+                    "projectDescription": "Project description"
+                },
+                "submitAnotherProject": "Submit another project",
+                "successMessage": "Your proposal has been sent successfully. I will respond to it within 24 hours.",
+                "nextStep": "Next",
+                "previousStep": "Back",
+                "submitProject": "Submit",
+                "summary": {
+                    "title": "Mission Proposal Summary",
+                    "send": "Send",
+                    "cancel": "Cancel"
+                },
+                "mailError": "Your proposal could not be sent!",
+                "email": {
+                    "emailHeader": "I would like to contact you to offer you a mission that matches your profile. We are currently looking for a speaker for a project entitled",
+                    "projectDescriptionAnnouncer": "The project mainly consists of ",
+                    "skillsAnnouncer": "For this mission, the essential skills are:",
+                    "goodByeFormulation": "King regards"
+                }
             }
         }
     },

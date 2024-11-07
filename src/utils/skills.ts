@@ -44,7 +44,7 @@ export const getListingFromList = (list: string[]): string => {
             return (` ${item}`)
         } else if(index === (list.length - 1)) {
             // Last skill formatting
-            return (` et ${item}`)
+            return (` and ${item}`)
         } else {
             return (`, ${item}`)
         }

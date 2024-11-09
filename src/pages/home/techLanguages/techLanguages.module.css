@@ -1,0 +1,67 @@
+.stackContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+.stackRow {
+    padding: 40px 10px 20px 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--contrast-color);
+    border-right: 20px solid var(--secondary-color);
+}
+.title {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-family: DosisMedium;
+    font-size: 25px;
+}
+.stackItem {
+    width: 100px;
+    aspect-ratio: 1/1;
+    will-change: filter;
+    transition: filter 300ms;
+}
+.stackItem:hover {
+    filter: drop-shadow(0 0 0.5rem grey);
+}
+
+@media screen and (max-width: 1200px) {
+    .stackContainer {
+        gap: 15px;
+    }
+    .stackItem {
+        width: 80px;
+    }
+    .stackRow {
+        border-right-width: 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .stackItem {
+        width: 60px;
+    }
+    .stackRow {
+        border-right-width: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .stackContainer {
+        gap: 10px;
+    }
+    .stackItem {
+        width: 50px;
+    }
+    .stackRow {
+        border-right-width: 5px;
+    }
+}

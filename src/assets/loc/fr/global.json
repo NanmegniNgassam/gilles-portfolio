@@ -37,6 +37,11 @@
                         "hook": "Intérêts",
                         "main": "Domaines de compétences",
                         "description": "Ces domaines, loin d'être exhaustifs, représentent les secteurs principaux dans lesquels j'ai eu une expérience préalable. Cependant, je reste très ouvert à la nouveauté et aux challenges."
+                    },
+                    "technos": {
+                        "hook": "Compétences",
+                        "main": "TECHNOS & LANGAGES",
+                        "description": "Cette liste n'est pas exhaustive. Elle représente les principales technologies avec lesquelles j'ai déjà eu à travailler. Je suis toutefois prêt à m'adapter et à monter en compétences."
                     }
                 }
             }

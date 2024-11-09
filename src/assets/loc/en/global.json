@@ -37,6 +37,11 @@
                         "hook": "interests",
                         "main": "Areas of expertise",
                         "description": "These areas, far from being exhaustive, represent the main sectors in which I have had prior experience. However, I remain very open to novelty and challenges."
+                    },
+                    "technos": {
+                        "hook": "Skills",
+                        "main": "TECHNOS & LANGUAGES",
+                        "description": "This list is not exhaustive. It represents the main technologies with which I have already had to work. However, I am ready to adapt and improve my skills."
                     }
                 }
             }

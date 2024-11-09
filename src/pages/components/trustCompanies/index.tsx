@@ -35,5 +35,6 @@ const TrustCompanies = () => {
         </div>
     );
 }
+// TODO: Set the container as a flex-wrap: wrap.
 
 export default TrustCompanies;

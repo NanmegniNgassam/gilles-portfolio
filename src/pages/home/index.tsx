@@ -5,11 +5,12 @@ import HeroSection from "./heroSection";
 import styles from "./home.module.css";
 import Title from "../../components/title";
 import { useTranslation } from "react-i18next";
+import TechLanguages from "./techLanguages";
 
 const Home = () => {
     const {t} = useTranslation('global');
     useEffect(() => {
-        document.title = 'Gilles NGASSAM | landing'
+        document.title = 'Gilles NGASSAM | Landing'
     }, [])
 
     return (
@@ -17,9 +18,19 @@ const Home = () => {
             <HeroSection />
             <div className={styles.mainContainer}>
                 <FieldsSection />
+                
+            </div>
+            {/* TODO: Add the projects and roadmap section */}
+            <Title 
+                actualTitle={"Education & stages"}
+                titleHook={"Experiences"}
+                titleDescription={t("pages.home.container.titles.domains.description")}
+            />
+            <div className={styles.mainContainer}>
+                <TechLanguages />
                 <Title 
-                    actualTitle={"Education & stages"}
-                    titleHook={"Experiences"}
+                    actualTitle={"Expériences sociales"}
+                    titleHook={"Associations"}
                     titleDescription={t("pages.home.container.titles.domains.description")}
                 />
                 <TrustCompanies />

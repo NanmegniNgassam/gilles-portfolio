@@ -3,7 +3,7 @@
         "NavLinks": {
             "landing": "Accueil",
             "projects": "Projets",
-            "roadMap": "Parcours",
+            "roadMap": "Académie",
             "about": "A propos"
         },
         "Actions": {
@@ -50,6 +50,12 @@
                         "hook": "Compétences",
                         "main": "TECHNOS & LANGAGES",
                         "description": "Cette liste n'est pas exhaustive. Elle représente les principales technologies avec lesquelles j'ai déjà eu à travailler. Je suis toutefois prêt à m'adapter et à monter en compétences."
+                    },
+                    "experiences": {
+                        "hook": "Experiences",
+                        "main": "éducation & stages",
+                        "title": "Vitrine",
+                        "description": "Je suis très polyvalent en développement d’applications web et mobiles, maîtrisant l’ensemble de la chaîne : analyse des besoins, conception UX, création de maquettes interactives, développement, tests, et déploiement automatisé via CI/CD. J’assure la fiabilité et la performance des solutions, en utilisant l’intelligence artificielle pour optimiser et automatiser les fonctionnalités. Mon approche complète garantit des applications innovantes, centrées sur l’utilisateur, avec un suivi et une maintenance proactifs." 
                     }
                 }
             }

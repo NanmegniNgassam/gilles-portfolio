@@ -1,0 +1,61 @@
+.roadMapContainer {
+    padding: 80px 0;
+    background-color: var(--contrast-color);
+    display: flex;
+}
+.swiperContainer {
+    max-width: 50%;
+    border: 1px solid var(--black-color);
+    box-shadow: 4px 4px 12px var(--black-color);
+}
+
+.descriptionContainer {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.title {
+    font-family: Dosis;
+    font-size: 3rem;
+    color: var(--black-color);
+    text-transform: uppercase;
+}
+.description {
+    font-size: 1.2rem!important;
+    font-family: Dosis!important;
+}
+
+
+@media screen and (max-width: 900px) {
+    .roadMapContainer {
+        padding: 40px 0;
+        flex-direction: column;
+    }
+    .swiperContainer {
+        max-width: 100%;
+    }
+    .descriptionContainer {
+        padding: 20px;
+    }
+    .title {
+        font-family: Dosis;
+        font-size: 2rem;
+    }
+    .description {
+        font-size: 1.1rem!important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .roadMapContainer {
+        padding: 20px 0;
+    }
+    .descriptionContainer {
+        padding: 10px;
+    }
+    .description {
+        font-size: 1rem!important;
+    }
+}

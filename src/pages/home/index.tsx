@@ -6,6 +6,7 @@ import styles from "./home.module.css";
 import Title from "../../components/title";
 import { useTranslation } from "react-i18next";
 import TechLanguages from "./techLanguages";
+import RoadmapSection from "./roadmapSection";
 
 const Home = () => {
     const {t} = useTranslation('global');
@@ -20,12 +21,9 @@ const Home = () => {
                 <FieldsSection />
                 
             </div>
-            {/* TODO: Add the projects and roadmap section */}
-            <Title 
-                actualTitle={"Education & stages"}
-                titleHook={"Experiences"}
-                titleDescription={t("pages.home.container.titles.domains.description")}
-            />
+
+            <RoadmapSection />
+            
             <div className={styles.mainContainer}>
                 <TechLanguages />
                 <Title 

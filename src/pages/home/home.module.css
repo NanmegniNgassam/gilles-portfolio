@@ -3,7 +3,6 @@
   src: url("../../assets/fonts/Dosis-VariableFont_wght.ttf");
 }
 
-/* Main Content styles */
 .mainContainer {
     padding: 0px 80px;
 }
@@ -13,6 +12,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+}
+
+.roadMapContainer {
+    background-color: var(--contrast-color);
 }
 
 @media screen and (max-width: 900px) {

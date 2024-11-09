@@ -3,7 +3,7 @@
         "NavLinks": {
             "landing": "Landing",
             "projects": "Projects",
-            "roadMap": "Roadmap",
+            "roadMap": "Academics",
             "about": "About me"
         },
         "Actions": {
@@ -50,6 +50,12 @@
                         "hook": "Skills",
                         "main": "TECHNOS & LANGUAGES",
                         "description": "This list is not exhaustive. It represents the main technologies with which I have already had to work. However, I am ready to adapt and improve my skills."
+                    },
+                    "experiences": {
+                        "hook": "Experiences",
+                        "main": "Education & Internships",
+                        "title": "Showcase",
+                        "description": "I am very versatile in web and mobile application development, mastering the entire chain: needs analysis, UX design, creation of interactive mockups, development, testing, and automated deployment via CI/CD. I ensure the reliability and performance of solutions, using artificial intelligence to optimize and automate features. My comprehensive approach guarantees innovative, user-centric applications, with proactive monitoring and maintenance." 
                     }
                 }
             }

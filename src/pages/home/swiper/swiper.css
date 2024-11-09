@@ -1,0 +1,27 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    display: block!important;
+    max-width: 100%!important;
+    height: 100%!important;
+    object-fit: cover!important;
+}
+  
+.swiper-pagination-bullet {
+    width: 20px!important;
+    height: 20px!important;
+    border-radius: 50%!important;
+    text-align: center!important;
+    line-height: 20px!important;
+    font-size: 12px!important;
+    opacity: 1!important;
+    background: var(--dark-contrast-color)!important;
+    color: #fff!important;
+}
+  
+.swiper-pagination-bullet-active {
+    background: var(--primary-color)!important;
+}

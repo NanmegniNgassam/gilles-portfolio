@@ -20,7 +20,7 @@ const TechLanguages = () => {
                     <motion.div 
                         key={index} 
                         className={styles.stackRow}
-                        variants={{ hidden: { x:(index%2 ? "-10vw" : "10vw" )  , opacity: 0 }, visible: {x: 0, opacity: 1} }}
+                        variants={{ hidden: { y: -50   , opacity: 0 }, visible: {y: 0, opacity: 1} }}
                         transition={{ duration: 0.5 }}
                         initial="hidden"
                         whileInView="visible"

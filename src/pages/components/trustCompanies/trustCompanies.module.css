@@ -1,11 +1,12 @@
 .sectionContainer {
-    margin-bottom: 60px;
+    margin-bottom: 150px;
 }
 .companiesContainer {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 50px;
-    place-items: center;
+    align-items: center;
+    justify-content: center;
 }
 .companyContainer {
     display: flex;
@@ -13,27 +14,27 @@
     align-items: center;
     gap: 15px;
 }
+.label {
+    font-size: 1.2rem;
+    font-family: Dosis;
+}
 @media screen and (max-width: 1200px) {
     .companiesContainer {
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 25px;
+        gap: 25px;
     }
 }
 
 @media screen and (max-width: 900px) {
     .companiesContainer {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 700px) {
     .companiesContainer {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 400px) {
     .companiesContainer {
-        grid-template-columns: repeat(1, 1fr);
     }
 }

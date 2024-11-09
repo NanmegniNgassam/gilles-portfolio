@@ -1,16 +1,16 @@
-import { Avatar, Typography } from "@mui/material";
+import { Avatar } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Title from "../../../components/title";
 import { Colors } from "../../../utils/colors";
-import styles from "./trustCompanies.module.css";
 import { companies } from "../../../utils/companies";
+import styles from "./trustCompanies.module.css";
 
 const TrustCompanies = () => {
     const {t} = useTranslation("global");
     const avatarStyles = { 
-        width: { tablet: 200, mobile: 175 }, 
-        height: { tablet: 200, mobile: 175 }, 
+        width: { laptop: 180, tablet: 150, mobile: 120 }, 
+        height: { laptop: 180, tablet: 150, mobile: 120 }, 
         border: 1, 
         borderColor: Colors.darkContrast,
         boxShadow: `3px 2px 6px ${Colors.darkContrast}`
@@ -28,13 +28,12 @@ const TrustCompanies = () => {
                 {companies.map((company, index) => (
                     <Link key={index} className={styles.companyContainer} to={company.linkedProject}>
                         <Avatar sx={avatarStyles} src={company.imageUrl} />
-                        <Typography> {company.name} </Typography>
+                        <p className={styles.label}> {company.name} </p>
                     </Link>
                 ))}
             </div>
         </div>
     );
 }
-// TODO: Set the container as a flex-wrap: wrap.
 
 export default TrustCompanies;

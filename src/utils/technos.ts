@@ -39,7 +39,7 @@ interface Technology {
 
 export const technos: Technology[] = [
     {
-        name: 'langages',
+        name: 'languages',
         languages: [
             {
                 name: 'JavaScript',

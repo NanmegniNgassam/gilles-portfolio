@@ -31,6 +31,14 @@
                     "bitOfCode": "Voir un aperçu de mon code"
                 }
             },
+            "technos": {
+                "languages": "Langages",
+                "frameworks": "Frameworks et Librairies",
+                "services": "Services backend",
+                "databases": "Bases de données",
+                "conception": "Processus UX et UI",
+                "integration": "Versionnage et intégration"
+            },
             "container": {
                 "titles": {
                     "domains": {

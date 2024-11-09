@@ -46,11 +46,15 @@
 }
 
 @media screen and (max-width: 900px) {
+    .stackRow {
+        padding: 30px 10px 15px 10px;
+        border-right-width: 10px;
+    }
     .stackItem {
         width: 60px;
     }
-    .stackRow {
-        border-right-width: 10px;
+    .title {
+        font-size: 20px;
     }
 }
 
@@ -58,10 +62,14 @@
     .stackContainer {
         gap: 10px;
     }
+    .stackRow {
+        padding: 20px 10px 10px 10px;
+        border-right-width: 5px;
+    }
     .stackItem {
         width: 50px;
     }
-    .stackRow {
-        border-right-width: 5px;
+    .title {
+        font-size: 15px;
     }
 }

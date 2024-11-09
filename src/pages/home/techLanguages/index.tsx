@@ -17,7 +17,7 @@ const TechLanguages = () => {
             <div className={styles.stackContainer}>
                 {technos.map((techno, index) => (
                     <div key={index} className={styles.stackRow}>
-                        <span className={styles.title}> {techno.name} </span>
+                        <span className={styles.title}> { t("pages.home.technos." + techno.name)} </span>
                         {techno.languages.map((language, key) => (
                             <Tooltip key={index+key} title={language.name} placement='top'>
                                 <Link to={language.siteUrl} target='_blank'>

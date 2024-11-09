@@ -4,9 +4,18 @@ import { Link } from "react-router-dom";
 import Title from "../../../components/title";
 import { FieldOfInterest } from "../../../utils/field";
 import styles from "./fieldsSection.module.css";
+import { motion } from "framer-motion";
 
 const FieldsSection = () => {
     const {t} = useTranslation("global");
+    const popInAnimation = {
+        hidden: {
+            scale: 0,
+        },
+        visible: {
+            scale: 1,
+        }
+    }
 
     return (
         <div className={styles.expertiseSection}>
@@ -18,7 +27,14 @@ const FieldsSection = () => {
             <div className={styles.content}>
                 {FieldOfInterest.map((field, index) => (
                     <Link key={index} to="/hire">
-                        <Card sx={{ maxWidth: 400, minHeight: 390 }} >
+                        <Card 
+                            variants={popInAnimation}
+                            initial="hidden"
+                            transition={{ delay: 0.2 * index }}
+                            whileInView="visible"
+                            sx={{ maxWidth: 400, minHeight: 390 }} 
+                            component={motion.div}
+                        >
                             <CardActionArea className="removeButtonOutline">
                                 <CardMedia
                                     component="img"

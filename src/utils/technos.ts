@@ -23,6 +23,12 @@ import redis from '../assets/images/redis.svg';
 import sqlite from '../assets/images/sqllite.svg';
 import typeScript from '../assets/images/typescript.svg';
 import vue from '../assets/images/vue.svg';
+import redux from '../assets/images/redux.svg';
+import html from '../assets/images/html.svg';
+import css from '../assets/images/css.svg';
+import sass from '../assets/images/sass.svg';
+import jest from '../assets/images/jest.svg';
+import testingLibrary from '../assets/images/testingLibrary.png';
 
 
 
@@ -79,7 +85,7 @@ export const technos: Technology[] = [
             {
                 name: 'React',
                 imageUrl: react,
-                siteUrl: 'react.dev'
+                siteUrl: 'https://react.dev/'
             },
             {
                 name: 'Angular',
@@ -94,12 +100,12 @@ export const technos: Technology[] = [
             {
                 name: 'React native',
                 imageUrl: react,
-                siteUrl: 'reactnative.dev'
+                siteUrl: 'https://reactnative.dev/'
             },
             {
                 name: 'Flutter',
                 imageUrl: flutter,
-                siteUrl: 'flutter.dev'
+                siteUrl: 'https://flutter.dev/'
             },
             {
                 name: 'NextJs',
@@ -115,6 +121,11 @@ export const technos: Technology[] = [
                 name: 'Material UI',
                 imageUrl: mui,
                 siteUrl: 'https://mui.com/'
+            },
+            {
+                name: 'Redux',
+                imageUrl: redux,
+                siteUrl: 'https://redux.js.org/'
             },
         ]
     },
@@ -179,7 +190,7 @@ export const technos: Technology[] = [
             {
                 name: 'Figma',
                 imageUrl: figma,
-                siteUrl: 'figma.com'
+                siteUrl: 'https://www.figma.com/'
             }
         ]
     },
@@ -200,6 +211,36 @@ export const technos: Technology[] = [
                 name: 'Docker',
                 imageUrl: docker,
                 siteUrl: 'https://www.docker.com/'
+            }
+        ]
+    },
+    {
+        name: 'others',
+        languages: [
+            {
+                name: 'HTML',
+                imageUrl: html,
+                siteUrl: 'https://html.com/'
+            },
+            {
+                name: 'Css',
+                imageUrl: css,
+                siteUrl: 'https://www.w3.org/Style/CSS/Overview.en.html'
+            },
+            {
+                name: 'Sass',
+                imageUrl: sass,
+                siteUrl: 'https://sass-lang.com/'
+            },
+            {
+                name: 'Jest',
+                imageUrl: jest,
+                siteUrl: 'https://www.docker.com/'
+            },
+            {
+                name: 'Testing Library',
+                imageUrl: testingLibrary,
+                siteUrl: 'https://jestjs.io/'
             }
         ]
     },

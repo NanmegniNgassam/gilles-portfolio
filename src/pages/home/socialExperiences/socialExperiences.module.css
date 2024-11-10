@@ -1,0 +1,56 @@
+.experiencesContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experienceContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+}
+.experienceContainer:hover {
+    box-shadow: 3px 3px 6px black;
+}
+.experienceBanner {
+    position: absolute;
+    padding: 10px 20px;
+    top: 20px;
+    right: 0;
+    background-color: green; /*var(--secondary-color);*/
+    color: #fff;
+}
+.titleSection {
+    display: flex;
+    align-items: center;
+}
+.titleSection h3 {
+    flex: 5;
+    font-weight: 500;
+    line-height: 150%;
+}
+.titleSection img {
+    width: 50px;
+    flex: 1;
+}
+
+.moreButton {
+    position: absolute;
+    padding: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px black;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.moreButton:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: none;
+}

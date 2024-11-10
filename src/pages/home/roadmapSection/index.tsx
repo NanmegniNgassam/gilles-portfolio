@@ -1,7 +1,7 @@
 import styles from "./roadmap.module.css";
 import { useTranslation } from "react-i18next";
 import Title from "../../../components/title";
-import SwiperSection from "../swiper";
+import SwiperSection from "../../../components/swiper";
 import { Button, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -44,5 +44,6 @@ const RoadmapSection = () => {
         </>
     );
 }
- 
+
+// TODO: Donner une liste d'image à l'objet swiper et le laisser faire le taf.
 export default RoadmapSection;

@@ -3,13 +3,11 @@ import TrustCompanies from "../components/trustCompanies";
 import FieldsSection from "./fieldsSection";
 import HeroSection from "./heroSection";
 import styles from "./home.module.css";
-import Title from "../../components/title";
-import { useTranslation } from "react-i18next";
-import TechLanguages from "./techLanguages";
 import RoadmapSection from "./roadmapSection";
+import SocialExperiences from "./socialExperiences";
+import TechLanguages from "./techLanguages";
 
 const Home = () => {
-    const {t} = useTranslation('global');
     useEffect(() => {
         document.title = 'Gilles NGASSAM | Landing'
     }, [])
@@ -19,18 +17,13 @@ const Home = () => {
             <HeroSection />
             <div className={styles.mainContainer}>
                 <FieldsSection />
-                
             </div>
 
             <RoadmapSection />
             
             <div className={styles.mainContainer}>
                 <TechLanguages />
-                <Title 
-                    actualTitle={"Expériences sociales"}
-                    titleHook={"Associations"}
-                    titleDescription={t("pages.home.container.titles.domains.description")}
-                />
+                <SocialExperiences />
                 <TrustCompanies />
             </div>
         </div>

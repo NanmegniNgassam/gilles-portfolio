@@ -1,15 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay  } from 'swiper/modules';
-import image_1 from '../../../assets/images/1.png' 
-import image_2 from '../../../assets/images/2.png' 
-import image_3 from '../../../assets/images/3.png' 
-import image_4 from '../../../assets/images/4.png' 
-import image_5 from '../../../assets/images/5.png'
-import image_6 from '../../../assets/images/6.png'
-import image_7 from '../../../assets/images/7.png'
-import image_8 from '../../../assets/images/8.png'
-import image_9 from '../../../assets/images/9.png'
-import image_10 from '../../../assets/images/10.png'
+import image_1 from '../../assets/images/1.png' 
+import image_2 from '../../assets/images/2.png' 
+import image_3 from '../../assets/images/3.png' 
+import image_4 from '../../assets/images/4.png' 
+import image_5 from '../../assets/images/5.png'
+import image_6 from '../../assets/images/6.png'
+import image_7 from '../../assets/images/7.png'
+import image_8 from '../../assets/images/8.png'
+import image_9 from '../../assets/images/9.png'
+import image_10 from '../../assets/images/10.png'
 
 import './swiper.css'
 

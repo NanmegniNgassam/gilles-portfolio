@@ -43,14 +43,14 @@ const FieldsSection = () => {
                                     alt={ t("general.domains." + field.title) }
                                 />
                                 <CardContent>
-                                <Typography gutterBottom variant="h5" sx={{ fontWeight: 500 }} component="div">
-                                    { t("general.domains." + field.title) }
-                                </Typography>
-                                <Typography variant="body1" 
-                                    sx={{ color: 'text.secondary', lineHeight: "150%", textAlign: "justify", textIndent: 50 }}
-                                >
-                                    { t("general.description." + field.title) }
-                                </Typography>
+                                    <Typography gutterBottom variant="h5" sx={{ fontWeight: 500 }} component="div">
+                                        { t("general.domains." + field.title) }
+                                    </Typography>
+                                    <Typography variant="body1" 
+                                        sx={{ color: 'text.secondary', lineHeight: "150%", textAlign: "justify", textIndent: 50 }}
+                                    >
+                                        { t("general.description." + field.title) }
+                                    </Typography>
                                 </CardContent>
                             </CardActionArea>
                         </Card>

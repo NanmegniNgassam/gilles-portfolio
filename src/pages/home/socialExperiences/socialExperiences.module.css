@@ -19,6 +19,9 @@
     background-color: var(--secondary-color);
     color: #fff;
 }
+.experienceDone {
+    background-color: green;
+}
 .titleSection {
     display: flex;
     align-items: center;
@@ -50,7 +53,7 @@
     border-radius: 50%;
     box-shadow: 2px 2px 4px black;
     right: 10px;
-    top: 50%;
+    bottom: 0;
     transform: translateY(-50%);
 }
 .moreButton:hover {

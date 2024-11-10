@@ -61,7 +61,19 @@
                     },
                     "experiences": {
                         "title": "Showcase",
-                        "description": "I am very versatile in web and mobile application development, mastering the entire chain: needs analysis, UX design, creation of interactive mockups, development, testing, and automated deployment via CI/CD. I ensure the reliability and performance of solutions, using artificial intelligence to optimize and automate features. My comprehensive approach guarantees innovative, user-centric applications, with proactive monitoring and maintenance." 
+                        "description": "I am very versatile in web and mobile application development, mastering the entire chain: needs analysis, UX design, creation of interactive mockups, development, testing, and automated deployment via CI/CD. I ensure the reliability and performance of solutions, using artificial intelligence to optimize and automate features. My comprehensive approach guarantees innovative, user-centric applications, with proactive monitoring and maintenance.", 
+                        "positions": {
+                            "headAtJunior": "Head of the UTBM Junior Studies Department",
+                            "brindilles": "Volunteer for the organization of the young caregivers festival",
+                            "workerAtJunior": "Study supervisor at Junior UTBM",
+                            "afev": "Educational and social support worker"
+                        },
+                        "descriptions": {
+                            "headAtJunior": "Supervise the overall progress of missions. Ensure the development of my colleagues. Ensure accurate reporting to management. Facilitate effective communication internally and externally. Actively contribute to strategic decisions and their implementation.",
+                            "brindilles": "Welcome and supervise young people from 7 to 25 years old. Talk to them and make them smile. Prepare smoothies in a good mood. Do activities (games, competitions, karaoke, etc.). Be a good listener. Ensure the cleanliness of the stand. Guarantee the development of all participants.",
+                            "workerAtJunior": "Ensure the smooth running of the missions assigned to me. Help write the specification (if necessary). Guarantee quality reporting to my hierarchy. Communicate effectively internally and externally. Ensure the quality of deliverables and compliance with deadlines.",
+                            "afev": "Accompany children in their school activities to strengthen their understanding and learning. Stimulate their autonomy by encouraging them to solve problems independently. Support children in managing their emotions to improve their well-being and concentration."
+                        }
                     }
                 }
             }

@@ -5,9 +5,8 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import image_1 from "../../../assets/images/1.png";
-import junior from "../../../assets/images/junior.png";
 import Title from "../../../components/title";
+import { volunteeringExperiences } from "../../../utils/voluntering";
 import styles from "./socialExperiences.module.css";
 
 const SocialExperiences = () => {
@@ -17,11 +16,12 @@ const SocialExperiences = () => {
     // Adjusting to show just the duration, e.g., "5 months" or "2 years"
     const formatDuration = (value: number, unit: Intl.RelativeTimeFormatUnit) => {
         const formatted = formatter.formatToParts(value, unit);
+
         return formatted.map(part => part.value).slice(1).join("");
     };
 
     // Format periods with internationalization
-    const  formatPeriod = (startDate: Date, endDate: Date) => {
+    const  formatPeriod = (startDate: Date, endDate?: Date) => {
         // Formateur de date pour la locale spécifiée
         const formatter = new Intl.DateTimeFormat(translate.language, {
           day: "2-digit",
@@ -43,8 +43,6 @@ const SocialExperiences = () => {
         }
     }
 
-    // TODO: Add the card switching animation
-
     return (
         <div className={styles.socialExperiencesContainer}>
             <Title
@@ -53,194 +51,53 @@ const SocialExperiences = () => {
                 titleDescription={t("pages.home.socials.title.description")}
             />
             <div className={styles.experiencesContainer}>
-                <Card sx={{ maxWidth: 400, minHeight: 390, position: "relative" }} >
-                    <div className={styles.experienceBanner}>
-                        { t("general.status.inProgress") }
-                    </div>
-                    <CardMedia
-                        component="img"
-                        height="200"
-                        image={image_1}
-                    />
-                    <CardContent>
-                        <div className={styles.titleSection}>
-                            <h3>Responsable du pôle Études Junior UTBM</h3>
-                            <img src={junior} />
+                {volunteeringExperiences.map((experience, index) => (
+                    <Card sx={{ maxWidth: 400, minHeight: 390, position: "relative" }} key={index} >
+                        <div className={`${styles.experienceBanner} ${ !experience.isProgressing && styles.experienceDone}`}>
+                            { experience.isProgressing ? t("general.status.inProgress") : t("general.status.done") }
                         </div>
-                        <Stack sx={{ mb: 2 }} flexDirection="row" gap={1} alignItems="center">
-                            <CalendarMonth color="secondary" />
-                            <Typography>
-                                { formatPeriod(new Date("9/2/2024"), new Date("1/31/2025")) }
-                            </Typography>
-                        </Stack>
-                        <Stack sx={{ mb: 2 }}>
-                            <Stack flexDirection="row" gap={1} alignItems="center">
-                                <AlarmOnOutlinedIcon color="secondary" />
-                                <Typography fontSize="small"> { formatDuration(6, "months") } </Typography>
+                        <CardMedia
+                            component="img"
+                            height="200"
+                            image={experience.coverImage}
+                        />
+                        <CardContent>
+                            <div className={styles.titleSection}>
+                                <h3> { t("pages.home.container.titles.experiences.positions." + experience.description) } </h3>
+                                <img src={experience.associationImage} />
+                            </div>
+                            <Stack sx={{ mb: 2 }} flexDirection="row" gap={1} alignItems="center">
+                                <CalendarMonth color="secondary" />
+                                <Typography fontSize="0.95rem">
+                                    { formatPeriod(experience.start, experience.end) }
+                                </Typography>
                             </Stack>
-                            <Stack flexDirection="row" gap={1} alignItems="center">
-                                <LocationOnOutlinedIcon color="secondary" />
-                                <Typography fontSize="small">Belfort, Bourgogne-Franche-Comté, France</Typography>
+                            <Stack sx={{ mb: 2 }}>
+                                <Stack flexDirection="row" gap={1} alignItems="center">
+                                    <AlarmOnOutlinedIcon color="secondary" />
+                                    <Typography fontSize="small"> 
+                                        { formatDuration(experience.duration, experience.durationUnit) } 
+                                    </Typography>
+                                </Stack>
+                                <Stack flexDirection="row" gap={1} alignItems="center">
+                                    <LocationOnOutlinedIcon color="secondary" />
+                                    <Typography fontSize="small"> { experience.location } </Typography>
+                                </Stack>
                             </Stack>
-                        </Stack>
-                        <Stack sx={{ mb: 3 }}>
-                            <strong>{ t("general.keywords.description") }.</strong>
-                            <Typography fontSize="small" sx={{ textAlign: "justify", textIndent: 30, mt: 1}}>
-                                Superviser le déroulement global des missions. veiller à l'épanouissement de mes collaborateurs. 
-                                Assurer un reporting précis à la hiérarchie. Faciliter une communication efficace en interne et externe.
-                                Contribuer activement aux décisions stratégiques et à leur mise en œuvre.
-                            </Typography>
-                        </Stack>
-                        <Stack sx={{ position: "relative", alignItems: "center", mb: 3 }}>
-                            <Link to="https://junior.utbm.fr/" target="_blank"> 
+                            <Stack sx={{ mb: 3 }}>
+                                <strong>{ t("general.keywords.description") }.</strong>
+                                <Typography fontSize="small" sx={{ textAlign: "justify", textIndent: 30, mt: 1}}>
+                                    { t("pages.home.container.titles.experiences.descriptions." + experience.title) }
+                                </Typography>
+                            </Stack>
+                            <Link to={experience.link} target="_blank"> 
                                 <div className={styles.moreButton}>
                                     <ArrowForwardOutlinedIcon sx={{ width: 25 }} />
                                 </div>
                             </Link>
-                        </Stack>
-                    </CardContent>
-                </Card >
-                <Card sx={{ maxWidth: 400, minHeight: 390, position: "relative" }} >
-                    <div className={styles.experienceBanner}>
-                        { t("general.status.inProgress") }
-                    </div>
-                    <CardMedia
-                        component="img"
-                        height="200"
-                        image={image_1}
-                    />
-                    <CardContent>
-                        <div className={styles.titleSection}>
-                            <h3>Responsable du pôle Études Junior UTBM</h3>
-                            <img src={junior} />
-                        </div>
-                        <Stack sx={{ mb: 2 }} flexDirection="row" gap={1} alignItems="center">
-                            <CalendarMonth color="secondary" />
-                            <Typography>
-                                { formatPeriod(new Date("9/2/2024"), new Date("1/31/2025")) }
-                            </Typography>
-                        </Stack>
-                        <Stack sx={{ mb: 2 }}>
-                            <Stack flexDirection="row" gap={1} alignItems="center">
-                                <AlarmOnOutlinedIcon color="secondary" />
-                                <Typography fontSize="small"> { formatDuration(6, "months") } </Typography>
-                            </Stack>
-                            <Stack flexDirection="row" gap={1} alignItems="center">
-                                <LocationOnOutlinedIcon color="secondary" />
-                                <Typography fontSize="small">Belfort, Bourgogne-Franche-Comté, France</Typography>
-                            </Stack>
-                        </Stack>
-                        <Stack sx={{ mb: 3 }}>
-                            <strong>{ t("general.keywords.description") }.</strong>
-                            <Typography fontSize="small" sx={{ textAlign: "justify", textIndent: 30, mt: 1}}>
-                                Superviser le déroulement global des missions. veiller à l'épanouissement de mes collaborateurs. 
-                                Assurer un reporting précis à la hiérarchie. Faciliter une communication efficace en interne et externe.
-                                Contribuer activement aux décisions stratégiques et à leur mise en œuvre.
-                            </Typography>
-                        </Stack>
-                        <Stack sx={{ position: "relative", alignItems: "center", mb: 3 }}>
-                            <Link to="https://junior.utbm.fr/" target="_blank"> 
-                                <div className={styles.moreButton}>
-                                    <ArrowForwardOutlinedIcon sx={{ width: 25 }} />
-                                </div>
-                            </Link>
-                        </Stack>
-                    </CardContent>
-                </Card >
-                <Card sx={{ maxWidth: 400, minHeight: 390, position: "relative" }} >
-                    <div className={styles.experienceBanner}>
-                        { t("general.status.inProgress") }
-                    </div>
-                    <CardMedia
-                        component="img"
-                        height="200"
-                        image={image_1}
-                    />
-                    <CardContent>
-                        <div className={styles.titleSection}>
-                            <h3>Responsable du pôle Études Junior UTBM</h3>
-                            <img src={junior} />
-                        </div>
-                        <Stack sx={{ mb: 2 }} flexDirection="row" gap={1} alignItems="center">
-                            <CalendarMonth color="secondary" />
-                            <Typography>
-                                { formatPeriod(new Date("9/2/2024"), new Date("1/31/2025")) }
-                            </Typography>
-                        </Stack>
-                        <Stack sx={{ mb: 2 }}>
-                            <Stack flexDirection="row" gap={1} alignItems="center">
-                                <AlarmOnOutlinedIcon color="secondary" />
-                                <Typography fontSize="small"> { formatDuration(6, "months") } </Typography>
-                            </Stack>
-                            <Stack flexDirection="row" gap={1} alignItems="center">
-                                <LocationOnOutlinedIcon color="secondary" />
-                                <Typography fontSize="small">Belfort, Bourgogne-Franche-Comté, France</Typography>
-                            </Stack>
-                        </Stack>
-                        <Stack sx={{ mb: 3 }}>
-                            <strong>{ t("general.keywords.description") }.</strong>
-                            <Typography fontSize="small" sx={{ textAlign: "justify", textIndent: 30, mt: 1}}>
-                                Superviser le déroulement global des missions. veiller à l'épanouissement de mes collaborateurs. 
-                                Assurer un reporting précis à la hiérarchie. Faciliter une communication efficace en interne et externe.
-                                Contribuer activement aux décisions stratégiques et à leur mise en œuvre.
-                            </Typography>
-                        </Stack>
-                        <Stack sx={{ position: "relative", alignItems: "center", mb: 3 }}>
-                            <Link to="https://junior.utbm.fr/" target="_blank"> 
-                                <div className={styles.moreButton}>
-                                    <ArrowForwardOutlinedIcon sx={{ width: 25 }} />
-                                </div>
-                            </Link>
-                        </Stack>
-                    </CardContent>
-                </Card >
-                <Card sx={{ maxWidth: 400, minHeight: 390, position: "relative" }} >
-                    <div className={styles.experienceBanner}>
-                        { t("general.status.inProgress") }
-                    </div>
-                    <CardMedia
-                        component="img"
-                        height="200"
-                        image={image_1}
-                    />
-                    <CardContent>
-                        <div className={styles.titleSection}>
-                            <h3>Responsable du pôle Études Junior UTBM</h3>
-                            <img src={junior} />
-                        </div>
-                        <Stack sx={{ mb: 2 }} flexDirection="row" gap={1} alignItems="center">
-                            <CalendarMonth color="secondary" />
-                            <Typography>
-                                { formatPeriod(new Date("9/2/2024"), new Date("1/31/2025")) }
-                            </Typography>
-                        </Stack>
-                        <Stack sx={{ mb: 2 }}>
-                            <Stack flexDirection="row" gap={1} alignItems="center">
-                                <AlarmOnOutlinedIcon color="secondary" />
-                                <Typography fontSize="small"> { formatDuration(6, "months") } </Typography>
-                            </Stack>
-                            <Stack flexDirection="row" gap={1} alignItems="center">
-                                <LocationOnOutlinedIcon color="secondary" />
-                                <Typography fontSize="small">Belfort, Bourgogne-Franche-Comté, France</Typography>
-                            </Stack>
-                        </Stack>
-                        <Stack sx={{ mb: 3 }}>
-                            <strong>{ t("general.keywords.description") }.</strong>
-                            <Typography fontSize="small" sx={{ textAlign: "justify", textIndent: 30, mt: 1}}>
-                                Superviser le déroulement global des missions. veiller à l'épanouissement de mes collaborateurs. 
-                                Assurer un reporting précis à la hiérarchie. Faciliter une communication efficace en interne et externe.
-                                Contribuer activement aux décisions stratégiques et à leur mise en œuvre.
-                            </Typography>
-                        </Stack>
-                        <Stack sx={{ position: "relative", alignItems: "center", mb: 3 }}>
-                            <Link to="https://junior.utbm.fr/" target="_blank"> 
-                                <div className={styles.moreButton}>
-                                    <ArrowForwardOutlinedIcon sx={{ width: 25 }} />
-                                </div>
-                            </Link>
-                        </Stack>
-                    </CardContent>
-                </Card >
+                        </CardContent>
+                    </Card >
+                ))}
             </div>
         </div>
     );

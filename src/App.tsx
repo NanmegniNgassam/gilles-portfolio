@@ -9,6 +9,11 @@ import { CURRENT_APP_LANG_LOCALSTORAGE_KEY } from './utils/languages';
 import Footer from './components/footer';
 import Home from './pages/home';
 import Hire from './pages/hire';
+import Projects from './pages/projects';
+import Academics from './pages/academics';
+import About from './pages/about';
+import NotFound from './pages/notFound';
+import Project from './pages/project';
 
 
 // loc files initialization
@@ -92,16 +97,21 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'projects',
-        element: <div className='full-page'>Projects</div>
+        path: 'projects/:id',
+        element: <Project />
       },
       {
+        path: 'projects',
+        element: <Projects />,
+      },
+
+      {
         path: 'roadmap',
-        element: <div className='full-page'>Parcours</div>
+        element: <Academics />
       },
       {
         path: 'about',
-        element: <div className='full-page'>About me</div>
+        element: <About />
       }, 
       {
         path: 'hire',
@@ -109,11 +119,7 @@ const router = createBrowserRouter([
       },
     ],
     errorElement: (
-      <div>
-        <Header />
-        <p>404 page</p>
-        <Footer />
-      </div>
+      <NotFound />
     )
   }
 ])

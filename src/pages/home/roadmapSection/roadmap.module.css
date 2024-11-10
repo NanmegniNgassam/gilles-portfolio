@@ -31,7 +31,7 @@
 @media screen and (max-width: 900px) {
     .roadMapContainer {
         padding: 40px 0;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .swiperContainer {
         max-width: 100%;

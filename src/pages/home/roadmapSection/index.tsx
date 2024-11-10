@@ -1,6 +1,5 @@
 import styles from "./roadmap.module.css";
 import { useTranslation } from "react-i18next";
-import Title from "../../../components/title";
 import SwiperSection from "../../../components/swiper";
 import { Button, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -11,11 +10,6 @@ const RoadmapSection = () => {
 
     return (
         <>
-            <Title
-                actualTitle={t("pages.home.container.titles.experiences.main")}
-                titleHook={t("pages.home.container.titles.experiences.hook")}
-                titleDescription=""
-            />
             <div className={styles.roadMapContainer}>
                 <div className={styles.swiperContainer}>
                     <SwiperSection />

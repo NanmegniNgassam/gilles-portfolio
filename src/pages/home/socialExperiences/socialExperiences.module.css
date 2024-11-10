@@ -1,34 +1,38 @@
 .experiencesContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .experienceContainer {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    cursor: pointer;
 }
-.experienceContainer:hover {
-    box-shadow: 3px 3px 6px black;
-}
+
 .experienceBanner {
     position: absolute;
     padding: 10px 20px;
     top: 20px;
     right: 0;
-    background-color: green; /*var(--secondary-color);*/
+    background-color: var(--secondary-color);
     color: #fff;
 }
 .titleSection {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 .titleSection h3 {
     flex: 5;
     font-weight: 500;
     line-height: 150%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
 }
 .titleSection img {
     width: 50px;
@@ -51,6 +55,6 @@
 }
 .moreButton:hover {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--contrast-color);
     box-shadow: none;
 }

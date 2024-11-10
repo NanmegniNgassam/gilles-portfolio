@@ -37,7 +37,8 @@
                 "services": "Backend services",
                 "databases": "DataBases",
                 "conception": "UX and UI processes",
-                "integration": "Versioning and CI/CD"
+                "integration": "Versioning and CI/CD",
+                "others": "Others"
             },
             "container": {
                 "titles": {

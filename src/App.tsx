@@ -1,19 +1,20 @@
 import { createTheme, ThemeProvider } from '@mui/material';
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import Header from './components/header';
 import i18next from 'i18next';
+import { I18nextProvider } from 'react-i18next';
+import { createBrowserRouter, Outlet, RouterProvider, useLocation } from 'react-router-dom';
 import global_en from './assets/loc/en/global.json';
 import global_fr from './assets/loc/fr/global.json';
-import { I18nextProvider } from 'react-i18next';
-import { CURRENT_APP_LANG_LOCALSTORAGE_KEY } from './utils/languages';
 import Footer from './components/footer';
-import Home from './pages/home';
-import Hire from './pages/hire';
-import Projects from './pages/projects';
-import Academics from './pages/academics';
+import Header from './components/header';
 import About from './pages/about';
+import Academics from './pages/academics';
+import Hire from './pages/hire';
+import Home from './pages/home';
 import NotFound from './pages/notFound';
 import Project from './pages/project';
+import Projects from './pages/projects';
+import { CURRENT_APP_LANG_LOCALSTORAGE_KEY } from './utils/languages';
+import { useEffect } from 'react';
 
 
 // loc files initialization
@@ -80,13 +81,23 @@ const theme = createTheme({
   }
 });
 
-const AppLayout = () => (
-  <div>
-    <Header />
-    <Outlet />
-    <Footer />
-  </div>
-)
+const AppLayout = () => {
+  // Extracts pathname property(key) from an object
+  const { pathname } = useLocation();
+
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return (
+    <div>
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  )
+}
 
 const router = createBrowserRouter([
   {

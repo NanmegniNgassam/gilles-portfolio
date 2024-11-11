@@ -6,15 +6,19 @@ import styles from "./home.module.css";
 import RoadmapSection from "./roadmapSection";
 import SocialExperiences from "./socialExperiences";
 import TechLanguages from "./techLanguages";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+    const {t} = useTranslation("global"); 
+
     useEffect(() => {
-        document.title = 'Gilles NGASSAM | Landing'
-    }, [])
+        document.title = 'Gilles NGASSAM | ' + t("Header.NavLinks.landing");
+    }, [t])
 
     return (
         <div>
             <HeroSection />
+
             <div className={styles.mainContainer}>
                 <FieldsSection />
             </div>

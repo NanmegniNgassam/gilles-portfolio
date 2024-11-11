@@ -18,13 +18,10 @@ const Home = () => {
     return (
         <div>
             <HeroSection />
-
             <div className={styles.mainContainer}>
                 <FieldsSection />
             </div>
-
             <RoadmapSection />
-            
             <div className={styles.mainContainer}>
                 <TechLanguages />
                 <SocialExperiences />

@@ -3,6 +3,7 @@ import AlarmOnOutlinedIcon from '@mui/icons-material/AlarmOnOutlined';
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Title from "../../../components/title";
@@ -90,11 +91,11 @@ const SocialExperiences = () => {
                                     { t("pages.home.container.titles.experiences.descriptions." + experience.title) }
                                 </Typography>
                             </Stack>
-                            <Link to={experience.link} target="_blank"> 
-                                <div className={styles.moreButton}>
-                                    <ArrowForwardOutlinedIcon sx={{ width: 25 }} />
-                                </div>
-                            </Link>
+                            <motion.div whileInView={{ rotate: 360 }} transition={{ duration: 0.5 }} className={styles.moreButton} >
+                                <Link to={experience.link}  target="_blank" className={styles.stack}> 
+                                    <ArrowForwardOutlinedIcon  sx={{ width: 25 }} />
+                                </Link>
+                            </motion.div>
                         </CardContent>
                     </Card >
                 ))}

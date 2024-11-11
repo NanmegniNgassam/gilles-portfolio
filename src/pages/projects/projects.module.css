@@ -1,0 +1,17 @@
+.container {
+    padding: 120px 80px 0px 80px;
+}
+
+.projectsContainer {
+    padding: 0px 80px;
+    color: var(--black-color);
+}
+.specialText {
+    font-family: Dosis!important;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}

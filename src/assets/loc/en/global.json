@@ -135,6 +135,30 @@
                     "description": "Some companies with which I collaborate or have had to collaborate on non-confidential projects"
                 }
             }
+        },
+        "projects": {
+            "projects": {
+                "titles": {
+                    "portfolio": "My portfolio 1st Version",
+                    "africanTerroir": "E-commerce website by Terroir d'Afrique",
+                    "movieGuidApp": "MovieAdvisor",
+                    "stockManagement": "Inventory management platform by Bio-Gusta",
+                    "ubuntu": "SJP Prom King and Queen Elections",
+                    "otakuApp": "Otaku App",
+                    "privateNight": "Validation Certificates: RSA Authentication",
+                    "jsWindowTransfert": "DLR Soccers: Transfer window"
+                },
+                "descriptions": {
+                    "portfolio": "This is a SPA coded in React. I describe myself and present my skills and the projects I had to carry out. I also use Material UI for animations and interactions. The design is clean, modern and responsive.",
+                    "africanTerroir": "This mission was carried out in its entirety (user research, process and user interface design, development of the web platform, testing and implementation) by us. Overall, the solution was similar to a classic e-commerce site (authentication, configuration and profile verification, purchases, delivery tracking, order history, management of item availability, user ratings and feedback, provision of local and international payment solutions, classic interactions with blog articles, etc.).",
+                    "movieGuidApp": "It is a search platform dedicated to movies and series, designed to help users quickly form an opinion before choosing what to watch. By performing a simple search, the interface presents key details such as the title, other users' ratings, the full cast, the summary (plot), the duration, as well as the genres and subgenres. The goal is to provide a fluid and enriching experience, allowing moviegoers to consult all the necessary information in one place to make informed decisions about their next viewing sessions.",
+                    "stockManagement": "This mission was carried out in its entirety (user research, process and user interface design, development of the web platform, testing and implementation) by us. Overall, the solution was similar to a classic e-commerce site (authentication, configuration and profile verification, purchases, delivery tracking, order history, management of item availability, user ratings and feedback, provision of local and international payment solutions, classic interactions with blog articles, etc.).",
+                    "ubuntu": "Web platform dedicated to the election of the king and queen of our class, with a secure and transparent process. Students log in via their school email address, which is registered with the unique identifier of their device to guarantee a unique vote. Once their choice of candidates is made, the vote is locked, and they can only follow the evolution of the results in real time. At the scheduled time, the final podium is displayed, offering a fluid and engaging experience while ensuring the integrity of the vote.",
+                    "otakuApp": "An immersive platform for anime fans, combining information and interactive features. Users can search for comprehensive details about their favorite anime, receive personalized recommendations based on their favorite genres, and place anime in a dedicated list to watch later. The platform offers regular reminders to follow this list, while offering fun quizzes to earn points and climb a competitive leaderboard, creating a dynamic and engaging community for anime enthusiasts.",
+                    "privateNight": "Secure system allowing subscribers to access a resource protected by a keyword, which is regenerated every month. The platform uses a robust two-step authentication process: verification of the email and password pair, followed by verification of the terminal's IP address using an RSA-encrypted certificate. Once authenticated, the user gains access to the secret word. If a suspicious connection attempt is detected (same device or account reconnecting within the month), an intrusion alert is triggered, the keyword is immediately changed, and all verified devices receive a secure notification.",
+                    "jsWindowTransfert": "Transfer market simulation interface, allowing users to manage their team by searching for players, applying filters and initiating negotiations for the acquisition of new talents. The interface allows dynamic transfer management, providing an immersive experience where the user can recruit the players that best fit the needs of his team, while simulating the strategic aspects of the market."
+                }
+            }
         }
     },
     "general": {
@@ -164,7 +188,8 @@
             "done": "Done"
         },
         "keywords": {
-            "description": "Description"
+            "description": "Description",
+            "stack": "Stack"
         }
     }
 }

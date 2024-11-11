@@ -135,6 +135,30 @@
                     "description": "Quelques entreprises avec lesquelles je collabore ou j'ai eu à collaborer sur des projets non-confidentiels"
                 }
             }
+        },
+        "projects": {
+            "projects": {
+                "titles": {
+                    "portfolio": "Version 1 de mon portfolio",
+                    "africanTerroir": "Site de vente en ligne Terroir d'Afrique",
+                    "movieGuidApp": "MovieAdvisor",
+                    "stockManagement": "Plateforme de gestion de stock par Bio-Gusta",
+                    "ubuntu": "Elections roi et reine du bal de fin de promo",
+                    "otakuApp": "Otaku App",
+                    "privateNight": "Certificats de validation : Authentification RSA",
+                    "jsWindowTransfert": "DLR Soccers: Fenêtre de transfert"
+                },
+                "descriptions": {
+                    "portfolio": "Il s'agit d'une SPA codé en React. Je m'y décris et je présente mes compétences et les projets que j'ai eu à réaliser. Je me sers également de Material UI pour les animations et les interactions. Le design est épuré, moderne et responsive. Il comporte également un formulaire de contact permettant aux recrutants de me contacter directement au travers d'un intégration d'API de messagerie.",
+                    "africanTerroir": "Cette mission a été réalisée dans son intégralité (recherche utilisateur, conception de processus et d'interface utilisateur, développement de la plateforme Web, tests et mise en production) par nos soins. Globalement, la solution s'approchait du site d'e-commerce classique (authentification, configuration et vérification de profil, achats, suivi de la livraison, historique des commandes, gestion de la disponibilité des articles , notations et retours des utilisateurs, mise à disposition des solutions de paiement locales et internationales, interactions classiques avec les articles du blog...).",
+                    "movieGuidApp": "Il s'agit d'une plateforme de recherche dédiée aux films et séries, conçue pour aider les utilisateurs à se faire rapidement un avis avant de choisir quoi regarder. En effectuant une simple recherche, l'interface présente des détails clés tels que le titre, les évaluations des autres utilisateurs, le casting complet, le résumé (plot), la durée, ainsi que les genres et sous-genres. L’objectif est de fournir une expérience fluide et enrichissante, permettant aux cinéphiles de consulter toutes les informations nécessaires en un seul endroit pour prendre des décisions éclairées sur leurs prochaines séances de visionnage.",
+                    "stockManagement": "Cette mission a été réalisée dans son intégralité (recherche utilisateur, conception de processus et d'interface utilisateur, développement de la plateforme Web, tests et mise en production) par nos soins. Globalement, la solution s'approchait du site d'e-commerce classique (authentification, configuration et vérification de profil, achats, suivi de la livraison, historique des commandes, gestion de la disponibilité des articles , notations et retours des utilisateurs, mise à disposition des solutions de paiement locales et internationales, interactions classiques avec les articles du blog...).",
+                    "ubuntu": "Plateforme Web dédiée à l'élection du roi et de la reine de notre promotion, avec un processus sécurisé et transparent. Les étudiants se connectent via leur adresse mail scolaire, qui est enregistrée avec l'identifiant unique de leur dispositif pour garantir un vote unique. Une fois leur choix de candidats effectué, le vote est verrouillé, et ils peuvent uniquement suivre l'évolution des résultats en temps réel. À l'heure prévue, le podium final s'affiche, offrant une expérience fluide et engageante tout en assurant l'intégrité du scrutin.",
+                    "otakuApp": "Plateforme immersive pour les fans d'animés, combinant informations et fonctionnalités interactives. Les utilisateurs peuvent rechercher des détails complets sur leurs animés préférés, recevoir des recommandations personnalisées selon leurs genres favoris, et placer des animés dans une liste dédiée pour les voir plus tard. La plateforme propose des rappels réguliers pour suivre cette liste, tout en offrant des quiz amusants permettant de gagner des points et de grimper dans un classement compétitif, créant ainsi une communauté dynamique et engageante pour les passionnés d'animé.",
+                    "privateNight": "Système sécurisé permettant aux abonnés d'accéder à une ressource protégée par un mot-clé, qui est régénéré chaque mois. La plateforme utilise un processus d'authentification robuste en deux étapes : vérification du couple e-mail et mot de passe, suivie de la vérification de l'adresse IP du terminal grâce à un certificat chiffré au RSA. Une fois authentifié, l'utilisateur obtient accès au mot secret. Si une tentative de connexion suspecte est détectée (même appareil ou compte se reconnectant dans le mois), une alerte d'intrusion est déclenchée, le mot clé est immédiatement changé, et tous les appareils vérifiés reçoivent une notification sécurisée.",
+                    "jsWindowTransfert": "Interface de simulation du marché des transferts, permettant aux utilisateurs de gérer leur équipe en effectuant des recherches de joueurs, en appliquant des filtres et en lançant des négociations pour l'acquisition de nouveaux talents. L'interface permet une gestion dynamique des transferts, offrant une expérience immersive où l'utilisateur peut recruter les joueurs qui correspondent le mieux aux besoins de son équipe, tout en simulant les aspects stratégiques du marché."
+                }
+            }
         }
     },
     "general": {
@@ -164,7 +188,8 @@
             "done": "Terminé"
         },
         "keywords": {
-            "description": "Description"
+            "description": "Description",
+            "stack": "Stack"
         }
     }
 }

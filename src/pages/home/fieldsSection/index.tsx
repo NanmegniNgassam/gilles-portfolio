@@ -35,7 +35,7 @@ const FieldsSection = () => {
                             sx={{ maxWidth: 400, minHeight: 390 }} 
                             component={motion.div}
                         >
-                            <CardActionArea className="removeButtonOutline">
+                            <CardActionArea>
                                 <CardMedia
                                     component="img"
                                     height="200"

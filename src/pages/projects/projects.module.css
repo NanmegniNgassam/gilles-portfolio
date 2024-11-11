@@ -3,7 +3,6 @@
 }
 
 .projectsContainer {
-    padding: 0px 80px;
     color: var(--black-color);
 }
 .specialText {
@@ -11,7 +10,24 @@
 }
 
 .projects {
+    margin: 40px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    justify-content: center;
+    gap: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 0 40px;
+    }
+    .projects {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 0 20px;
+    }
 }

@@ -1,6 +1,6 @@
 import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import { SocialExperience } from "../../utils/voluntering";
-import styles from "./socialCard.module.css";
+import styles from "./projectCard.module.css";
 import { useTranslation } from "react-i18next";
 import { AlarmOutlined, ArrowForwardOutlined, CalendarMonth, LocationOnOutlined } from "@mui/icons-material";
 import { motion } from "framer-motion";
@@ -9,10 +9,8 @@ import { formatDuration, formatPeriod } from "../../utils/relativeTime";
 
 
 
-const SocialCard = ( { experience }: { experience: SocialExperience } ) => {
+const ProjectCard = ( { experience }: { experience: SocialExperience } ) => {
     const [t, translate] = useTranslation("global");
-    
-
     
     return (
         <Card sx={{ maxWidth: 400, minHeight: 390, position: "relative" }} >
@@ -63,4 +61,4 @@ const SocialCard = ( { experience }: { experience: SocialExperience } ) => {
     );
 }
  
-export default SocialCard;
+export default ProjectCard;

@@ -6,7 +6,7 @@ import junior_association from "../assets/images/junior.jpg";
 import afev_logo from "../assets/images/afev_logo.jpeg";
 import afev from "../assets/images/afev.jpg";
 
-interface SocialExperience {
+export interface SocialExperience {
     title: string;
     coverImage: string;
     associationImage: string;

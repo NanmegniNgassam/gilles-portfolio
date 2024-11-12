@@ -159,6 +159,11 @@
                     "jsWindowTransfert": "Interface de simulation du marché des transferts, permettant aux utilisateurs de gérer leur équipe en effectuant des recherches de joueurs, en appliquant des filtres et en lançant des négociations pour l'acquisition de nouveaux talents. L'interface permet une gestion dynamique des transferts, offrant une expérience immersive où l'utilisateur peut recruter les joueurs qui correspondent le mieux aux besoins de son équipe, tout en simulant les aspects stratégiques du marché."
                 }
             }
+        },
+        "project": {
+            "seeAllProjects": "Voir tous les projets",
+            "viewProduct": "Voir le produit",
+            "examineCode": "Examiner le code"
         }
     },
     "general": {

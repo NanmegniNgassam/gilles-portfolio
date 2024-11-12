@@ -1,0 +1,80 @@
+.container {
+    padding: 120px 80px 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.companyImage {
+    width: 100px;
+}
+.title {
+    font-family: Roboto;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--black-color);
+    margin: 25px auto;
+}
+.container .coverImage {
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto;
+    box-shadow: 4px 4px 8px gray;
+
+}
+.description {
+    line-height: 200%!important;
+    max-width: 800px;
+    width: 100%;
+}
+.container strong {
+    font-size: 1.5rem;
+    color: var(--black-color);
+    text-align: center;
+}
+
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+.stack img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 60px 40px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .stack {
+        gap: 16px;
+    }
+    .stack img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 30px 20px;
+    }
+    .companyImage {
+        width: 80px;
+    }
+    .stack {
+        gap: 8px;
+    }
+    .stack img {
+        width: 50px;
+        height: 50px;
+    }
+}

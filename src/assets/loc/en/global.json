@@ -159,6 +159,11 @@
                     "jsWindowTransfert": "Transfer market simulation interface, allowing users to manage their team by searching for players, applying filters and initiating negotiations for the acquisition of new talents. The interface allows dynamic transfer management, providing an immersive experience where the user can recruit the players that best fit the needs of his team, while simulating the strategic aspects of the market."
                 }
             }
+        },
+        "project": {
+            "seeAllProjects": "See all projects",
+            "viewProduct": "View the product",
+            "examineCode": "See the code"
         }
     },
     "general": {

@@ -1,4 +1,4 @@
-import portfolio_logo from "../../public/logo.png";
+import portfolio_logo from "../assets/images/logo.png";
 import terroir_logo from "../assets/images/bio-gusta.jpg";
 import cert_landing from "../assets/images/cert_landing.png";
 import certification_logo from "../assets/images/certification.png";
@@ -51,7 +51,8 @@ export interface Project {
     duration: number;
     durationUnit: Intl.RelativeTimeFormatUnit;
     description: string;
-    link: string;
+    code?: string;
+    link?: string;
     isProgressing: boolean;
     tools: {name: string, imageUrl: string}[];
 }
@@ -68,6 +69,7 @@ export const projects: Project[] = [
         duration: 10,
         durationUnit: "days",
         isProgressing: false,
+        code: "https://github.com/NanmegniNgassam/gilles-portfolio",
         link: "https://gilles-ngassam.pisoftlite.com/",
         tools: [
             {name: 'TypeScript', imageUrl: typeScript},
@@ -103,7 +105,7 @@ export const projects: Project[] = [
         ]
     },
     {
-        id: 8,
+        id: 3,
         title: "movieGuidApp",
         description: "movieGuidApp",
         coverImage: movieAdvisor,
@@ -113,6 +115,7 @@ export const projects: Project[] = [
         duration: 7,
         durationUnit: "days",
         isProgressing: true,
+        code: "https://github.com/NanmegniNgassam/movie-guid-app",
         link: "https://movie-guid-app.pisoftlite.com/",
         tools: [
             {name: 'TypeScript', imageUrl: typeScript},
@@ -125,7 +128,7 @@ export const projects: Project[] = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: "stockManagement",
         description: "stockManagement",
         coverImage: terroir_back,
@@ -148,7 +151,7 @@ export const projects: Project[] = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         title: "ubuntu",
         description: "ubuntu",
         coverImage: ubuntu,
@@ -158,7 +161,7 @@ export const projects: Project[] = [
         duration: 4,
         durationUnit: "weeks",
         isProgressing: false,
-        link: "https://github.com/NanmegniNgassam/Ubuntu_2k22",
+        code: "https://github.com/NanmegniNgassam/Ubuntu_2k22",
         tools: [
             {name: 'Php', imageUrl: php},
             {name: 'JavaScript', imageUrl: javaScript},
@@ -169,7 +172,7 @@ export const projects: Project[] = [
         ]
     },
     {
-        id: 5,
+        id: 6,
         title: "otakuApp",
         description: "otakuApp",
         coverImage: otaku_landing,
@@ -179,6 +182,7 @@ export const projects: Project[] = [
         duration: 6,
         durationUnit: "months",
         isProgressing: true,
+        code: "https://github.com/NanmegniNgassam/otaku",
         link: "https://otaku.pisoftlite.com/",
         tools: [
             {name: 'TypeScript', imageUrl: typeScript},
@@ -192,7 +196,7 @@ export const projects: Project[] = [
         ]
     },
     {
-        id: 6,
+        id: 7,
         title: "privateNight",
         description: "privateNight",
         coverImage: cert_landing,
@@ -202,7 +206,7 @@ export const projects: Project[] = [
         duration: 4,
         durationUnit: "months",
         isProgressing: false,
-        link: "https://github.com/NanmegniNgassam/Authentification_Certificate",
+        code: "https://github.com/NanmegniNgassam/Authentification_Certificate",
         tools: [
             {name: 'Python', imageUrl: python},
             {name: 'Django', imageUrl: django},
@@ -214,7 +218,7 @@ export const projects: Project[] = [
         ]
     },
     {
-        id: 7,
+        id: 8,
         title: "jsWindowTransfert",
         description: "jsWindowTransfert",
         coverImage: mercato,
@@ -224,7 +228,7 @@ export const projects: Project[] = [
         duration: 12,
         durationUnit: "days",
         isProgressing: true,
-        link: "https://github.com/NanmegniNgassam/foot-trader",
+        code: "https://github.com/NanmegniNgassam/foot-trader",
         tools: [
             {name: 'JavaScript', imageUrl: javaScript},
             {name: 'React', imageUrl: react},

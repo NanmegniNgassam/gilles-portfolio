@@ -169,6 +169,20 @@
             "message": "La ressource que vous recherchez n'est pas disponible.",
             "backHome": "Retourner à l'accueil",
             "previousPage": "Page Précédente"
+        },
+        "roadMap": {
+            "titles": {
+                "experience": {
+                    "main": "Mon parcours académique",
+                    "hook": "éducation",
+                    "description": "Cette section présente la grande majorité des expériences que j'ai eues sur le plan éducatif. Que ce soit à titre individuel (Mooc, BootCamps, Hackathons…) dans une salle de cours (universités, conférences…) ou pendant les séjours en entreprise (stages, visites, journées de découvertes…)."
+                },
+                "competences": {
+                    "main": "Aperçu",
+                    "hook": "Compétences",
+                    "description": "Vous retrouvez ici les domaines notables dans lesquels j'ai pu développer un certain niveau de compétences. Ainsi que l'estimation de ce niveau-là."
+                }
+            }
         }
     },
     "general": {

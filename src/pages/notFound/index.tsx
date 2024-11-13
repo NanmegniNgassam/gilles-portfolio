@@ -3,9 +3,14 @@ import gilles from "../../assets/images/Gilles.png";
 import { Button, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const NotFound = () => {
     const { t } = useTranslation("global");
+
+    useEffect(() => {
+        document.title = 'Gilles NGASSAM | 404';
+    }, [t]);
 
     return (
         <div className={styles.globalContainer}>

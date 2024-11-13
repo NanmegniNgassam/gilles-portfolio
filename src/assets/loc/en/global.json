@@ -169,6 +169,20 @@
             "message": "The ressource you're looking for is not available.",
             "backHome": "Back home",
             "previousPage": "Previous page"
+        },
+        "roadMap": {
+            "titles": {
+                "experience": {
+                    "main": "My academic background",
+                    "hook": "Education",
+                    "description": "This section presents the vast majority of experiences I have had on the educational level. Whether on an individual basis (Mooc, BootCamps, Hackathons, etc.) in a classroom (universities, conferences, etc.) or during company stays (internships, visits, discovery days, etc.)."
+                },
+                "competences": {
+                    "main": "Overview",
+                    "hook": "Skills",
+                    "description": "Here you will find the notable areas in which I have been able to develop a certain level of skills. As well as the estimation of this level."
+                }
+            }
         }
     },
     "general": {

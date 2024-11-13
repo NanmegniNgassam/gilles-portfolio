@@ -1,6 +1,16 @@
 .expertiseSection {
     margin-bottom: 150px;
 }
+.expertiseSection h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.expertiseSection p {
+    font-size: 1rem;
+    line-height: 175%!important;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -16,6 +26,6 @@
 
 @media screen and (max-width: 700px) {
     .content {
-        gap: 50px;
+        gap: 40px;
     }
 }

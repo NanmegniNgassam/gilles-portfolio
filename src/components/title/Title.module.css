@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 90px auto;
+    margin: 90px auto 60px auto;
     color: var(--dark-contrast-color);
     text-align: center;
 }
@@ -32,6 +32,9 @@
 }
 
 @media screen and (max-width: 900px) {
+    .titleContainer {
+        margin: 60px auto 40px auto;
+    }
     .titleHook, .titleDescription {
         font-size: 1rem;
     }
@@ -40,7 +43,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
     .titleHook, .titleDescription {
         font-size: 0.9rem;
     }

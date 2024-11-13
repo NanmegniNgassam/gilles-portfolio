@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay  } from 'swiper/modules';
+import image_0 from '../../assets/images/0.png' 
 import image_1 from '../../assets/images/1.png' 
 import image_2 from '../../assets/images/2.png' 
 import image_3 from '../../assets/images/3.png' 
@@ -36,6 +37,9 @@ const SwiperSection = () => {
                 {delay: 5000}
             }
         >
+            <SwiperSlide>
+                <img src={image_0} />
+            </SwiperSlide>                        
             <SwiperSlide>
                 <img src={image_1} />
             </SwiperSlide>                        

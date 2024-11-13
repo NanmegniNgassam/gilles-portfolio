@@ -164,6 +164,11 @@
             "seeAllProjects": "Voir tous les projets",
             "viewProduct": "Voir le produit",
             "examineCode": "Examiner le code"
+        },
+        "notFound": {
+            "message": "La ressource que vous recherchez n'est pas disponible.",
+            "backHome": "Retourner à l'accueil",
+            "previousPage": "Page Précédente"
         }
     },
     "general": {

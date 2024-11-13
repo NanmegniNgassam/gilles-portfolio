@@ -130,7 +130,12 @@ const router = createBrowserRouter([
       },
     ],
     errorElement: (
-      <NotFound />
+      <div className='viewSection'>
+        <Header />
+        <NotFound />
+        <Footer />
+      </div>
+      
     )
   }
 ])

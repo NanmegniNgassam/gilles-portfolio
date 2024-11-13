@@ -79,6 +79,10 @@ button:focus-visible {
   }
 }
 
-.full-page {
-  height: 200vh;
+/* Make the component fits at least the 100% page. */
+.viewSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

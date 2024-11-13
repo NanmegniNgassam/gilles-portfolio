@@ -158,7 +158,9 @@
                     "privateNight": "Secure system allowing subscribers to access a resource protected by a keyword, which is regenerated every month. The platform uses a robust two-step authentication process: verification of the email and password pair, followed by verification of the terminal's IP address using an RSA-encrypted certificate. Once authenticated, the user gains access to the secret word. If a suspicious connection attempt is detected (same device or account reconnecting within the month), an intrusion alert is triggered, the keyword is immediately changed, and all verified devices receive a secure notification.",
                     "jsWindowTransfert": "Transfer market simulation interface, allowing users to manage their team by searching for players, applying filters and initiating negotiations for the acquisition of new talents. The interface allows dynamic transfer management, providing an immersive experience where the user can recruit the players that best fit the needs of his team, while simulating the strategic aspects of the market."
                 }
-            }
+            },
+            "callToActionLabel": "Do you have an idea in mind ?",
+            "callToActionButton": "Let's talk about it !"
         },
         "project": {
             "seeAllProjects": "See all projects",
@@ -182,6 +184,15 @@
                     "hook": "Skills",
                     "description": "Here you will find the notable areas in which I have been able to develop a certain level of skills. As well as the estimation of this level."
                 }
+            }
+        },
+        "about": {
+            "studentStatus": "Engineering student",
+            "workStatus": "FullStack Web and Mobile Developer.",
+            "description": {
+                "firstSection": "A passionate developer driven by innovation, I specialize in mobile, web, and software development with a strong focus on creativity and user-centered design. My goal is to create intuitive and impactful solutions that enhance users' daily lives in meaningful and sustainable ways.",
+                "secondSection": "Curious and forward-thinking, I continually explore emerging technologies such as IoT and artificial intelligence to develop smart, connected applications. I thrive on projects that bring genuine added value, combining innovation, resource optimization, and environmental consciousness.",
+                "thirdSection": "I am motivated by the challenge of developing engaging experiences that place people at the heart of technology, while contributing to a more sustainable world. For me, each project is an opportunity to push boundaries and deliver practical, responsible solutions."
             }
         }
     },
@@ -213,7 +224,9 @@
         },
         "keywords": {
             "description": "Description",
-            "stack": "Stack"
+            "stack": "Stack",
+            "pronoun": "he",
+            "connector": "and"
         }
     }
 }

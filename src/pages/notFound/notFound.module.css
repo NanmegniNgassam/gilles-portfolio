@@ -59,7 +59,6 @@
 }
 .container p {
     text-align: justify;
-    text-indent: 4rem;
 }
 
 @media screen and (max-width: 900px) {

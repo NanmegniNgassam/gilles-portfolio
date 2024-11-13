@@ -1,16 +1,12 @@
-import { useTranslation } from "react-i18next";
-import styles from "./heroSection.module.css";
-import gilles from "../../../assets/images/Gilles.png";
-import github from '../../../assets/images/github.png';
-import gmail from "../../../assets/images/gmail.png";
-import linkedIn from '../../../assets/images/linkedin.png';
-import download from '../../../assets/images/download.png';
-import cv from "../../../assets/data/NANMEGNI_NGASSAM_Gilles_Pavel_CV.pdf";
-import { TitleHook } from "./HeroSection.styles";
-import Typewriter from "typewriter-effect";
-import { Link } from "react-router-dom";
 import { Button, Tooltip } from "@mui/material";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
+import gilles from "../../../assets/images/Gilles.png";
+import { links } from "../../../utils/socialLinks";
+import styles from "./heroSection.module.css";
+import { TitleHook } from "./HeroSection.styles";
 
 
 const HeroSection = () => {
@@ -72,26 +68,13 @@ const HeroSection = () => {
                 </motion.div>
             </div>
             <div className={styles.linksContainer}>
-                <Tooltip title={ t("pages.home.heroSection.tooltipLabels.sendMail") } placement="top">
-                    <a className={styles.linkContainer} href="mailto:nanmegningassam@gmail.com" target='_blank'>
-                        <img src={gmail} alt="Default description" />
-                    </a>
-                </Tooltip>
-                <Tooltip title={ t("pages.home.heroSection.tooltipLabels.linkedInProfil") } placement="top">
-                    <a className={styles.linkContainer} href="https://www.linkedin.com/in/nanmegni-ngassam-gilles-pavel-825997206" target='_blank'>
-                        <img src={linkedIn} alt="Default description" />
-                    </a>
-                </Tooltip>
-                <Tooltip title={ t("pages.home.heroSection.tooltipLabels.resume") } placement="top">
-                    <a className={styles.linkContainer} href={cv} target='_blank'>
-                        <img src={download} alt="Default description" />
-                    </a>
-                </Tooltip>
-                <Tooltip title={ t("pages.home.heroSection.tooltipLabels.bitOfCode") } placement="top">
-                    <a className={styles.linkContainer} href="https://github.com/NanmegniNgassam" target='_blank'>
-                        <img src={github} alt="Default description" />
-                    </a>
-                </Tooltip>
+                {links.map((link, index) => (
+                    <Tooltip title={t("pages.home.heroSection.tooltipLabels." + link.title)} placement="top" key={index}>
+                        <a className={styles.linkContainer} href={link.url} target='_blank'>
+                            <img src={link.imageUrl} alt={t("pages.home.heroSection.tooltipLabels." + link.title)} />
+                        </a>
+                    </Tooltip>
+                ))}
             </div>
         </div>
     );

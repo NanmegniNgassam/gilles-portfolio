@@ -2,12 +2,8 @@ import { Button, Tooltip } from "@mui/material";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import cv from "../../assets/data/NANMEGNI_NGASSAM_Gilles_Pavel_CV.pdf";
-import download from '../../assets/images/download.png';
 import gilles from "../../assets/images/Gilles.png";
-import github from '../../assets/images/github.png';
-import gmail from "../../assets/images/gmail.png";
-import linkedIn from '../../assets/images/linkedin.png';
+import { links } from "../../utils/socialLinks";
 import styles from "./about.module.css";
 
 const About = () => {
@@ -16,30 +12,6 @@ const About = () => {
     useEffect(() => {
         document.title = 'Gilles NGASSAM | ' + t("Header.NavLinks.about");
     }, [t]);
-
-    // TODO: Make some refacto with the Header section.
-    const links = [
-        {
-            title: t("pages.home.heroSection.tooltipLabels.sendMail"),
-            url: "mailto:nanmegningassam@gmail.com",
-            imageUrl: gmail,
-        },
-        {
-            title: t("pages.home.heroSection.tooltipLabels.linkedInProfil"),
-            url: "https://www.linkedin.com/in/nanmegni-ngassam-gilles-pavel-825997206",
-            imageUrl: linkedIn,
-        },
-        {
-            title: t("pages.home.heroSection.tooltipLabels.resume"),
-            url: cv,
-            imageUrl: download,
-        },
-        {
-            title: t("pages.home.heroSection.tooltipLabels.bitOfCode"),
-            url: "https://github.com/NanmegniNgassam",
-            imageUrl: github,
-        },
-    ]
     
     return (
         <div className={styles.globalContainer}>
@@ -65,9 +37,9 @@ const About = () => {
                 </Link>
                 <div className={styles.linksContainer}>
                     {links.map((link, index) => (
-                        <Tooltip title={link.title} placement="top" key={index}>
+                        <Tooltip title={t("pages.home.heroSection.tooltipLabels." + link.title)} placement="top" key={index}>
                             <a className={styles.linkContainer} href={link.url} target='_blank'>
-                                <img src={link.imageUrl} alt={link.title} />
+                                <img src={link.imageUrl} alt={t("pages.home.heroSection.tooltipLabels." + link.title)} />
                             </a>
                         </Tooltip>
                     ))}

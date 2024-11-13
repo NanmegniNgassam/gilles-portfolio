@@ -2,6 +2,12 @@
     padding: 0px 80px;
     margin: 100px auto;
 }
+.experiencesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
 .skillsContainer {
     display: flex;
     flex-direction: column;

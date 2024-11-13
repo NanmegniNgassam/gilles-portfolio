@@ -44,7 +44,7 @@ import vue from '../assets/images/vue.svg';
 export interface Project {
     id: number;
     title: string;
-    coverImage: string;
+    coverImage?: string;
     associationImage: string;
     start: Date;
     end?: Date;

@@ -17,14 +17,36 @@ export const  formatPeriod = (lang: string, startDate: Date, endDate?: Date) => 
     
     // Format start and end dates
     const formattedStartDate = formatter.format(startDate);
-    const formattedEndDate = formatter.format(endDate);
+    if(endDate) {
+        const formattedEndDate = formatter.format(endDate);
     
-    // Generate the corresponding formulation according to locale
-    if (lang.startsWith("fr")) {
-        return `Du ${formattedStartDate} au ${formattedEndDate}`;
-    } else if (lang.startsWith("en")) {
-        return `From ${formattedStartDate} to ${formattedEndDate}`;
+        // Generate the corresponding formulation according to locale
+        if (lang.startsWith("fr")) {
+            return `Du ${formattedStartDate} au ${formattedEndDate}`;
+        } else if (lang.startsWith("en")) {
+            return `From ${formattedStartDate} to ${formattedEndDate}`;
+        } else {
+            return `${formattedStartDate} - ${formattedEndDate}`;
+        }
     } else {
-        return `${formattedStartDate} - ${formattedEndDate}`;
+        // Generate the corresponding formulation according to locale
+        if (lang.startsWith("fr")) {
+            return `Du ${formattedStartDate} à maintenant`;
+        } else if (lang.startsWith("en")) {
+            return `From ${formattedStartDate} to now`;
+        } else {
+            return `${formattedStartDate} - ...`;
+        }
     }
+}
+
+export const formatDate = (lang: string, date: Date) => {
+        // Format the date for the specified local
+        const formatter = new Intl.DateTimeFormat(lang, {
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        });
+
+        return formatter.format(date);
 }

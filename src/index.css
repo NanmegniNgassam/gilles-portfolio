@@ -86,3 +86,10 @@ button:focus-visible {
   flex-direction: column;
   justify-content: space-between;
 }
+
+
+/* MUI Design section */
+.css-l73f8l-MuiTypography-root-MuiTimelineContent-root {
+  display: flex;
+  justify-content: center;
+}

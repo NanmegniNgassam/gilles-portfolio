@@ -89,7 +89,14 @@ const Academics = () => {
                                     </TimelineDot>
                                 <TimelineConnector />
                             </TimelineSeparator>
-                            <TimelineContent sx={{ py: '12px', px: 2 }}>
+                            <TimelineContent 
+                                sx={{
+                                    py: '12px', 
+                                    px: 2, 
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                }}
+                            >
                                 <AcademicCard academic={academic} />
                             </TimelineContent>
                         </TimelineItem>

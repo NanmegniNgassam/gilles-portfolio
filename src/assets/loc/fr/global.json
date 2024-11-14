@@ -184,6 +184,34 @@
                     "hook": "Compétences",
                     "description": "Vous retrouvez ici les domaines notables dans lesquels j'ai pu développer un certain niveau de compétences. Ainsi que l'estimation de ce niveau-là."
                 }
+            },
+            "timeline": {
+                "highSchoolDiploma": "Baccalauréat Scientifique",
+                "lookingForInternship": "En recherche de mon projet de fin d'études (06 mois à partir de février 2025)",
+                "experiences": {
+                    "titles": {
+                        "A24": "Semestre de cours (Intelligence Artificielle)",
+                        "P24": "Semestre de cours (Génie Logicielle)",
+                        "A23": "Stage assistant ingénieur chez Ekilog",
+                        "interA23": "Innovation Crunch Time : mobilité des équipements industriels",
+                        "interA22": "Innovation Crunch Time: Production d'énergie verte",
+                        "A3": "Base Filière",
+                        "uxCert": "Conception d'expérience utilisateur Google Certificat Professionnel",
+                        "elviatech": "Olympiades Elviatech : robot explorateur",
+                        "cpge": "Classes préparatoires aux grandes écoles : MPSI"
+                    },
+                    "descriptions": {
+                        "A24": "Ce bloc métier de l'UTBM forme des ingénieurs spécialisés dans les domaines des systèmes multiagents, de l'optimisation et de l'apprentissage automatique. Les étudiants apprennent à concevoir des systèmes intelligents où plusieurs agents interagissent pour résoudre des problèmes complexes. Ils développent également des compétences en optimisation mathématique pour améliorer les performances des algorithmes et dans l’application du machine learning, notamment pour traiter de grands volumes de données (Big Data). Le programme met l’accent sur des projets pratiques permettant aux étudiants de déployer des solutions en robotique et dans des contextes industriels, tout en les préparant à s’adapter aux évolutions technologiques rapides.​",
+                        "P24": "Le bloc métier Méthodes et outils de déploiement logiciel à l'UTBM se spécialise dans la conception et le déploiement d'applications à grande échelle. Les étudiants y acquièrent des compétences techniques essentielles pour mettre en œuvre des logiciels dans des environnements complexes, tout en respectant des exigences strictes en matière de qualité et d'efficacité. Les outils abordés dans ce parcours couvrent des méthodes de gestion de projet, d'intégration continue et de tests automatisés, ainsi que l'optimisation des processus de développement pour garantir une mise en production fluide et pérenne des solutions logicielles.",
+                        "A23": "Ekilog est une startup qui développe des solutions informatiques innovantes, spécialisées dans l’écosystème SharePoint, pour aider les entreprises à améliorer leur collaboration et leur productivité, tout en proposant des services sur mesure pour accompagner la transformation numérique. En tant qu’assistant ingénieur, j'ai participé au développement de solutions SharePoint en travaillant sur l’analyse fonctionnelle de nouvelles fonctionnalités. J'ai contribué à la conception technique en développant des composants spécifiques via SharePoint Framework (SPFx) et participé aux phases de test et de validation pour assurer la qualité des livrables. Enfin, j'ai collaboré avec le Lead Developer pour finaliser les modules et garantir leur intégration fluide dans la gamme produit. Ce stage m’a permis de développer des compétences techniques en développement front-end et en gestion de projets dans un environnement collaboratif.",
+                        "interA23": "Lors de cet exercice d'idéation et de prototypage XXL, j'ai participé à un sprint d'innovation intensif où nous avons travaillé en équipe pour concevoir des solutions novatrices répondant aux défis de la mobilité dans le secteur industriel. Ce projet nous a permis de combiner compétences techniques et créativité pour développer des prototypes visant à améliorer l’efficacité et la flexibilité des équipements utilisés en production et logistique. L'expérience a mis l'accent sur la collaboration rapide, la gestion du temps et la résolution de problèmes complexes, le tout dans un cadre stimulant axé sur la performance industrielle et l'optimisation des processus.",
+                        "interA22": "J'ai participé au CrunchTime sur le thème de la production d'énergie verte, un challenge d'idéation où l'objectif était de concevoir des solutions innovantes pour la production et l'optimisation des énergies renouvelables. En équipe, nous avons exploré des technologies et des stratégies permettant de rendre la production d'énergie plus durable, en mettant l'accent sur l'intégration des sources d'énergie propres comme l'énergie solaire, éolienne et hydrolienne. Ce défi m'a permis de renforcer mes compétences en gestion de projet, en travail d'équipe et en réflexion stratégique, tout en développant une meilleure compréhension des enjeux environnementaux et technologiques liés à l'énergie verte.",
+                        "A3": "La base filière à l'UTBM offre une formation générale en sciences et technologies, renforcée par des projets industriels et des stages en entreprise. Ce tronc commun permet aux étudiants d'acquérir des compétences solides en mathématiques, physique, informatique, et sciences de l’ingénieur, tout en favorisant l'ouverture internationale. Après ces deux premières années, les étudiants se spécialisent dans l’une des neuf filières proposées, en fonction de leurs intérêts. Cette approche garantit une transition réussie vers des carrières d’ingénieur dans des secteurs innovants et en constante évolution.",
+                        "uxCert": "Cette formation m'a permis de développer des compétences pratiques en conception d'expérience utilisateur (UX) à travers des concepts et outils essentiels pour créer des interfaces centrées sur l'utilisateur. J'ai appris à utiliser des user stories pour définir les besoins des utilisateurs et à créer des user flows pour illustrer leur parcours. La formation m'a également familiarisé avec la création de wireframes et de prototypes interactifs afin de visualiser et tester les idées de conception avant le développement. En outre, j'ai acquis de l'expérience dans la réalisation de user research pour recueillir des retours utilisateurs et améliorer les designs, ainsi que dans l'utilisation de personas et user boards pour mieux cibler les attentes des utilisateurs. Cette approche m'a permis de développer une compréhension approfondie du processus de conception UX, de la phase d'idéation à la validation du produit final.",
+                        "elviatech": "Lors de l'ELVIA TECH Hackathon, un challenge d'idéation organisé en Afrique centrale, l'objectif était de concevoir des solutions innovantes en Intelligence Artificielle et robotique. Le domaine d'application que nous avons choisi était celui du robot explorateur. Nous avons travaillé sur la conception d'un robot autonome capable d'explorer des environnements complexes, en intégrant des technologies d'IA pour le traitement de données en temps réel, la navigation et l'optimisation des trajectoires. Ce projet m'a permis de renforcer mes compétences en IA, robotique et en travail d'équipe pour résoudre des problématiques techniques avancées.",
+                        "cpge": "La Classe Préparatoire aux Grandes Écoles est un cursus d'excellence qui prépare intensivement les étudiants aux concours des grandes écoles d'ingénieurs ou de commerce en France. Sur une durée de deux ans, les élèves acquièrent des bases solides en mathématiques, physique, chimie, sciences de l’ingénieur, ou en économie et langues, selon la filière choisie. Le programme met l'accent sur le développement de compétences analytiques, la rigueur méthodologique, et la capacité à résoudre des problèmes complexes. Cette formation exigeante valorise également la gestion du stress et le travail en équipe, préparant les étudiants à réussir dans des environnements académiques et professionnels compétitifs."
+                    }
+                }
             }
         },
         "about": {
@@ -226,7 +254,8 @@
             "description": "Description",
             "stack": "Stack",
             "pronoun": "il",
-            "connector": "et"
+            "connector": "et",
+            "nowIndicator": "Maintenant"
         }
     }
 }

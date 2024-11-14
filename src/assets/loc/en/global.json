@@ -184,6 +184,34 @@
                     "hook": "Skills",
                     "description": "Here you will find the notable areas in which I have been able to develop a certain level of skills. As well as the estimation of this level."
                 }
+            },
+            "timeline": {
+                "highSchoolDiploma": "Baccalaureat",
+                "lookingForInternship": "Looking for my final year project (6 months from February 2025)",
+                "experiences": {
+                    "titles": {
+                        "A24": "Course semester (Artificial Intelligence)",
+                        "P24": "Course semester (Software Engineering)",
+                        "A23": "Assistant engineer internship at Ekilog",
+                        "interA23": "Innovation Crunch Time: Mobility of industrial equipment",
+                        "interA22": "Innovation Crunch Time: Green energy production",
+                        "A3": "Core curriculum",
+                        "uxCert": "Google User Experience Design Professional Certificate",
+                        "elviatech": "Elviatech Olympics: exploratory robot",
+                        "cpge": "Preparatory classes: MPSI"
+                    },
+                    "descriptions": {
+                        "A24": "This UTBM business block trains engineers specializing in the fields of multiagent systems, optimization and machine learning. Students learn to design intelligent systems where multiple agents interact to solve complex problems. They also develop skills in mathematical optimization to improve the performance of algorithms and in the application of machine learning, particularly to process large volumes of data (Big Data). The program emphasizes practical projects that allow students to deploy solutions in robotics and in industrial contexts, while preparing them to adapt to rapid technological developments.",
+                        "P24": "The Software Deployment Methods and Tools business block at UTBM specializes in the design and deployment of large-scale applications. Students acquire essential technical skills to implement software in complex environments, while respecting strict quality and efficiency requirements. The tools covered in this course cover project management methods, continuous integration and automated testing, as well as the optimization of development processes to ensure smooth and sustainable production of software solutions.",
+                        "A23": "Ekilog is a startup that develops innovative IT solutions, specialized in the SharePoint ecosystem, to help companies improve their collaboration and productivity, while offering tailor-made services to support digital transformation. As an assistant engineer, I participated in the development of SharePoint solutions by working on the functional analysis of new features. I contributed to the technical design by developing specific components via SharePoint Framework (SPFx) and participated in the testing and validation phases to ensure the quality of the deliverables. Finally, I collaborated with the Lead Developer to finalize the modules and ensure their smooth integration into the product range. This internship allowed me to develop technical skills in front-end development and project management in a collaborative environment.",
+                        "interA23": "During this XXL ideation and prototyping exercise, I participated in an intensive innovation sprint where we worked as a team to design innovative solutions to address mobility challenges in the industrial sector. This project allowed us to combine technical skills and creativity to develop prototypes aimed at improving the efficiency and flexibility of equipment used in production and logistics. The experience focused on rapid collaboration, time management and complex problem solving, all in a stimulating environment focused on industrial performance and process optimization.",
+                        "interA22": "I participated in the CrunchTime on the theme of green energy production, an ideation challenge where the objective was to design innovative solutions for the production and optimization of renewable energies. As a team, we explored technologies and strategies to make energy production more sustainable, with a focus on the integration of clean energy sources such as solar, wind and tidal energy. This challenge allowed me to strengthen my skills in project management, teamwork and strategic thinking, while developing a better understanding of the environmental and technological issues related to green energy.",
+                        "A3": "The core curriculum at UTBM offers a general education in science and technology, reinforced by industrial projects and internships in companies. This common core allows students to acquire solid skills in mathematics, physics, computer science, and engineering sciences, while promoting international openness. After these first two years, students specialize in one of the nine proposed courses, according to their interests. This approach guarantees a successful transition to engineering careers in innovative and constantly evolving sectors.",
+                        "uxCert": "This course helped me develop practical skills in user experience (UX) design through key concepts and tools for creating user-centered interfaces. I learned how to use user stories to define user needs and create user flows to map out their journey. The course also introduced me to creating wireframes and interactive prototypes to visualize and test design ideas before development. Additionally, I gained experience in user research to gather feedback and improve designs, as well as using personas and user boards to better target user expectations. This approach provided me with a deep understanding of the UX design process, from ideation to final product validation.",
+                        "elviatech": "I participated in the ELVIA TECH Hackathon, an ideation challenge organized in Central Africa, focused on Artificial Intelligence and robotics. The application domain we chose was the explorer robot. Our team worked on designing an autonomous robot capable of exploring complex environments, integrating AI technologies for real-time data processing, navigation, and trajectory optimization. This project allowed me to enhance my skills in AI, robotics, and teamwork to solve advanced technical challenges.",
+                        "cpge": "The Preparatory Classes (CPGE) is a highly intensive two-year program designed to prepare students for competitive entrance exams to prestigious engineering or business schools in France. It offers a rigorous curriculum focused on developing a strong foundation in mathematics, physics, chemistry, engineering sciences, or economics and languages, depending on the chosen track. The CPGE emphasizes analytical thinking, problem-solving skills, and methodological rigor. It also fosters stress management and teamwork, equipping students with the discipline and resilience needed to excel in demanding academic and professional environments."
+                    }
+                }
             }
         },
         "about": {
@@ -226,7 +254,8 @@
             "description": "Description",
             "stack": "Stack",
             "pronoun": "he",
-            "connector": "and"
+            "connector": "and",
+            "nowIndicator": "Now"
         }
     }
 }

@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 import AcademicCard from '../../components/academicCard';
 import Skill from "../../components/skill";
 import Title from "../../components/title";
-import { projects } from '../../utils/interfaces';
+import { academics } from '../../utils/interfaces';
 import { formatDate } from '../../utils/relativeTime';
 import styles from "./academics.module.css";
 
@@ -79,19 +79,19 @@ const Academics = () => {
                                 variant="body2"
                                 color="text.secondary"
                             >
-                                Now
+                                { t("general.keywords.nowIndicator") }
                             </TimelineOppositeContent>
                             <TimelineSeparator>
                                 <TimelineDot color="secondary" sx={{ width: 50, height: 50 }} />
                             </TimelineSeparator>
                             <TimelineContent sx={{ py: '0px', px: 2, mt: 0.25 }}>
                                 <Typography variant="h6" component="p" sx={{ maxWidth: '400px', fontSize: "1rem" }}>
-                                    En recherche de mon projet de fin d'études (06 mois à partir de Février 2025)
+                                    { t("pages.roadMap.timeline.lookingForInternship") }
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
 
-                        {projects.map((academic, key) => (
+                        {academics.map((academic, key) => (
                             <TimelineItem key={key}>
                                 <TimelineOppositeContent
                                     sx={{ m: 'auto 0' }}
@@ -114,6 +114,13 @@ const Academics = () => {
                         ))}
                         
                         <TimelineItem>
+                            <TimelineOppositeContent
+                                sx={{ m: 'auto 0' }}
+                                variant="body2"
+                                color="text.secondary"
+                            >
+                                { formatDate(translate.language, new Date("6/20/2020")) }
+                            </TimelineOppositeContent>
                             <TimelineSeparator>
                                 <TimelineConnector/>
                                     <TimelineDot color="secondary">
@@ -122,32 +129,32 @@ const Academics = () => {
                             </TimelineSeparator>
                             <TimelineContent sx={{ py: '20px', px: 2 }}>
                                 <Typography variant="h6" component="span">
-                                    Baccalauréat
+                                    { t("pages.roadMap.timeline.highSchoolDiploma") }
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
                     </Timeline>
                 ) : (
                     <div className={styles.experiencesContainer}>
-                        {projects.map((academic, key) => (
+                        {academics.map((academic, key) => (
                             <AcademicCard completeCard academic={academic} key={key} />
                         ))}
                     </div>
                 )}
                 
             </div>
-
-            <Title 
-                actualTitle={t("pages.roadMap.titles.competences.main")}
-                titleHook={t("pages.roadMap.titles.competences.hook")}
-                titleDescription={t("pages.roadMap.titles.competences.description")}
-            />
-            <div className={styles.skillsContainer}>
-                {skills.map((skill, key) => (
-                    <Skill skill={skill} key={key} />
-                ))}
+            <div>
+                <Title 
+                    actualTitle={t("pages.roadMap.titles.competences.main")}
+                    titleHook={t("pages.roadMap.titles.competences.hook")}
+                    titleDescription={t("pages.roadMap.titles.competences.description")}
+                />
+                <div className={styles.skillsContainer}>
+                    {skills.map((skill, key) => (
+                        <Skill skill={skill} key={key} />
+                    ))}
+                </div>
             </div>
-
         </div>
         
     );

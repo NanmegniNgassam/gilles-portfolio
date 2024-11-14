@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import gilles from "../../assets/images/Gilles.png";
 import { links } from "../../utils/socialLinks";
 import styles from "./about.module.css";
+import Skills from "../../components/skills";
 
 const About = () => {
     const { t } = useTranslation("global"); 
@@ -45,6 +46,7 @@ const About = () => {
                     ))}
                 </div>
             </div>
+            <Skills />
         </div>
     );
 }

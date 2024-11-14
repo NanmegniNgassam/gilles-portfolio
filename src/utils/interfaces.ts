@@ -302,7 +302,7 @@ export const academics: Project[] = [
         duration: 5,
         durationUnit: "days",
         isProgressing: false,
-        link: "https://gilles-ngassam.pisoftlite.com/",
+        link: "https://neext.engineering/",
         tools: [
             {name: 'Python', imageUrl: python},
             {name: 'Django', imageUrl: django},
@@ -359,7 +359,7 @@ export const academics: Project[] = [
         duration: 9,
         durationUnit: "months",
         isProgressing: false,
-        link: "https://www.ekilog.fr/",
+        link: "https://www.utbm.fr/",
         tools: [
             {name: 'Java', imageUrl: java},
             {name: 'Python', imageUrl: python},

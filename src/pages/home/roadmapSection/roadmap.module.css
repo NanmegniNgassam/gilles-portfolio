@@ -1,12 +1,11 @@
 .roadMapContainer {
-    padding: 80px 0;
+    overflow: hidden;
     background-color: var(--contrast-color);
     display: flex;
 }
 .swiperContainer {
     max-width: 50%;
-    border: 1px solid var(--black-color);
-    box-shadow: 4px 4px 12px var(--black-color);
+    border: 2px solid var(--black-color);
 }
 
 .descriptionContainer {
@@ -25,16 +24,19 @@
 .description {
     font-size: 1.2rem!important;
     font-family: Dosis!important;
+    color: var(--black-color);
 }
 
 
 @media screen and (max-width: 900px) {
     .roadMapContainer {
-        padding: 40px 0;
+        padding: 40px 0 0 0;
         flex-direction: column-reverse;
+        gap: 40px;
     }
     .swiperContainer {
         max-width: 100%;
+        border-width: 1px;
     }
     .descriptionContainer {
         padding: 20px;
@@ -50,7 +52,7 @@
 
 @media screen and (max-width: 700px) {
     .roadMapContainer {
-        padding: 20px 0;
+        padding: 20px 0 0 0;
     }
     .descriptionContainer {
         padding: 10px;

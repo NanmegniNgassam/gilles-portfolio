@@ -53,7 +53,7 @@ const SocialCard = ( { experience }: { experience: SocialExperience } ) => {
                         { t("pages.home.container.titles.experiences.descriptions." + experience.title) }
                     </Typography>
                 </Stack>
-                <motion.div whileInView={{ rotate: 360 }} transition={{ duration: 0.5 }} className={styles.moreButton} >
+                <motion.div initial={{rotate: -90}} whileInView={{ rotate: 0 }} transition={{ duration: 0.5 }} className={styles.moreButton} >
                     <Link to={experience.link}  target="_blank" className={styles.stack}> 
                         <ArrowForwardOutlined  sx={{ width: 25 }} />
                     </Link>

@@ -45,13 +45,13 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
         setSending(true)
 
         try {
-            await fetch('https://api.gillesngassam.com/', {
+            await fetch('https://api.gillesngassam.com/offers', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    subject: "PROPOSITION DE MISSION",
+                    subject: `MISSION - ${proposition.mission.title} - ${proposition.recruiter.company || ''}`,
                     body: emailFormat(proposition, skills)
                 })
             })

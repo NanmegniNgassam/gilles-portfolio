@@ -5,7 +5,6 @@ import { TransitionProps } from "@mui/material/transitions";
 import { MissionProposition } from "../../../utils/mission";
 import { SKILLS } from "../../../utils/skills";
 import EmailTemplate from "./emailTemplate";
-import { MailSlurp } from 'mailslurp-client';
 import { emailFormat } from "../../../utils/email";
 import CustomSnackBar from "./snackBar";
 import { useTranslation } from "react-i18next";
@@ -17,8 +16,6 @@ interface ConfirmDialogProps {
     handleNext: () => void;
     skills: SKILLS[];
 }
-
-const mailslurp = new MailSlurp({ apiKey: import.meta.env.VITE_REACT_MAIL_SLURP_API_KEY });
 
 const ConfirmDialog = (props: ConfirmDialogProps) => {
     const {t} = useTranslation("global");
@@ -44,18 +41,20 @@ const ConfirmDialog = (props: ConfirmDialogProps) => {
     }
 
     const sendProposition = async(proposition: MissionProposition, skills: SKILLS[]): Promise<void> => {
-        const inboxID = import.meta.env.VITE_REACT_MAIL_SLURP_INBOX_ID;
         setSendingError(false);
         setSending(true)
 
         try {
-            await mailslurp.sendEmail(inboxID, {
-                to: ['nanmegningassam@gmail.com'],
-                cc: ['marreckgilles@gmail.com'],
-                subject: "PROPOSITION DE MISSION",
-                isHTML: true,
-                body: emailFormat(proposition, skills),
-            });
+            await fetch('https://api.gillesngassam.com/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    subject: "PROPOSITION DE MISSION",
+                    body: emailFormat(proposition, skills)
+                })
+            })
             
             handleNext(); 
             setDialogOpen(false);

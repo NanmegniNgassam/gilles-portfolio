@@ -10,7 +10,6 @@ import Typography from '@mui/material/Typography';
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import AcademicCard from '../../components/academicCard';
-import Skills from '../../components/skills';
 import Title from "../../components/title";
 import { academics } from '../../utils/interfaces';
 import { formatDate } from '../../utils/relativeTime';
@@ -130,7 +129,7 @@ const Academics = () => {
                     ))}
                 </div>
             )}
-            <Skills />
+            {/* <Skills /> */}
         </div>
         
     );

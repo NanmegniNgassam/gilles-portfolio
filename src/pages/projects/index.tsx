@@ -8,7 +8,6 @@ import Title from "../../components/title";
 import { projects } from "../../utils/interfaces";
 import TrustCompanies from "../components/trustCompanies";
 import styles from "./projects.module.css";
-import Skills from "../../components/skills";
 
 const Projects = () => {
     const {t} = useTranslation("global"); 
@@ -40,7 +39,7 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
-            <Skills />
+            {/* <Skills /> */}
             <TrustCompanies />
         </div>
     );

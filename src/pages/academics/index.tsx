@@ -67,7 +67,7 @@ const Academics = () => {
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: '0px', px: 2, mt: 0.25 }}>
                             <Typography variant="h6" component="p" sx={{ maxWidth: '400px', fontSize: "1rem" }}>
-                                { t("pages.roadMap.timeline.lookingForInternship") }
+                                { t("pages.roadMap.timeline.permanentPosition") }
                             </Typography>
                         </TimelineContent>
                     </TimelineItem>

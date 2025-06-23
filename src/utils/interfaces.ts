@@ -17,6 +17,8 @@ import terroir_back from "../assets/images/terroir_back.png";
 import ubuntu from "../assets/images/ubuntu.png";
 import ubuntu_logo from "../assets/images/ubuntu_logo.png";
 import utbm_logo from "../assets/images/utbm.svg";
+import orange_logo from "../assets/images/orange_logo.png";
+import genopole_logo from "../assets/images/genopole.png";
 
 
 import adobeXD from '../assets/images/adobe-xd.svg';
@@ -254,6 +256,43 @@ export const projects: Project[] = [
 export const academics: Project[] = [
     {
         id: 1,
+        title: "ST50",
+        description: "ST50",
+        associationImage: orange_logo,
+        start: new Date("2/3/2025"),
+        duration: 6,
+        durationUnit: "months",
+        isProgressing: true,
+        link: "https://www.orange.com/fr",
+        tools: [
+            {name: 'Angular', imageUrl: angular},
+            {name: 'TypeScript', imageUrl: typeScript},
+            {name: 'Django', imageUrl: django},
+            {name: 'Figma', imageUrl: figma},
+            {name: 'Git', imageUrl: git},
+            {name: 'Git', imageUrl: git},
+        ]
+    },
+    {
+        id: 2,
+        title: "D4Gen",
+        description: "D4Gen",
+        associationImage: genopole_logo,
+        start: new Date("5/16/2025"),
+        end: new Date("5/18/2024"),
+        duration: 3,
+        durationUnit: "days",
+        isProgressing: false,
+        link: "https://genopole.agorize.com/fr/challenges/d4gen-hackathon-2025",
+        tools: [
+            {name: 'React', imageUrl: react},
+            {name: 'Python', imageUrl: python},
+            {name: 'Adobe XD', imageUrl: adobeXD},
+            {name: 'Git', imageUrl: git},
+        ]
+    },
+    {
+        id: 3,
         title: "A24",
         description: "A24",
         associationImage: utbm_logo,
@@ -270,7 +309,7 @@ export const academics: Project[] = [
         ]
     },
     {
-        id: 2,
+        id: 4,
         title: "P24",
         description: "P24",
         associationImage: utbm_logo,
@@ -293,7 +332,7 @@ export const academics: Project[] = [
         ]
     },
     {
-        id: 3,
+        id: 5,
         title: "interA23",
         description: "interA23",
         associationImage: nextEngineering,
@@ -309,7 +348,7 @@ export const academics: Project[] = [
         ]
     },
     {
-        id: 4,
+        id: 6,
         title: "A23",
         description: "A23",
         associationImage: ekilog,
@@ -334,7 +373,7 @@ export const academics: Project[] = [
         ]
     },
     {
-        id: 5,
+        id: 7,
         title: "interA22",
         description: "interA22",
         associationImage: crous_logo,
@@ -350,7 +389,7 @@ export const academics: Project[] = [
         ]
     },
     {
-        id: 5,
+        id: 8,
         title: "A3",
         description: "A3",
         associationImage: utbm_logo,
@@ -380,7 +419,7 @@ export const academics: Project[] = [
         ]
     },
     {
-        id: 6,
+        id: 9,
         title: "uxCert",
         description: "uxCert",
         associationImage: google,
@@ -396,7 +435,7 @@ export const academics: Project[] = [
         ]
     },
     {
-        id: 7,
+        id: 10,
         title: "elviatech",
         description: "elviatech",
         associationImage: elviatech,
@@ -414,7 +453,7 @@ export const academics: Project[] = [
         ]
     },
     {
-        id: 8,
+        id: 11,
         title: "cpge",
         description: "cpge",
         associationImage: ekilog,

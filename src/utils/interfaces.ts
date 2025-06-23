@@ -54,6 +54,13 @@ import sqlite from '../assets/images/sqllite.svg';
 import testingLibrary from '../assets/images/testingLibrary.png';
 import typeScript from '../assets/images/typescript.svg';
 import vue from '../assets/images/vue.svg';
+import tailwind_css from '../assets/images/tailwind_css.png';
+import gitLab from '../assets/images/gitlab.svg';
+import oidc from '../assets/images/oidc.png';
+import gitHub from '../assets/images/github.png';
+import karma from '../assets/images/karma.png';
+import jasmine from '../assets/images/jasmine.png';
+
 
 export interface Project {
     id: number;
@@ -267,10 +274,13 @@ export const academics: Project[] = [
         tools: [
             {name: 'Angular', imageUrl: angular},
             {name: 'TypeScript', imageUrl: typeScript},
+            {name: 'OIDC', imageUrl: oidc},
+            {name: 'GitLab', imageUrl: gitLab},
             {name: 'Django', imageUrl: django},
             {name: 'Figma', imageUrl: figma},
             {name: 'Git', imageUrl: git},
-            {name: 'Git', imageUrl: git},
+            {name: 'Karma', imageUrl: karma},
+            {name: 'Jasmine', imageUrl: jasmine},
         ]
     },
     {
@@ -285,10 +295,12 @@ export const academics: Project[] = [
         isProgressing: false,
         link: "https://genopole.agorize.com/fr/challenges/d4gen-hackathon-2025",
         tools: [
-            {name: 'React', imageUrl: react},
             {name: 'Python', imageUrl: python},
+            {name: 'React', imageUrl: react},
+            {name: 'Tailwind Css', imageUrl: tailwind_css},
             {name: 'Adobe XD', imageUrl: adobeXD},
             {name: 'Git', imageUrl: git},
+            {name: 'GitHub', imageUrl: gitHub},
         ]
     },
     {
@@ -306,6 +318,7 @@ export const academics: Project[] = [
             {name: 'Java', imageUrl: java},
             {name: 'Django', imageUrl: django},
             {name: 'Git', imageUrl: git},
+            {name: 'GitHub', imageUrl: gitHub},
         ]
     },
     {
@@ -326,6 +339,7 @@ export const academics: Project[] = [
             {name: 'Material UI', imageUrl: mui},
             {name: 'Figma', imageUrl: figma},
             {name: 'Git', imageUrl: git},
+            {name: 'GitHub', imageUrl: gitHub},
             {name: 'Jest', imageUrl: jest},
             {name: 'Google Cloud Platform', imageUrl: gcp},
             {name: 'Docker', imageUrl: docker},
@@ -416,6 +430,7 @@ export const academics: Project[] = [
             {name: 'Redux', imageUrl: redux},
             {name: 'Adobe XD', imageUrl: adobeXD},
             {name: 'Git', imageUrl: git},
+            {name: 'GitHub', imageUrl: gitHub},
         ]
     },
     {

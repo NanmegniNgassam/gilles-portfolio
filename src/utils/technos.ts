@@ -29,7 +29,11 @@ import css from '../assets/images/css.svg';
 import sass from '../assets/images/sass.svg';
 import jest from '../assets/images/jest.svg';
 import testingLibrary from '../assets/images/testingLibrary.png';
-
+import karma from '../assets/images/karma.png';
+// import jasmine from '../assets/images/jasmine.png';
+import gitHub from '../assets/images/github.png';
+import gitLab from '../assets/images/gitlab.svg';
+import oidc from '../assets/images/oidc.png';
 
 
 interface Language {
@@ -151,6 +155,11 @@ export const technos: Technology[] = [
                 name: 'Google Cloud Platform',
                 imageUrl: gcp,
                 siteUrl: 'https://www.cloudskillsboost.google/'
+            },
+            {
+                name: 'OIDC',
+                imageUrl: oidc,
+                siteUrl: 'https://openid.net/'
             }
         ]
     },
@@ -211,7 +220,18 @@ export const technos: Technology[] = [
                 name: 'Docker',
                 imageUrl: docker,
                 siteUrl: 'https://www.docker.com/'
-            }
+            },
+            {
+                name: 'GitHub',
+                imageUrl: gitHub,
+                siteUrl: 'https://github.com/'
+            },
+            {
+                name: 'GitLab',
+                imageUrl: gitLab,
+                siteUrl: 'https://about.gitlab.com/'
+            },
+
         ]
     },
     {
@@ -235,13 +255,23 @@ export const technos: Technology[] = [
             {
                 name: 'Jest',
                 imageUrl: jest,
-                siteUrl: 'https://www.docker.com/'
+                siteUrl: 'https://jestjs.io/'
             },
             {
                 name: 'Testing Library',
                 imageUrl: testingLibrary,
-                siteUrl: 'https://jestjs.io/'
-            }
+                siteUrl: 'https://testing-library.com/'
+            },
+            {
+                name: 'Karma',
+                imageUrl: karma,
+                siteUrl: 'https://karma-runner.github.io/latest/index.html'
+            },
+            // {
+            //     name: 'Jasmine',
+            //     imageUrl: jasmine,
+            //     siteUrl: 'https://jasmine.github.io/'
+            // },
         ]
     },
 ]

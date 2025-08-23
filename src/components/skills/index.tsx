@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Title from "../title";
 import styles from "./skills.module.css";
-import Skill from "../skill";
+import Skill from "./skill";
 
 const Skills = () => {
     const { t } = useTranslation("global"); 

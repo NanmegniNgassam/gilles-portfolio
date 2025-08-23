@@ -2,38 +2,41 @@ import adobeXD from '../assets/images/adobe-xd.svg';
 import angular from '../assets/images/angular.svg';
 import appWrite from '../assets/images/appWrite.png';
 import azure from '../assets/images/azure-devops.svg';
+import css from '../assets/images/css.svg';
 import django from '../assets/images/django.svg';
 import docker from '../assets/images/docker.svg';
 import figma from '../assets/images/figma.svg';
 import firebase from '../assets/images/firebase.svg';
-import flutter from '../assets/images/flutter.svg';
 import gcp from '../assets/images/gcp.png';
 import git from '../assets/images/git.svg';
-import java from '../assets/images/java.svg';
+import gitHub from '../assets/images/github.png';
+import gitLab from '../assets/images/gitlab.svg';
+import html from '../assets/images/html.svg';
 import javaScript from '../assets/images/javascript.svg';
+import jest from '../assets/images/jest.svg';
+import karma from '../assets/images/karma.png';
 import mongo from '../assets/images/mongodb.svg';
 import mui from '../assets/images/mui.svg';
 import sql from '../assets/images/mysql.svg';
 import nextJs from '../assets/images/next.svg';
 import nodeJs from '../assets/images/nodejs.svg';
-import php from '../assets/images/php.svg';
+import oidc from '../assets/images/oidc.png';
 import python from '../assets/images/python.svg';
 import react from '../assets/images/react.svg';
 import redis from '../assets/images/redis.svg';
+import redux from '../assets/images/redux.svg';
+import sass from '../assets/images/sass.svg';
 import sqlite from '../assets/images/sqllite.svg';
+import testingLibrary from '../assets/images/testingLibrary.png';
 import typeScript from '../assets/images/typescript.svg';
 import vue from '../assets/images/vue.svg';
-import redux from '../assets/images/redux.svg';
-import html from '../assets/images/html.svg';
-import css from '../assets/images/css.svg';
-import sass from '../assets/images/sass.svg';
-import jest from '../assets/images/jest.svg';
-import testingLibrary from '../assets/images/testingLibrary.png';
-import karma from '../assets/images/karma.png';
-// import jasmine from '../assets/images/jasmine.png';
-import gitHub from '../assets/images/github.png';
-import gitLab from '../assets/images/gitlab.svg';
-import oidc from '../assets/images/oidc.png';
+import nestJs from '../assets/images/nestJs.png';
+import fastAPI from '../assets/images/fast_api.png';
+import tailwindCss from '../assets/images/tailwindCss.png';
+import mocha from '../assets/images/mocha.png';
+import cypress from '../assets/images/cypress.png';
+import playwright from '../assets/images/playwright.png';
+import kubernetes from '../assets/images/Kubernetes.png';
 
 
 interface Language {
@@ -67,19 +70,9 @@ export const technos: Technology[] = [
                 siteUrl: 'https://nodejs.org/',
             },
             {
-                name: 'Php',
-                imageUrl: php,
-                siteUrl: 'https://www.php.net/'
-            },
-            {
                 name: 'Python',
                 imageUrl: python,
                 siteUrl: 'https://www.python.org/'
-            },
-            {
-                name: 'Java',
-                imageUrl: java,
-                siteUrl: 'https://www.java.com/'
             }
         ]
     },
@@ -97,24 +90,24 @@ export const technos: Technology[] = [
                 siteUrl: 'https://v2.angular.io/'
             },
             {
+                name: 'NextJs',
+                imageUrl: nextJs,
+                siteUrl: 'https://nextjs.org/'
+            },
+            {
                 name: 'Vue',
                 imageUrl: vue,
                 siteUrl: 'https://vuejs.org/'
             },
             {
-                name: 'React native',
-                imageUrl: react,
-                siteUrl: 'https://reactnative.dev/'
+                name: 'NestJs',
+                imageUrl: nestJs,
+                siteUrl: 'https://nestjs.com/'
             },
             {
-                name: 'Flutter',
-                imageUrl: flutter,
-                siteUrl: 'https://flutter.dev/'
-            },
-            {
-                name: 'NextJs',
-                imageUrl: nextJs,
-                siteUrl: 'https://nextjs.org/'
+                name: 'Redux',
+                imageUrl: redux,
+                siteUrl: 'https://redux.js.org/'
             },
             {
                 name: 'Django',
@@ -122,14 +115,19 @@ export const technos: Technology[] = [
                 siteUrl: 'https://www.djangoproject.com/'
             },
             {
+                name: 'Fast Api',
+                imageUrl: fastAPI,
+                siteUrl: 'https://fastapi.tiangolo.com/'
+            },
+            {
+                name: 'TailwindCss',
+                imageUrl: tailwindCss,
+                siteUrl: 'https://tailwindcss.com/'
+            },
+            {
                 name: 'Material UI',
                 imageUrl: mui,
                 siteUrl: 'https://mui.com/'
-            },
-            {
-                name: 'Redux',
-                imageUrl: redux,
-                siteUrl: 'https://redux.js.org/'
             },
         ]
     },
@@ -212,6 +210,16 @@ export const technos: Technology[] = [
                 siteUrl: 'https://git-scm.com/'
             },
             {
+                name: 'GitHub',
+                imageUrl: gitHub,
+                siteUrl: 'https://github.com/'
+            },
+            {
+                name: 'GitLab',
+                imageUrl: gitLab,
+                siteUrl: 'https://about.gitlab.com/'
+            },
+            {
                 name: 'Azure',
                 imageUrl: azure,
                 siteUrl: 'https://azure.microsoft.com/'
@@ -222,21 +230,45 @@ export const technos: Technology[] = [
                 siteUrl: 'https://www.docker.com/'
             },
             {
-                name: 'GitHub',
-                imageUrl: gitHub,
-                siteUrl: 'https://github.com/'
+                name: 'Kubernetes',
+                imageUrl: kubernetes,
+                siteUrl: 'https://kubernetes.io/'
             },
-            {
-                name: 'GitLab',
-                imageUrl: gitLab,
-                siteUrl: 'https://about.gitlab.com/'
-            },
-
         ]
     },
     {
         name: 'others',
         languages: [
+            {
+                name: 'Jest',
+                imageUrl: jest,
+                siteUrl: 'https://jestjs.io/'
+            },
+            {
+                name: 'Testing Library',
+                imageUrl: testingLibrary,
+                siteUrl: 'https://testing-library.com/'
+            },
+            {
+                name: 'Cypress',
+                imageUrl: cypress,
+                siteUrl: 'https://testing-library.com/'
+            },
+            {
+                name: 'Playwright',
+                imageUrl: playwright,
+                siteUrl: 'https://testing-library.com/'
+            },
+            {
+                name: 'Karma',
+                imageUrl: karma,
+                siteUrl: 'https://karma-runner.github.io/latest/index.html'
+            },
+            {
+                name: 'Mocha',
+                imageUrl: mocha,
+                siteUrl: 'https://mochajs.org/'
+            },
             {
                 name: 'HTML',
                 imageUrl: html,
@@ -252,26 +284,6 @@ export const technos: Technology[] = [
                 imageUrl: sass,
                 siteUrl: 'https://sass-lang.com/'
             },
-            {
-                name: 'Jest',
-                imageUrl: jest,
-                siteUrl: 'https://jestjs.io/'
-            },
-            {
-                name: 'Testing Library',
-                imageUrl: testingLibrary,
-                siteUrl: 'https://testing-library.com/'
-            },
-            {
-                name: 'Karma',
-                imageUrl: karma,
-                siteUrl: 'https://karma-runner.github.io/latest/index.html'
-            },
-            // {
-            //     name: 'Jasmine',
-            //     imageUrl: jasmine,
-            //     siteUrl: 'https://jasmine.github.io/'
-            // },
         ]
     },
 ]

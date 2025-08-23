@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Title from '../../../components/title';
 import { technos } from '../../../utils/technos';
 import styles from './techLanguages.module.css';
-import { motion } from 'framer-motion';
 
 const TechLanguages = () => {
     const {t} = useTranslation("global");
@@ -17,13 +16,9 @@ const TechLanguages = () => {
             />
             <div className={styles.stackContainer}>
                 {technos.map((techno, index) => (
-                    <motion.div 
+                    <div 
                         key={index} 
                         className={styles.stackRow}
-                        variants={{ hidden: { y: -50   , opacity: 0 }, visible: {y: 0, opacity: 1} }}
-                        transition={{ duration: 0.5 }}
-                        initial="hidden"
-                        whileInView="visible"
                     >
                         <span className={styles.title}> { t("pages.home.technos." + techno.name)} </span>
                         {techno.languages.map((language, key) => (
@@ -33,7 +28,7 @@ const TechLanguages = () => {
                                 </Link>
                             </Tooltip>
                         ))}
-                    </motion.div>
+                    </div>
                 ))}
             </div>
         </div>

@@ -7,15 +7,12 @@
     overflow: hidden;
 }
 .stackRow {
-    padding: 40px 10px 20px 10px;
+    padding: 70px 10px 5px 10px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--contrast-color);
-    border-right: 20px solid var(--secondary-color);
+    justify-content: start;
 }
 .title {
     position: absolute;
@@ -23,9 +20,10 @@
     left: 10px;
     font-family: DosisMedium;
     font-size: 25px;
+    border-block-end: 3px solid var(--black-color);
 }
 .stackItem {
-    width: 100px;
+    width: 80px;
     aspect-ratio: 1/1;
     will-change: filter;
     transition: filter 300ms;
@@ -48,8 +46,7 @@
 
 @media screen and (max-width: 900px) {
     .stackRow {
-        padding: 30px 10px 15px 10px;
-        border-right-width: 10px;
+        padding: 50px 10px 15px 10px;
     }
     .stackItem {
         width: 60px;
@@ -64,8 +61,8 @@
         gap: 10px;
     }
     .stackRow {
-        padding: 20px 10px 10px 10px;
-        border-right-width: 5px;
+        padding: 50px 10px 10px 10px;
+        border-block-end-width: 2px;
     }
     .stackItem {
         width: 50px;

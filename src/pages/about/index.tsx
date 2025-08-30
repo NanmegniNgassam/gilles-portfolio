@@ -1,10 +1,12 @@
-import { Button, Tooltip } from "@mui/material";
+import { Box, Button, Tooltip } from "@mui/material";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import gilles from "../../assets/images/Gilles.png";
 import { links } from "../../utils/socialLinks";
+import Masonry from '@mui/lab/Masonry'
 import styles from "./about.module.css";
+import ImageCard from "./imageCard";
 
 const About = () => {
     const { t } = useTranslation("global"); 
@@ -44,6 +46,18 @@ const About = () => {
                         </Tooltip>
                     ))}
                 </div>
+            </div>
+            
+            <div >
+                <h2>Around my career,</h2>
+                <Box sx={{ width: '100%', minHeight: 829 }}>
+                    
+                    <Masonry columns={3} spacing={2}>
+                        <ImageCard />
+                        <ImageCard />
+                        <ImageCard />
+                    </Masonry>
+                </Box>
             </div>
             {/* <Skills /> */}
         </div>

@@ -31,7 +31,7 @@ export const volunteeringExperiences: SocialExperience[] = [
         duration: 6,
         durationUnit: "months",
         location: "Belfort, Bourgogne-Franche-Comté, France",
-        isProgressing: true,
+        isProgressing: false,
         link: "https://junior.utbm.fr/"
     },
     {

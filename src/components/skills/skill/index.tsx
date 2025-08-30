@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import styles from "./skill.module.css";
-import { Colors } from "../../utils/colors";
+import { Colors } from "../../../utils/colors";
 
 interface Grade {
     title: string;

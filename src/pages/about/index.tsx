@@ -1,12 +1,10 @@
-import { Box, Button, Tooltip } from "@mui/material";
+import { Button, Tooltip } from "@mui/material";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import gilles from "../../assets/images/Gilles.png";
 import { links } from "../../utils/socialLinks";
-import Masonry from '@mui/lab/Masonry'
 import styles from "./about.module.css";
-import ImageCard from "./imageCard";
 
 const About = () => {
     const { t } = useTranslation("global"); 
@@ -20,10 +18,6 @@ const About = () => {
             <div className={styles.container}>
                 <div className={styles.blob}>
                     <img src={gilles} className={styles.image} />
-                    <span className={styles.pulse} data-delay="0"></span>
-                    <span className={styles.pulse} data-delay="1"></span>
-                    <span className={styles.pulse} data-delay="2"></span>
-                    <span className={styles.pulse} data-delay="3"></span>
                 </div>
                 <div className={styles.content}>
                     <h1>Gilles NGASSAM ({ t("general.keywords.pronoun") })</h1>
@@ -47,19 +41,6 @@ const About = () => {
                     ))}
                 </div>
             </div>
-            
-            <div >
-                <h2>Around my career,</h2>
-                <Box sx={{ width: '100%', minHeight: 829 }}>
-                    
-                    <Masonry columns={3} spacing={2}>
-                        <ImageCard />
-                        <ImageCard />
-                        <ImageCard />
-                    </Masonry>
-                </Box>
-            </div>
-            {/* <Skills /> */}
         </div>
     );
 }

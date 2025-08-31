@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-
- 
-
 const ImageCard = () => {
   const StyledImage = styled.div`
     background-image: url('/images/junior.jpg');

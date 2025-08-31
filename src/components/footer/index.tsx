@@ -12,6 +12,7 @@ const Footer = () => {
     const linkHoverAnimation = {
         y: -10
     }
+    const date = new Date();
 
     const navLinksData = [
         {
@@ -72,7 +73,7 @@ const Footer = () => {
 
             <div className={styles.credentials}>
                 © {t("Footer.copyrightsLabel")}
-                <span className={styles.actualHook}> 2024</span>. 
+                <span className={styles.actualHook}> { date.getFullYear() }</span>. 
                 {t("Footer.authorLabel")}
                 <span className={styles.actualHook}> Gilles NGASSAM</span>.
             </div>

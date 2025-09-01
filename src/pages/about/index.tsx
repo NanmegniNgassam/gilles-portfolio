@@ -21,7 +21,7 @@ const About = () => {
                 </div>
                 <div className={styles.content}>
                     <h1>Gilles NGASSAM ({ t("general.keywords.pronoun") })</h1>
-                    <h3> { t("pages.about.studentStatus") } <Link to="https://www.utbm.fr/" target="_blank" className={styles.link}>@UTBM</Link>  { t("general.keywords.connector") } { t("pages.about.workStatus") }.</h3>
+                    <h3> { t("pages.about.workStatus") }.</h3>
                     <div className={styles.description}>
                         <p> { t("pages.about.description.firstSection") } </p> 
                         <p> { t("pages.about.description.secondSection") } </p>

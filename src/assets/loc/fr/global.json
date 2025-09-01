@@ -220,8 +220,7 @@
             }
         },
         "about": {
-            "studentStatus": "Étudiant ingénieur",
-            "workStatus": "Développeur Fullstack Web et Mobile",
+            "workStatus": "Ingénieur Développement Fullstack Web et Mobile",
             "description": {
                 "firstSection": "Développeur passionné par l'innovation, je me spécialise dans le développement mobile, web et logiciel, avec un fort accent sur la créativité et le design centré utilisateur. Mon ambition est de concevoir des solutions intuitives et impactantes qui enrichissent le quotidien des utilisateurs de manière concrète et durable.",
                 "secondSection": "Curieux et visionnaire, j'explore constamment de nouvelles technologies comme l'IoT et l'intelligence artificielle pour créer des applications intelligentes et connectées. J'aime relever des projets qui apportent une réelle valeur ajoutée, alliant innovation, optimisation des ressources, et respect de l'environnement.",

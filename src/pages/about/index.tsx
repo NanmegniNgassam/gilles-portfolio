@@ -1,4 +1,4 @@
-import { Button, Tooltip } from "@mui/material";
+import { Button, Chip, Stack, Tooltip } from "@mui/material";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -22,6 +22,13 @@ const About = () => {
                 <div className={styles.content}>
                     <h1>Gilles NGASSAM ({ t("general.keywords.pronoun") })</h1>
                     <h3> { t("pages.about.workStatus") }.</h3>
+                    <Stack direction='row' gap={1}>
+                        <Chip label={"Autonome"} color="secondary" />
+                        <Chip label={"Créatif"} color="secondary" />
+                        <Chip label={"Rigoureux"} color="secondary" />
+                        <Chip label={"Curieux"} color="secondary" />
+                        <Chip label={"Passionné"} color="secondary" />
+                    </Stack> 
                     <div className={styles.description}>
                         <p> { t("pages.about.description.firstSection") } </p> 
                         <p> { t("pages.about.description.secondSection") } </p>

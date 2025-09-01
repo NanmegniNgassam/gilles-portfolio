@@ -221,6 +221,13 @@
         },
         "about": {
             "workStatus": "FullStack Web and Mobile Engineer",
+            "softSkills": {
+                "autonomy": "Autonomous",
+                "creativity": "Creativity",
+                "rigor": "Rigorous",
+                "curiosity": "Curious",
+                "passion": "Passionate"
+            },
             "description": {
                 "firstSection": "A passionate developer driven by innovation, I specialize in mobile, web, and software development with a strong focus on creativity and user-centered design. My goal is to create intuitive and impactful solutions that enhance users' daily lives in meaningful and sustainable ways.",
                 "secondSection": "Curious and forward-thinking, I continually explore emerging technologies such as IoT and artificial intelligence to develop smart, connected applications. I thrive on projects that bring genuine added value, combining innovation, resource optimization, and environmental consciousness.",

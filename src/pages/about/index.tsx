@@ -23,11 +23,11 @@ const About = () => {
                     <h1>Gilles NGASSAM ({ t("general.keywords.pronoun") })</h1>
                     <h3> { t("pages.about.workStatus") }.</h3>
                     <Stack direction='row' gap={1}>
-                        <Chip label={"Autonome"} color="secondary" />
-                        <Chip label={"Créatif"} color="secondary" />
-                        <Chip label={"Rigoureux"} color="secondary" />
-                        <Chip label={"Curieux"} color="secondary" />
-                        <Chip label={"Passionné"} color="secondary" />
+                        <Chip label={ t("pages.about.softSkills.autonomy") } color="secondary" />
+                        <Chip label={ t("pages.about.softSkills.creativity") } color="secondary" />
+                        <Chip label={ t("pages.about.softSkills.rigor") } color="secondary" />
+                        <Chip label={ t("pages.about.softSkills.curiosity") } color="secondary" />
+                        <Chip label={ t("pages.about.softSkills.passion") } color="secondary" />
                     </Stack> 
                     <div className={styles.description}>
                         <p> { t("pages.about.description.firstSection") } </p> 
